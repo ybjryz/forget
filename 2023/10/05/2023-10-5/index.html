@@ -4,12 +4,15 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="ryz">
-    <meta name="description" content="2023.10.4博客基本建站完成 现在考虑如何将图片自动部署到云端
-–11：45 一个截屏的本地路径 实时抓取他的文件 复制到博客的文件夹下 然后打包上传
-文章字数统计 等有时间再装
-source–fa….png –换logo
-–23:3">
+    <meta name="keywords" content="2023-10-5, ryz">
+    <meta name="description" content="2023-10-5-16:38
+每天9点睡两点醒
+作息规律！
+可是国庆还有最后一天了！ 作业还没有写 不光没写 还没学 怎么办！
+于是timi了压压惊
+
+先把ict看完 还有一节半 
+总体来说觉得ict的课程还是很有意义的 对网络的知识了解">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -21,7 +24,7 @@ source–fa….png –换logo
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>ryz</title>
+    <title>2023-10-5 | ryz</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -226,12 +229,12 @@ source–fa….png –换logo
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title"></h1>
+                    <h1 class="description center-align post-title">2023-10-5</h1>
                 </div>
             </div>
         </div>
@@ -293,55 +296,16 @@ source–fa….png –换logo
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="2023-10-4"><a href="#2023-10-4" class="headerlink" title="2023.10.4"></a>2023.10.4</h1><p>博客基本建站完成 现在考虑如何将图片自动部署到云端</p>
-<p>–11：45 一个截屏的本地路径 实时抓取他的文件 复制到博客的文件夹下 然后打包上传</p>
-<p>文章字数统计 等有时间再装</p>
-<p>source–fa….png –换logo</p>
-<p>–23:33 小妲己喊我休息了 所以直接开始写blog</p>
-<p>昨天sql注入的那一题还没整理 先把网站的视频显示看看是什么</p>
-<p>啊啊先解决图床问题</p>
-<p><img src="/image-20231004233945823.png" alt="image-20231004233945823"></p>
-<p>&lt;c-,&gt;打开图像设置 设置每张图片插入时的相对路径即可</p>
-<p>先在本地测试一下s</p>
-<p><img src="/image-20231004234324193.png" alt="失败的样子"></p>
-<p>ok 看来不是那么简单 看下yaml文件里面的配置吧</p>
-<p>注意到hexo全局配置中有</p>
-<p><img src="/image-20231004234648402.png" alt="__config.yml"></p>
-<p>assets–资产，财产和typora的重名</p>
-<p>还是妥协了 装个插件</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install https://github.com/CodeFalling/hexo-asset-image --save</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>这个安装不成功 挺恼火的 </p>
-<p>插件的作用是把不管本地还是网络的都下载到一个文件夹下</p>
-<p>下载后发现依然不能使用 </p>
-<p>度后说hexo仍然在维护 但插件已经在2020年archieve了</p>
-<blockquote>
-<p>在查看其<code>index.js</code>时，发现该插件还是<code>scr</code>属性标签，但hexo6.3.0中已经改为 <code>data-scr</code>，所以在使用原插件时，这部分会直接跳过，从而会使图片的引用路径处理出错。</p>
-</blockquote>
-<p>本地就是跑不起来 没办法 直接换网络 发现文件名多打一个空格</p>
-<p>终于访问成功了一次！ 本地下public即为网站root</p>
-<p>当src &#x3D;”assets&#x2F;img-xxx.jpg”时 成功访问 此时他自动加上文件夹路径 不知为何</p>
-<p>typora在转换为html时会进行</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![example](postname/example.jpg) --&gt; &#123;% asset_img example.jpg example %&#125;</span><br></pre></td></tr></table></figure>
-
-<p>并且hexo-assets-images是个大坑 他因为版本问题有bug</p>
-<p>尝试参考<a target="_blank" rel="noopener" href="http://www.manongjc.com/detail/62-zgtxnnxlewfqyca.html%E8%87%AA%E5%B7%B1%E5%86%99%E4%B8%80%E4%B8%AAjs">http://www.manongjc.com/detail/62-zgtxnnxlewfqyca.html自己写一个js</a></p>
-<p>–7:11</p>
-<p>在__config.yml中加入了</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">_config.yml</span><br><span class="line"></span><br><span class="line">post_asset_folder: true</span><br><span class="line">marked:</span><br><span class="line">  prependRoot: true</span><br><span class="line">  postAsset: true</span><br></pre></td></tr></table></figure>
-
-
-
-<p>本地图片正常显示</p>
-<p><img src="/2023/10/05/2023-10-4/image-20231005071320508.png" alt="image-20231005071320508"></p>
-<p>激动的心 颤抖的手 该睡觉了 typora设置如图</p>
-<p><img src="/2023/10/05/2023-10-4/image-20231005071404664.png" alt="image-20231005071404664"></p>
-<p>只是在新建时必须要存在与文档同名的目录下</p>
-<p>初步可行 但考虑到如果后续要修改博客在查看图片时会比较麻烦 后续应该还得加入脚本</p>
-<p>在路径中添加</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\<span class="string">&#x27;username&#x27;</span>\AppData\Roaming\Typora\typora-user-images\</span><br></pre></td></tr></table></figure>
-
-<p>即可</p>
+                <h1 id="2023-10-5"><a href="#2023-10-5" class="headerlink" title="2023-10-5"></a>2023-10-5</h1><p>-16:38</p>
+<p>每天9点睡两点醒</p>
+<p>作息规律！</p>
+<p>可是国庆还有最后一天了！ 作业还没有写 不光没写 还没学 怎么办！</p>
+<p>于是timi了压压惊</p>
+<p><img src="/2023/10/05/2023-10-5/20231005164209.jpg" alt="基操勿6"></p>
+<p>先把ict看完 还有一节半 </p>
+<p>总体来说觉得ict的课程还是很有意义的 对网络的知识了解更深一层</p>
+<p>今天想把评论的功能开发出来 </p>
+<p>啊啊还有前面写的那个sql</p>
 
                 
             </div>
@@ -368,7 +332,7 @@ source–fa….png –换logo
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://ybjryz.github.io/2023/10/05/2023-10-4/">http://ybjryz.github.io/2023/10/05/2023-10-4/</a>
+                    <a href="http://ybjryz.github.io/2023/10/05/2023-10-5/">http://ybjryz.github.io/2023/10/05/2023-10-5/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -453,13 +417,13 @@ source–fa….png –换logo
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2023/10/05/2023-10-5/">
+                <a href="/2023/10/06/2023-10-6/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="2023-10-5">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="2023-10-6">
                         
-                        <span class="card-title">2023-10-5</span>
+                        <span class="card-title">2023-10-6</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -470,7 +434,7 @@ source–fa….png –换logo
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-10-05
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-10-06
                         </span>
                         <span class="publish-author">
                             
@@ -490,7 +454,7 @@ source–fa….png –换logo
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/10/04/2023-10-3/">
+                <a href="/2023/10/05/2023-10-4/">
                     <div class="card-image">
                         
                         
@@ -507,7 +471,7 @@ source–fa….png –换logo
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-10-04
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-10-05
                             </span>
                         <span class="publish-author">
                             
