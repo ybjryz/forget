@@ -4,12 +4,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="ryz">
-    <meta name="description" content="2023.10.4博客基本建站完成 现在考虑如何将图片自动部署到云端
-–11：45 一个截屏的本地路径 实时抓取他的文件 复制到博客的文件夹下 然后打包上传
-文章字数统计 等有时间再装
-source–fa….png –换logo
-–23:3">
+    <meta name="keywords" content="2023-10-8, ryz">
+    <meta name="description" content="2023-10-8–2：54昨天晚上在路上碰见她了 按她说的 装作不认识吧 她看起来很开心的样子 那就好
+我喜欢的 困住我的 是她喜欢我的样子 现在的她 多看我一眼都是厌恶 那不是她 只需记住记忆中的那个 爱我的她就好
+工图的作业还有两题找">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -21,7 +19,7 @@ source–fa….png –换logo
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>ryz</title>
+    <title>2023-10-8 | ryz</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -226,12 +224,12 @@ source–fa….png –换logo
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title"></h1>
+                    <h1 class="description center-align post-title">2023-10-8</h1>
                 </div>
             </div>
         </div>
@@ -253,9 +251,13 @@ source–fa….png –换logo
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/WEB-SQL/">
+                                <span class="chip bg-color">WEB-SQL</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -267,7 +269,7 @@ source–fa….png –换logo
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-10-05
+                    2023-10-08
                 </div>
                 
 
@@ -293,55 +295,160 @@ source–fa….png –换logo
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="2023-10-4"><a href="#2023-10-4" class="headerlink" title="2023.10.4"></a>2023.10.4</h1><p>博客基本建站完成 现在考虑如何将图片自动部署到云端</p>
-<p>–11：45 一个截屏的本地路径 实时抓取他的文件 复制到博客的文件夹下 然后打包上传</p>
-<p>文章字数统计 等有时间再装</p>
-<p>source–fa….png –换logo</p>
-<p>–23:33 小妲己喊我休息了 所以直接开始写blog</p>
-<p>昨天sql注入的那一题还没整理 先把网站的视频显示看看是什么</p>
-<p>啊啊先解决图床问题</p>
-<p><img src="/image-20231004233945823.png" alt="image-20231004233945823"></p>
-<p>&lt;c-,&gt;打开图像设置 设置每张图片插入时的相对路径即可</p>
-<p>先在本地测试一下s</p>
-<p><img src="/image-20231004234324193.png" alt="失败的样子"></p>
-<p>ok 看来不是那么简单 看下yaml文件里面的配置吧</p>
-<p>注意到hexo全局配置中有</p>
-<p><img src="/image-20231004234648402.png" alt="__config.yml"></p>
-<p>assets–资产，财产和typora的重名</p>
-<p>还是妥协了 装个插件</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install https://github.com/CodeFalling/hexo-asset-image --save</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+                <h1 id="2023-10-8"><a href="#2023-10-8" class="headerlink" title="2023-10-8"></a>2023-10-8</h1><h2 id="–2：54"><a href="#–2：54" class="headerlink" title="–2：54"></a>–2：54</h2><p>昨天晚上在路上碰见她了 按她说的 装作不认识吧 她看起来很开心的样子 那就好</p>
+<p>我喜欢的 困住我的 是她喜欢我的样子 现在的她 多看我一眼都是厌恶 那不是她 只需记住记忆中的那个 爱我的她就好</p>
+<p>工图的作业还有两题找不到答案 ict的作业配置没看清导致全部要重做</p>
+<p>拖了很久的sql注入还是来写一下吧</p>
+<h2 id="sql注入–-极客大挑战-2019-EasySQL"><a href="#sql注入–-极客大挑战-2019-EasySQL" class="headerlink" title="sql注入–[极客大挑战 2019]EasySQL"></a>sql注入–[极客大挑战 2019]EasySQL</h2><h3 id="0x01-准备工作"><a href="#0x01-准备工作" class="headerlink" title="0x01 准备工作"></a>0x01 准备工作</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_62239233/article/details/132916255">https://blog.csdn.net/m0_62239233/article/details/132916255</a></p>
+<p><img src="/2023/10/08/2023-10-8/image-20231008030017462.png" alt="image-20231008030017462"></p>
+<p>页面长这样</p>
+<p>用户名 admin 密码123456尝试提交</p>
+<p><img src="/2023/10/08/2023-10-8/image-20231008030056090.png" alt="image-20231008030056090"></p>
+<h3 id="0x02-查看SQL语句闭合方式"><a href="#0x02-查看SQL语句闭合方式" class="headerlink" title="0x02 查看SQL语句闭合方式"></a>0x02 查看SQL语句闭合方式</h3><p>SQL注入原理：在没有对用户的输入进行过滤、检测的情况下，就把用户输入数据，带入到数据库中执行SQL语句。</p>
+<h4 id="利用SQL注入："><a href="#利用SQL注入：" class="headerlink" title="利用SQL注入："></a>利用SQL注入：</h4><p>由于系统没有对输入的数据进行过滤、检测，就带入到数据库中执行SQL语句，那么当用户输入一条恶意的数据，使其与原SQL语句拼接、重组得到一条恶意的SQL语句，当数据库执行这条恶意的SQL语句时，就会把数据库中的信息暴露出来，从而泄露信息。</p>
+<p><img src="/2023/10/08/2023-10-8/image-20231008030250733.png" alt="image-20231008030250733"></p>
+<p>在上图中，用户访问实验楼主页进行了如下过程：</p>
+<p>1、在 Web 浏览器中输入 <a target="_blank" rel="noopener" href="http://www.shiyanlou.com/">www.shiyanlou.com</a> 连接到实验楼服务器。</p>
+<p>2、业务逻辑层的 Web 服务器从本地存储中加载 index.php 脚本并解析。</p>
+<p>3、脚本连接位于数据访问层的 DBMS（数据库管理系统），并执行 Sql 语句。</p>
+<p>4、数据访问层的数据库管理系统返回 Sql 语句执行结果给 Web 服务器。</p>
+<p>5、业务逻辑层的 Web 服务器将 Web 页面封装成 HTML 格式发送给表示层的 Web 浏览器。</p>
+<p>6、表示层的 Web 浏览器解析 HTML 文件，将内容展示给用户。</p>
+<p>在三层架构中，所有通信都必须要经过中间层，简单地说，三层架构是一种线性关系。</p>
+<p>一般SQL代码:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$id<span class="operator">=</span>$_GET[‘id’];			#<span class="keyword">get</span>全局变量</span><br><span class="line">$<span class="keyword">sql</span><span class="operator">=</span>“<span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> name <span class="keyword">WHERE</span> id<span class="operator">=</span>’$id’ LIMIT <span class="number">0</span>,<span class="number">1</span>”;</span><br></pre></td></tr></table></figure>
 
-<p>这个安装不成功 挺恼火的 </p>
-<p>插件的作用是把不管本地还是网络的都下载到一个文件夹下</p>
-<p>下载后发现依然不能使用 </p>
-<p>度后说hexo仍然在维护 但插件已经在2020年archieve了</p>
-<blockquote>
-<p>在查看其<code>index.js</code>时，发现该插件还是<code>scr</code>属性标签，但hexo6.3.0中已经改为 <code>data-scr</code>，所以在使用原插件时，这部分会直接跳过，从而会使图片的引用路径处理出错。</p>
-</blockquote>
-<p>本地就是跑不起来 没办法 直接换网络 发现文件名多打一个空格</p>
-<p>终于访问成功了一次！ 本地下public即为网站root</p>
-<p>当src &#x3D;”assets&#x2F;img-xxx.jpg”时 成功访问 此时他自动加上文件夹路径 不知为何</p>
-<p>typora在转换为html时会进行</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![example](postname/example.jpg) --&gt; &#123;% asset_img example.jpg example %&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="判断sql注入闭合方式"><a href="#判断sql注入闭合方式" class="headerlink" title="判断sql注入闭合方式"></a>判断sql注入闭合方式</h4><p>–参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_46634468/article/details/120480080">https://blog.csdn.net/weixin_46634468/article/details/120480080</a></p>
+<h5 id="1-使用-转义字符-来判断SQL注入的闭合方式。"><a href="#1-使用-转义字符-来判断SQL注入的闭合方式。" class="headerlink" title="1.使用(转义字符)来判断SQL注入的闭合方式。"></a>1.使用(转义字符)来判断SQL注入的闭合方式。</h5><p>–不适用于双变量</p>
+<p>原理:当闭合字符遇到转义字符时，会被转义，那么没有闭合符的语句就不完整了，就会报错，通过报错信息我们就可以推断出闭合符。</p>
+<p>分析报错信息：看\斜杠后面跟着的字符，是什么字符，它的闭合字符就是什么，若是没有，就为数字型。</p>
+<h5 id="2-使用‘"><a href="#2-使用‘" class="headerlink" title="2.使用‘"></a>2.使用‘</h5><p><img src="/2023/10/08/2023-10-8/image-20231008030823559.png" alt="image-20231008030823559"></p>
+<p>admin’报错 </p>
+<p>admin”不报错</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/u012060033/article/details/93348261">–单引号与双引号的区别</a></p>
+<p>MySQL里引用字符串常量时需要用一对英文单引号“ ‘ ”或英文双引号“ “ ”将字符串常量常量括起来。例如：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;an apple&#x27;</span></span><br><span class="line"> </span><br><span class="line">&quot;a book&quot;</span><br></pre></td></tr></table></figure>
 
-<p>并且hexo-assets-images是个大坑 他因为版本问题有bug</p>
-<p>尝试参考<a target="_blank" rel="noopener" href="http://www.manongjc.com/detail/62-zgtxnnxlewfqyca.html%E8%87%AA%E5%B7%B1%E5%86%99%E4%B8%80%E4%B8%AAjs">http://www.manongjc.com/detail/62-zgtxnnxlewfqyca.html自己写一个js</a></p>
-<p>–7:11</p>
-<p>在__config.yml中加入了</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">_config.yml</span><br><span class="line"></span><br><span class="line">post_asset_folder: true</span><br><span class="line">marked:</span><br><span class="line">  prependRoot: true</span><br><span class="line">  postAsset: true</span><br></pre></td></tr></table></figure>
+<h4 id="1-1-单引号"><a href="#1-1-单引号" class="headerlink" title="1.1 单引号"></a>1.1 单引号</h4><p><strong>一般应使用英文单引号，如果字符串内需要包含单引号时，除了使用转义的办法外，我们可以选用一对双引号来包括字符串，这样字符串内的单引号被视作普通字符，无需特殊处理</strong>。</p>
+<p>例如  <strong>Johnson’s mother</strong></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> &quot;Johnson&#x27;s mother&quot;,<span class="string">&#x27;Johnson&#x27;&#x27;s mother&#x27;</span>,<span class="string">&#x27;Johnson\&#x27;</span>s mother<span class="string">&#x27;;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="1-2-双引号"><a href="#1-2-双引号" class="headerlink" title="1.2 双引号"></a>1.2 双引号</h4><p><strong>与单引号对应，使用英文双引号引用的字符串内需要包含双引号时，除了使用转义的办法外，我们可以用一对单引号来包括字符串，这样字符串内的双引号被视作普通字符，无需特殊处理。</strong></p>
+<p>例如  <strong>He said: “Go away”</strong> </p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="string">&#x27;He said: &quot;Go away&quot;&#x27;</span> ,&quot;He said: &quot;&quot;Go away&quot;&quot;&quot; ,&quot;He said: \&quot;Go away\&quot;&quot; ;</span><br></pre></td></tr></table></figure>
+
+<p>因此其实是在判断闭合方式是单引号还是双引号</p>
+<h3 id="0x03-分析"><a href="#0x03-分析" class="headerlink" title="0x03 分析"></a>0x03 分析</h3><p>先假设是单引号闭合</p>
+<p>那查询语句应该是这样的</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span><span class="operator">*</span><span class="keyword">FROM</span> table_name <span class="keyword">WHERE</span> username<span class="operator">=</span><span class="string">&#x27;1&#x27;</span><span class="keyword">and</span> password<span class="operator">=</span><span class="string">&#x27;123&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>当字符串内需要包含双引号时，除了使用转义字符外，也可以使用一对单引号来包括字符串。字符串内的双引号被视为普通字符，无需特殊处理<br> 同理，当字符串内需要包含单引号时，除了使用转义字符外，也可以使用一对双引号来包括字符串。字符串内的单引号被视为普通字符，无需特殊处理</p>
+<p>username输入的是1’，形成的sql语句是错误的<br>SELECT*FROM table_name WHERE username&#x3D;’1’’and password&#x3D;’123’;<br>第一个单引号和第二个单引号形成了新的闭合，剩余第三个单引号，组成的sql语句不正确，于是语句报错。</p>
+<p>所以可以推出SQL语句闭合方式是单引号。</p>
+<h3 id="0x04-注入"><a href="#0x04-注入" class="headerlink" title="0x04 注入"></a>0x04 注入</h3><h4 id="万能账号注入"><a href="#万能账号注入" class="headerlink" title="万能账号注入"></a>万能账号注入</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span><span class="operator">*</span><span class="keyword">FROM</span> table_name <span class="keyword">WHERE</span> username<span class="operator">=</span><span class="string">&#x27;1&#x27;</span><span class="keyword">and</span> password<span class="operator">=</span><span class="string">&#x27;123&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>参考这个查询语句 首先使用   <strong>‘</strong> 将前面语句闭合 再加入 or true 则会直接选择true 再加入#将后面的一个’注释了 </p>
+<p>因此</p>
+<p><img src="/2023/10/08/2023-10-8/image-20231008032127237.png" alt="image-20231008032127237">****</p>
+<p><img src="/2023/10/08/2023-10-8/image-20231008032135696.png" alt="image-20231008032135696"></p>
+<p>拿到flag</p>
+<h4 id="HACKBAR"><a href="#HACKBAR" class="headerlink" title="HACKBAR"></a>HACKBAR</h4><p>是基于url的入侵 只是注意#要经过url编码%23</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="operator">/</span>check.php?username<span class="operator">=</span>a<span class="string">&#x27; or true %23&amp; password=1</span></span><br><span class="line"><span class="string"></span></span><br></pre></td></tr></table></figure>
+
+<p>ok基本教学完成 来随便练一条</p>
+<h2 id="SUCTF-2019-EasySQL"><a href="#SUCTF-2019-EasySQL" class="headerlink" title="[SUCTF 2019]EasySQL"></a>[SUCTF 2019]EasySQL</h2><p><img src="/2023/10/08/2023-10-8/image-20231008032449587.png" alt="image-20231008032449587"></p>
+<p><img src="/2023/10/08/2023-10-8/image-20231008032510779.png" alt="image-20231008032510779"></p>
+<p>看了眼wp 一点都不easy</p>
+<p>堆叠注入、SQL模式</p>
+<p>简单试了一下 </p>
+<p>输入1 2 3 都显示Array (    [0] &#x3D;&gt; 1 )</p>
+<p>输入 1” 显示nonono</p>
+<p>1’不显示</p>
+<p>1;（;用于一条语句的结束）</p>
+<p>学了一个注入姿势</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>;<span class="keyword">show</span> databases#</span><br></pre></td></tr></table></figure>
+
+<p>–;将一句话直接结束 show database显示数据库 #注释</p>
+<p>显示</p>
+<p><img src="/2023/10/08/2023-10-8/image-20231008033230446.png" alt="image-20231008033230446"></p>
+<p>这个好像叫堆叠注入 有时间看！</p>
+<p>大佬测试的结果</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">看到上面主要是有两中返回，一种是空白，一种是nonono。</span><br><span class="line">在网上查writeup看到</span><br><span class="line">输入<span class="number">1</span>显示<span class="keyword">Array</span> ( [<span class="number">0</span>] <span class="operator">=</span><span class="operator">&gt;</span> <span class="number">1</span> )</span><br><span class="line">输入a显示空白</span><br><span class="line">输入所有非<span class="number">0</span>数字都显示<span class="keyword">Array</span> ( [<span class="number">0</span>] <span class="operator">=</span><span class="operator">&gt;</span> <span class="number">1</span> )</span><br><span class="line">输入所有字母（除过滤的关键词外）都显示空白</span><br><span class="line">可以推测题目应该是用了<span class="operator">||</span>符号。</span><br><span class="line">推测出题目应该是<span class="keyword">select</span> $_post[<span class="keyword">value</span>] <span class="operator">||</span> flag <span class="keyword">from</span> Flag。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>使用 || 运算符，可以看到前面无论填1还是填2，它返回的都是1。这时因为有了 || 作为判断运算符，它自动把之前的先进行了运算，非0数字都当成了true，所以都是返回1。当前面填字母的时候，它会认为a是一个字段名，那当然没这个字段名所以会报错。</strong></p>
+<p>在oracle 缺省支持 通过 ‘ || ’ 来实现字符串拼接，但在mysql 缺省不支持。需要调整mysql 的sql_mode 模式：pipes_as_concat 来实现oracle 的一些功能。<br>这个意思是在oracle中 || 是作为字符串拼接，而在mysql中是运算符。当设置sql_mode为pipes_as_concat的时候，mysql也可以把 || 作为字符串拼接。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">set</span> sql_mode <span class="operator">=</span> pipes_as_contact</span><br></pre></td></tr></table></figure>
+
+<p>修改完后，|| 就会被认为是字符串拼接符。如 select 1 || secret_5QBH from s4g70jkqqx; 并不是所将 1 和 secret_5QBH拼接在一起作为一个新的字段名 1secret_5QBH去查询。</p>
+<p>先执行select 1 from s4g70jkqqx，得到结果1。再执行select| secret_5QBH from s4g70jkqqx;，得到结果6qpdPnCZQ3xHKQDbSjUWrH32。然后把他们的结果拼接到一起输出16qpdPnCZQ3xHKQDbSjUWrH32。<br><img src="/2023/10/08/2023-10-8/image-20231008033956702.png" alt="image-20231008033956702"></p>
+<p>用小皮本地环境跑一下试试看</p>
+<p>所以最后构造 </p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>;<span class="keyword">set</span> sql_mode<span class="operator">=</span>PIPES_AS_CONCAT;<span class="keyword">select</span> <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<p>就能得到flag。这个payload最终到后端其实是执行了三条语句。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="number">1</span>; <span class="operator">=</span><span class="operator">&gt;</span> 输出 <span class="number">1</span>;</span><br><span class="line"><span class="keyword">set</span> sql_mode<span class="operator">=</span>PIPES_AS_CONCAT; 修改sql_mode无输出</span><br><span class="line"><span class="keyword">select</span> <span class="number">1</span> <span class="operator">||</span> flag <span class="keyword">from</span> Flag。 输出 <span class="number">1</span><span class="operator">+</span>flag的内容</span><br></pre></td></tr></table></figure>
 
 
 
-<p>本地图片正常显示</p>
-<p><img src="/2023/10/05/2023-10-4/image-20231005071320508.png" alt="image-20231005071320508"></p>
-<p>激动的心 颤抖的手 该睡觉了 typora设置如图</p>
-<p><img src="/2023/10/05/2023-10-4/image-20231005071404664.png" alt="image-20231005071404664"></p>
-<p>只是在新建时必须要存在与文档同名的目录下</p>
-<p>初步可行 但考虑到如果后续要修改博客在查看图片时会比较麻烦 后续应该还得加入脚本</p>
-<p>在路径中添加</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\<span class="string">&#x27;username&#x27;</span>\AppData\Roaming\Typora\typora-user-images\</span><br></pre></td></tr></table></figure>
+<p>其实不太理解第一个select 1是什么作用 试下看看</p>
+<p><img src="/2023/10/08/2023-10-8/image-20231008034254933.png" alt="image-20231008034254933"></p>
+<p>报了一个toolong</p>
+<p>O.O 第一个1；其实是为了把那个查询语句的select结束 使得我们的set可以正常执行 最后</p>
+<h3 id="学的！"><a href="#学的！" class="headerlink" title="学的！"></a>学的！</h3><p>1.堆叠注入</p>
+<p>2.小皮本地环境跑一下sql</p>
+<p>不行不行 这不算自己做的 再来一条</p>
+<h2 id="极客大挑战-2019-BabySQL"><a href="#极客大挑战-2019-BabySQL" class="headerlink" title="[极客大挑战 2019]BabySQL"></a>[极客大挑战 2019]BabySQL</h2><h3 id="0x01-信息收集"><a href="#0x01-信息收集" class="headerlink" title="0x01 信息收集"></a>0x01 信息收集</h3><p><img src="/2023/10/08/2023-10-8/image-20231008035025942.png" alt="image-20231008035025942"></p>
+<p>长这样 以为和第一个是同一个</p>
+<p>结果报错</p>
+<p><img src="/2023/10/08/2023-10-8/image-20231008035058079.png" alt="image-20231008035058079"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version <span class="keyword">for</span> the right syntax to use near <span class="string">&#x27;true #&#x27;</span> and password=<span class="string">&#x27;1&#x27;</span> <span class="literal">true</span> #<span class="string">&#x27;&#x27;</span> at line <span class="number">1</span></span><br></pre></td></tr></table></figure>
 
-<p>即可</p>
+<p>证明他的闭合方式并没有那么简单 </p>
+<h3 id="0x02-分析"><a href="#0x02-分析" class="headerlink" title="0x02 分析"></a>0x02 分析</h3><p>1‘报错</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near &#x27;1&#x27;&#x27; at line 1</span><br></pre></td></tr></table></figure>
+
+<p>1“用户名密码错误</p>
+<p>初步判断应该是’闭合</p>
+<p>但在1‘ or true #后报错</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near &#x27;true #&#x27; and password=&#x27;1&#x27;&#x27; at line 1</span><br></pre></td></tr></table></figure>
+
+<p>还是得回去看一下那个题的报错是什么</p>
+<p>而且一定要本地环境跑一下！</p>
+<p>猜测 是这样的</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span><span class="operator">*</span><span class="keyword">FROM</span> table_name <span class="keyword">WHERE</span> username<span class="operator">=</span><span class="string">&#x27;&#x27;</span><span class="number">1</span><span class="string">&#x27;&#x27;</span><span class="keyword">and</span> password<span class="operator">=</span><span class="string">&#x27;123&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>‘’1’ or true #’’</p>
+<p>这样使得前面的被‘</p>
+<p>提交1’’正常查询</p>
+<p><img src="/2023/10/08/2023-10-8/image-20231008040452416.png" alt="image-20231008040452416"></p>
+<p>再来看password的闭合方式</p>
+<p>输入1’</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near &#x27;&#x27;1&#x27;&#x27;&#x27; at line 1</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">password = &#x27;&#x27;&#x27;1&#x27;&#x27;&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>修改payload 为 1’’ or true # 和 1’’’ or true #</p>
+<p>结果还是报错</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near &#x27;true #&#x27;&#x27; at line 1</span><br></pre></td></tr></table></figure>
+
+<p>username为payload password为1 密码错误</p>
+<p>证明是password出了问题</p>
+<p>考虑他不是三个单引号 仔细想想确实不对 三个单引号必有闭合啊 所以是双引号</p>
+<p>但复制下来以后会看出双引号和双单引号的区别</p>
+<p>有点不太确定</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">password = &#x27;&quot;1&quot;&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>1’ or true #</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near &#x27;true #&#x27;&#x27; at line 1&quot;</span><br></pre></td></tr></table></figure>
+
+<p>看了wp 是or、by、select、from、and、where等关键字时会被过滤且会被过滤为空</p>
+<p><strong>看见报错信息中没有出现or这个单词，所以我们猜想应该是用了过滤的手段将常见的<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=sql%E6%B3%A8%E5%85%A5&spm=1001.2101.3001.7020">sql注入</a>的关键词给过滤掉了</strong></p>
+<p><strong>双写绕过！</strong> –总结过滤关键字的绕过方法–<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_51295677/article/details/125444401">https://blog.csdn.net/qq_51295677/article/details/125444401</a></p>
+<p>payload</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1&#x27;oorr true#</span><br></pre></td></tr></table></figure>
+
+<p>ok休息一下 给网站换个壁纸</p>
+<p>想加个分类的 本身网址可以显示 但在获取全部分类好像不行 那就暂且先下线</p>
 
                 
             </div>
@@ -368,7 +475,7 @@ source–fa….png –换logo
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://ybjryz.github.io/2023/10/05/2023-10-4/">http://ybjryz.github.io/2023/10/05/2023-10-4/</a>
+                    <a href="http://ybjryz.github.io/2023/10/08/2023-10-8/">http://ybjryz.github.io/2023/10/08/2023-10-8/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -405,7 +512,11 @@ source–fa….png –换logo
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/WEB-SQL/">
+                                    <span class="chip bg-color">WEB-SQL</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -449,17 +560,18 @@ source–fa….png –换logo
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2023/10/05/2023-10-5/">
+                <a href="/2023/10/08/2023-10-8/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="2023-10-5">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="2023-10-8">
                         
-                        <span class="card-title">2023-10-5</span>
+                        <span class="card-title">2023-10-8</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -469,9 +581,9 @@ source–fa….png –换logo
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-10-05
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-10-08
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -479,6 +591,15 @@ source–fa….png –换logo
                             
                         </span>
                     </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/WEB-SQL/">
+                        <span class="chip bg-color">WEB-SQL</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -490,13 +611,13 @@ source–fa….png –换logo
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/10/04/2023-10-3/">
+                <a href="/2023/10/06/2023-10-6/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="2023-10-6">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">2023-10-6</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -507,7 +628,7 @@ source–fa….png –换logo
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-10-04
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-10-06
                             </span>
                         <span class="publish-author">
                             
