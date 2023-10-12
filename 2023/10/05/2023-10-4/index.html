@@ -288,6 +288,9 @@ source–fa….png –换logo
         <hr class="clearfix">
 
         
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
 
         
 
@@ -309,7 +312,8 @@ source–fa….png –换logo
 <p><img src="/image-20231004234648402.png" alt="__config.yml"></p>
 <p>assets–资产，财产和typora的重名</p>
 <p>还是妥协了 装个插件</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install https://github.com/CodeFalling/hexo-asset-image --save</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> https://github.com/CodeFalling/hexo-asset-image <span class="token parameter variable">--save</span>
+</code></pre>
 
 <p>这个安装不成功 挺恼火的 </p>
 <p>插件的作用是把不管本地还是网络的都下载到一个文件夹下</p>
@@ -322,13 +326,18 @@ source–fa….png –换logo
 <p>终于访问成功了一次！ 本地下public即为网站root</p>
 <p>当src &#x3D;”assets&#x2F;img-xxx.jpg”时 成功访问 此时他自动加上文件夹路径 不知为何</p>
 <p>typora在转换为html时会进行</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![example](postname/example.jpg) --&gt; &#123;% asset_img example.jpg example %&#125;</span><br></pre></td></tr></table></figure>
+<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token operator">!</span><span class="token punctuation">[</span>example<span class="token punctuation">]</span><span class="token punctuation">(</span>postname/example.jpg<span class="token punctuation">)</span> --<span class="token operator">></span> <span class="token punctuation">&#123;</span>% asset_img example.jpg example %<span class="token punctuation">&#125;</span></code></pre>
 
 <p>并且hexo-assets-images是个大坑 他因为版本问题有bug</p>
 <p>尝试参考<a target="_blank" rel="noopener" href="http://www.manongjc.com/detail/62-zgtxnnxlewfqyca.html%E8%87%AA%E5%B7%B1%E5%86%99%E4%B8%80%E4%B8%AAjs">http://www.manongjc.com/detail/62-zgtxnnxlewfqyca.html自己写一个js</a></p>
 <p>–7:11</p>
 <p>在__config.yml中加入了</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">_config.yml</span><br><span class="line"></span><br><span class="line">post_asset_folder: true</span><br><span class="line">marked:</span><br><span class="line">  prependRoot: true</span><br><span class="line">  postAsset: true</span><br></pre></td></tr></table></figure>
+<pre class="language-bash" data-language="bash"><code class="language-bash">_config.yml
+
+post_asset_folder: <span class="token boolean">true</span>
+marked:
+  prependRoot: <span class="token boolean">true</span>
+  postAsset: <span class="token boolean">true</span></code></pre>
 
 
 
@@ -339,7 +348,7 @@ source–fa….png –换logo
 <p>只是在新建时必须要存在与文档同名的目录下</p>
 <p>初步可行 但考虑到如果后续要修改博客在查看图片时会比较麻烦 后续应该还得加入脚本</p>
 <p>在路径中添加</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\<span class="string">&#x27;username&#x27;</span>\AppData\Roaming\Typora\typora-user-images\</span><br></pre></td></tr></table></figure>
+<pre class="language-c" data-language="c"><code class="language-c">C<span class="token operator">:</span>\Users\<span class="token char">'username'</span>\AppData\Roaming\Typora\typora<span class="token operator">-</span>user<span class="token operator">-</span>images\</code></pre>
 
 <p>即可</p>
 
@@ -531,6 +540,9 @@ source–fa….png –换logo
 <!-- 代码块功能依赖 -->
 <script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
 
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
 
 
 <!-- 代码语言 -->
@@ -913,6 +925,14 @@ $(function () {
     
 
     <!-- 鼠标星星特效 -->
+     
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/libs/others/star.js"><\/script>');
+            }
+        </script>
     
 
      
@@ -946,6 +966,34 @@ $(function () {
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
     
 
+    
+        <script src="//code.tidio.co/wcv1qigfmnvo0kqjh0jgjbkowlmndofw.js"></script>
+        <script>
+            $(document).ready(function () {
+                setInterval(change_Tidio, 50);
+                function change_Tidio() {
+                    var tidio=$("#tidio-chat iframe");
+                    if(tidio.css("display")=="block"&& $(window).width()>977 ){
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" &&$(window).width()>977)>0? "-40px" : ($("div.toc-title").length&&$(window).width()>977)>0?"85px":"20px";
+                        document.getElementById("tidio-chat-iframe").style.right="-15px";
+                        document.getElementById("tidio-chat-iframe").style.height=parseInt(tidio.css("height"))>=520?"520px":tidio.css("height");
+                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                    }
+                    else if(tidio.css("display")=="block"&&$(window).width()>601 &&$(window).width()<992 ){
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && 601< $(window).width()<992)>0? "-40px":"20px" ;
+                        document.getElementById("tidio-chat-iframe").style.right="-15px";
+                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                    }
+                    else if(tidio.css("display")=="block"&&$(window).width()<601 && parseInt(tidio.css("height"))<230){
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && $(window).width()<601)>0? "-10px":"45px" ;
+                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                    }
+                    if( tidio.css("display")=="block"&&$(window).width()<601 && parseInt(tidio.css("height"))>=230){
+                        document.getElementById("tidio-chat-iframe").style.zIndex="998";
+                    }
+                }
+            });
+        </script>
     
 
     

@@ -11,7 +11,7 @@
 
 1.tracert命令ict课程里有说这么一个命令 好像第一节课里有说怎么拿tracert追踪同一网段下的所有设备
 好的 找到了 是 arp -a
-1Pi">
+Pin">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -290,6 +290,9 @@
         <hr class="clearfix">
 
         
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
 
         
 
@@ -301,7 +304,7 @@
 </blockquote>
 <h2 id="1-tracert命令"><a href="#1-tracert命令" class="headerlink" title="1.tracert命令"></a>1.tracert命令</h2><p>ict课程里有说这么一个命令 好像第一节课里有说怎么拿tracert追踪同一网段下的所有设备</p>
 <p>好的 找到了 是 arp -a</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Ping <span class="number">192.168</span><span class="number">.1</span><span class="number">.255</span> 定向广播ip --触发arp回复 --渗透 arp-a</span><br></pre></td></tr></table></figure>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token class-name">Ping</span> <span class="token number">192.168</span><span class="token number">.1</span><span class="token number">.255</span> 定向广播ip <span class="token operator">--</span>触发arp回复 <span class="token operator">--</span>渗透 arp<span class="token operator">-</span>a</code></pre>
 
 <p>笔记是这样写的</p>
 <p>对于手机开的热点的构成 是否存在网关 回路地址而言呢</p>
@@ -335,10 +338,13 @@
 <p><img src="/2023/10/02/2023-10-1/image-20231001225908281.png" alt="image-20231001225908281"></p>
 <p><strong>–23：00了 答应潘潘要打游戏的 心急如焚~！！！</strong></p>
 <p>2:39 继续淦</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d			#上传配置</span><br></pre></td></tr></table></figure>
+<pre class="language-cmd" data-language="cmd"><code class="language-cmd">hexo d			#上传配置</code></pre>
 
 <p>时报错</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">fatal: unable to access <span class="string">&#x27;https://github.com/*/*.github.io.git/&#x27;</span>: Failed to connect to github.com port <span class="number">443</span>: Timed out</span><br><span class="line">FATAL Something<span class="number">&#x27;</span>s wrong. Maybe you can find the solution here: http:<span class="comment">//hexo.io/docs/troubleshooting.html</span></span><br><span class="line">Error: fatal: unable to access <span class="string">&#x27;https://github.com/*/*.github.io.git/&#x27;</span>: Failed to connect to github.com port <span class="number">443</span>: Timed out</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre class="language-c" data-language="c"><code class="language-c">fatal<span class="token operator">:</span> unable to access 'https<span class="token operator">:</span><span class="token comment">//github.com/*/*.github.io.git/': Failed to connect to github.com port 443: Timed out</span>
+FATAL Something's wrong<span class="token punctuation">.</span> Maybe you can find the solution here<span class="token operator">:</span> http<span class="token operator">:</span><span class="token comment">//hexo.io/docs/troubleshooting.html</span>
+Error<span class="token operator">:</span> fatal<span class="token operator">:</span> unable to access 'https<span class="token operator">:</span><span class="token comment">//github.com/*/*.github.io.git/': Failed to connect to github.com port 443: Timed out</span>
+</code></pre>
 
 <p>解决方法为：<br> 将hexo配置文件——config.yml中deploy》repo更改为<br> https:&#x2F;&#x2F;用户名:密码@github.com&#x2F;pythonsoft&#x2F;test.git然后就可以了。</p>
 <p>后遇到报</p>
@@ -349,7 +355,7 @@
 <p><code>https://docs.github.com/zh/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#fine-grained-personal-access-token</code></p>
 <p>的步骤操作</p>
 <p>其实搞到token以后 直接在_config.yml中改成</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">repository:https://用户名:token@github.com/用户名/仓库名.git</span><br></pre></td></tr></table></figure>
+<pre class="language-bash" data-language="bash"><code class="language-bash">repository:https://用户名:token@github.com/用户名/仓库名.git</code></pre>
 
 
 
@@ -359,17 +365,57 @@
 <p>repo的地址 <a target="_blank" rel="noopener" href="https://github.com/ybjryz/ybjryz">https://github.com/ybjryz/ybjryz</a> 这个地址会生成一个</p>
 <p>username.github.io&#x2F;username的主页 但进去以后没有主题</p>
 <p>repo应该是填ssh的地址 </p>
-<p><a href="mailto:&#103;&#x69;&#116;&#64;&#103;&#x69;&#x74;&#104;&#x75;&#98;&#x2e;&#99;&#x6f;&#109;">&#103;&#x69;&#116;&#64;&#103;&#x69;&#x74;&#104;&#x75;&#98;&#x2e;&#99;&#x6f;&#109;</a>:ybjryz&#x2F;ybjryz.git</p>
+<p><a href="mailto:&#x67;&#105;&#x74;&#x40;&#x67;&#x69;&#x74;&#104;&#117;&#x62;&#x2e;&#99;&#x6f;&#x6d;">&#x67;&#105;&#x74;&#x40;&#x67;&#x69;&#x74;&#104;&#117;&#x62;&#x2e;&#99;&#x6f;&#x6d;</a>:ybjryz&#x2F;ybjryz.git</p>
 <p><img src="/2023/10/02/2023-10-1/image-20231002152137635.png" alt="image-20231002152137635">在pages里查看</p>
 <h1 id="hexo建站知识及其逻辑"><a href="#hexo建站知识及其逻辑" class="headerlink" title="hexo建站知识及其逻辑"></a>hexo建站知识及其逻辑</h1><p>参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_61313949/article/details/127595044">https://blog.csdn.net/qq_61313949/article/details/127595044</a></p>
-<h2 id="常用hexo命令"><a href="#常用hexo命令" class="headerlink" title="常用hexo命令"></a>常用hexo命令</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo -g #安装Hexo</span><br><span class="line">npm update hexo -g #升级</span><br><span class="line">hexo init #初始化博客</span><br><span class="line"></span><br><span class="line">命令简写</span><br><span class="line">hexo n “我的博客” == hexo new “我的博客” #新建文章</span><br><span class="line">hexo g == hexo generate #生成</span><br><span class="line">hexo s == hexo server #启动服务预览</span><br><span class="line">hexo d == hexo deploy #部署</span><br><span class="line"></span><br><span class="line">hexo server #Hexo会监视文件变动并自动更新，无须重启服务器</span><br><span class="line">hexo server -s #静态模式</span><br><span class="line">hexo server -p 5000 #更改端口</span><br><span class="line">hexo server -i 192.168.1.1 #自定义 IP</span><br><span class="line">hexo clean #清除缓存，若是网页正常情况下可以忽略这条命令</span><br></pre></td></tr></table></figure>
+<h2 id="常用hexo命令"><a href="#常用hexo命令" class="headerlink" title="常用hexo命令"></a>常用hexo命令</h2><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo <span class="token parameter variable">-g</span> <span class="token comment">#安装Hexo</span>
+<span class="token function">npm</span> update hexo <span class="token parameter variable">-g</span> <span class="token comment">#升级</span>
+hexo init <span class="token comment">#初始化博客</span>
+
+命令简写
+hexo n “我的博客” <span class="token operator">==</span> hexo new “我的博客” <span class="token comment">#新建文章</span>
+hexo g <span class="token operator">==</span> hexo generate <span class="token comment">#生成</span>
+hexo s <span class="token operator">==</span> hexo server <span class="token comment">#启动服务预览</span>
+hexo d <span class="token operator">==</span> hexo deploy <span class="token comment">#部署</span>
+
+hexo server <span class="token comment">#Hexo会监视文件变动并自动更新，无须重启服务器</span>
+hexo server <span class="token parameter variable">-s</span> <span class="token comment">#静态模式</span>
+hexo server <span class="token parameter variable">-p</span> <span class="token number">5000</span> <span class="token comment">#更改端口</span>
+hexo server <span class="token parameter variable">-i</span> <span class="token number">192.168</span>.1.1 <span class="token comment">#自定义 IP</span>
+hexo clean <span class="token comment">#清除缓存，若是网页正常情况下可以忽略这条命令</span></code></pre>
 
 <p>为了方便运行 GitHub Actions 时登录 GitHub 账号，我们使用 SSH 方式登录。就是要把设备的私钥交给 GitHub Actions，公钥交给 GitHub，需要去 Settings 里去配置。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;Github的邮箱地址&quot;</span><br><span class="line"></span><br><span class="line"># 例如 ssh-keygen -t rsa -C &quot;123123123@gmail.com&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre class="language-she" data-language="she"><code class="language-she">ssh-keygen -t rsa -C &quot;Github的邮箱地址&quot;
+
+# 例如 ssh-keygen -t rsa -C &quot;123123123@gmail.com&quot;
+</code></pre>
 
 <p>代码参数含义：</p>
 <p>-t 指定密钥类型，默认是 rsa ，可以省略。<br> -C 设置注释文字，比如邮箱。<br> -f 指定密钥文件存储文件名。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# ssh-keygen -t rsa       &lt;== 建立密钥对，-t代表类型，有RSA和DSA两种</span><br><span class="line">Generating public/private rsa key pair.</span><br><span class="line">Enter file in which to save the key (/root/.ssh/id_rsa):   &lt;==密钥文件默认存放位置，按Enter即可</span><br><span class="line">Created directory &#x27;/root/.ssh&#x27;.</span><br><span class="line">Enter passphrase (empty for no passphrase):     &lt;== 输入密钥锁码，或直接按 Enter 留空</span><br><span class="line">Enter same passphrase again:     &lt;== 再输入一遍密钥锁码</span><br><span class="line">Your identification has been saved in /root/.ssh/id_rsa.    &lt;== 生成的私钥</span><br><span class="line">Your public key has been saved in /root/.ssh/id_rsa.pub.    &lt;== 生成的公钥</span><br><span class="line">The key fingerprint is:</span><br><span class="line">SHA256:K1qy928tkk1FUuzQtlZK+poeS67vIgPvHw9lQ+KNuZ4 root@localhost.localdomain</span><br><span class="line">The key&#x27;s randomart image is:</span><br><span class="line">+---[RSA 2048]----+</span><br><span class="line">|           +.    |</span><br><span class="line">|          o * .  |</span><br><span class="line">|        . .O +   |</span><br><span class="line">|       . *. *    |</span><br><span class="line">|        S =+     |</span><br><span class="line">|    .    =...    |</span><br><span class="line">|    .oo =+o+     |</span><br><span class="line">|     ==o+B*o.    |</span><br><span class="line">|    oo.=EXO.     |</span><br><span class="line">+----[SHA256]-----+</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@localhost ~<span class="token punctuation">]</span><span class="token comment"># ssh-keygen -t rsa       &lt;== 建立密钥对，-t代表类型，有RSA和DSA两种</span>
+Generating public/private rsa key pair.
+Enter <span class="token function">file</span> <span class="token keyword">in</span> <span class="token function">which</span> to save the key <span class="token punctuation">(</span>/root/.ssh/id_rsa<span class="token punctuation">)</span>:   <span class="token operator">&lt;=</span><span class="token operator">=</span>密钥文件默认存放位置，按Enter即可
+Created directory <span class="token string">'/root/.ssh'</span><span class="token builtin class-name">.</span>
+Enter passphrase <span class="token punctuation">(</span>empty <span class="token keyword">for</span> no passphrase<span class="token punctuation">)</span>:     <span class="token operator">&lt;=</span><span class="token operator">=</span> 输入密钥锁码，或直接按 Enter 留空
+Enter same passphrase again:     <span class="token operator">&lt;=</span><span class="token operator">=</span> 再输入一遍密钥锁码
+Your identification has been saved <span class="token keyword">in</span> /root/.ssh/id_rsa.    <span class="token operator">&lt;=</span><span class="token operator">=</span> 生成的私钥
+Your public key has been saved <span class="token keyword">in</span> /root/.ssh/id_rsa.pub.    <span class="token operator">&lt;=</span><span class="token operator">=</span> 生成的公钥
+The key fingerprint is:
+SHA256:K1qy928tkk1FUuzQtlZK+poeS67vIgPvHw9lQ+KNuZ4 root@localhost.localdomain
+The key's randomart image is:
++---<span class="token punctuation">[</span>RSA <span class="token number">2048</span><span class="token punctuation">]</span>----+
+<span class="token operator">|</span>           +.    <span class="token operator">|</span>
+<span class="token operator">|</span>          o * <span class="token builtin class-name">.</span>  <span class="token operator">|</span>
+<span class="token operator">|</span>        <span class="token builtin class-name">.</span> .O +   <span class="token operator">|</span>
+<span class="token operator">|</span>       <span class="token builtin class-name">.</span> *. *    <span class="token operator">|</span>
+<span class="token operator">|</span>        S <span class="token operator">=</span>+     <span class="token operator">|</span>
+<span class="token operator">|</span>    <span class="token builtin class-name">.</span>    <span class="token operator">=</span><span class="token punctuation">..</span>.    <span class="token operator">|</span>
+<span class="token operator">|</span>    .oo <span class="token operator">=</span>+o+     <span class="token operator">|</span>
+<span class="token operator">|</span>     <span class="token operator">==</span>o+B*o.    <span class="token operator">|</span>
+<span class="token operator">|</span>    oo.<span class="token operator">=</span>EXO.     <span class="token operator">|</span>
++----<span class="token punctuation">[</span>SHA256<span class="token punctuation">]</span>-----+
+
+</code></pre>
 
 <p>密钥对生成后默认的位置是用户文件。以 windows 为例：密钥对文件在 C:\Users\用户名里，其中 Users 可能因为系统原因显示的是用户。这个文件夹里会有一个.ssh 的目录，这个里面就是我们的密钥对。</p>
 <p>其中 id_rsa 是私钥，id_rsa.pub 是公钥。</p>
@@ -379,7 +425,11 @@
 </code></pre>
 <h4 id="配置部署信息"><a href="#配置部署信息" class="headerlink" title="配置部署信息"></a>配置部署信息</h4><p>在配置之前我们要解释一个概念，在blog根目录里的<code>_config.yml</code>文件称为<strong>站点配置文件</strong>，之后我们对博客配置的修改都是通过此文件来进行的</p>
 <p>Hexo与Github关联起来</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: 你的地址</span><br><span class="line">  branch: master</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre class="language-bash" data-language="bash"><code class="language-bash">deploy:
+  type: <span class="token function">git</span>
+  repo: 你的地址
+  branch: master
+</code></pre>
 
 
                 
@@ -571,6 +621,9 @@
 <!-- 代码块功能依赖 -->
 <script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
 
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
 
 
 <!-- 代码语言 -->
@@ -953,6 +1006,14 @@ $(function () {
     
 
     <!-- 鼠标星星特效 -->
+     
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/libs/others/star.js"><\/script>');
+            }
+        </script>
     
 
      
@@ -986,6 +1047,34 @@ $(function () {
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
     
 
+    
+        <script src="//code.tidio.co/wcv1qigfmnvo0kqjh0jgjbkowlmndofw.js"></script>
+        <script>
+            $(document).ready(function () {
+                setInterval(change_Tidio, 50);
+                function change_Tidio() {
+                    var tidio=$("#tidio-chat iframe");
+                    if(tidio.css("display")=="block"&& $(window).width()>977 ){
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" &&$(window).width()>977)>0? "-40px" : ($("div.toc-title").length&&$(window).width()>977)>0?"85px":"20px";
+                        document.getElementById("tidio-chat-iframe").style.right="-15px";
+                        document.getElementById("tidio-chat-iframe").style.height=parseInt(tidio.css("height"))>=520?"520px":tidio.css("height");
+                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                    }
+                    else if(tidio.css("display")=="block"&&$(window).width()>601 &&$(window).width()<992 ){
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && 601< $(window).width()<992)>0? "-40px":"20px" ;
+                        document.getElementById("tidio-chat-iframe").style.right="-15px";
+                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                    }
+                    else if(tidio.css("display")=="block"&&$(window).width()<601 && parseInt(tidio.css("height"))<230){
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && $(window).width()<601)>0? "-10px":"45px" ;
+                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                    }
+                    if( tidio.css("display")=="block"&&$(window).width()<601 && parseInt(tidio.css("height"))>=230){
+                        document.getElementById("tidio-chat-iframe").style.zIndex="998";
+                    }
+                }
+            });
+        </script>
     
 
     

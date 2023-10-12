@@ -8,7 +8,7 @@
     <meta name="description" content="2023-10-9–2：45
 不知道有什么意义 但把聊天记录翻了一遍 觉得 似乎当时是我心急了 如果慢慢来 是不是不会仓促的开始 又仓促的结束
 ICT作业在g端口无法添加ip 需进入vlan添加 在新建vlan后 使用命令
-1[SW2]in">
+[SW2]int">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -291,6 +291,9 @@ ICT作业在g端口无法添加ip 需进入vlan添加 在新建vlan后 使用命
         <hr class="clearfix">
 
         
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
 
         
 
@@ -299,14 +302,15 @@ ICT作业在g端口无法添加ip 需进入vlan添加 在新建vlan后 使用命
                 <h1 id="2023-10-9"><a href="#2023-10-9" class="headerlink" title="2023-10-9"></a>2023-10-9</h1><p>–2：45</p>
 <p>不知道有什么意义 但把聊天记录翻了一遍 觉得 似乎当时是我心急了 如果慢慢来 是不是不会仓促的开始 又仓促的结束</p>
 <h2 id="ICT作业"><a href="#ICT作业" class="headerlink" title="ICT作业"></a>ICT作业</h2><p>在g端口无法添加ip 需进入vlan添加 在新建vlan后 使用命令</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[SW2]inter vlan 10</span><br></pre></td></tr></table></figure>
+<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>SW2<span class="token punctuation">]</span>inter vlan <span class="token number">10</span></code></pre>
 
 <p>但在添加ip时</p>
 <p>报错</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[SW2-Vlanif10]ip add <span class="number">10.1</span><span class="number">.10</span><span class="number">.0</span> <span class="number">24</span></span><br><span class="line">Error: The specified IP address is invalid.</span><br></pre></td></tr></table></figure>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token punctuation">[</span><span class="token constant">SW2</span><span class="token operator">-</span><span class="token class-name">Vlanif10</span><span class="token punctuation">]</span>ip add <span class="token number">10.1</span><span class="token number">.10</span><span class="token number">.0</span> <span class="token number">24</span>
+<span class="token class-name">Error</span><span class="token operator">:</span> <span class="token class-name">The</span> specified <span class="token constant">IP</span> address is invalid<span class="token punctuation">.</span></code></pre>
 
 <p>将添加的ip换为</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[SW2-Vlanif10]ip add 10.1.10.1 24</span><br></pre></td></tr></table></figure>
+<pre class="language-none"><code class="language-none">[SW2-Vlanif10]ip add 10.1.10.1 24</code></pre>
 
 <p>成功</p>
 <p>最后似乎是配置完了 但相同vlan下dhcp到的ip居然是一样的 估计是有什么问题</p>
@@ -520,6 +524,9 @@ ICT作业在g端口无法添加ip 需进入vlan添加 在新建vlan后 使用命
 <!-- 代码块功能依赖 -->
 <script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
 
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
 
 
 <!-- 代码语言 -->
@@ -902,6 +909,14 @@ $(function () {
     
 
     <!-- 鼠标星星特效 -->
+     
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/libs/others/star.js"><\/script>');
+            }
+        </script>
     
 
      
@@ -935,6 +950,34 @@ $(function () {
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
     
 
+    
+        <script src="//code.tidio.co/wcv1qigfmnvo0kqjh0jgjbkowlmndofw.js"></script>
+        <script>
+            $(document).ready(function () {
+                setInterval(change_Tidio, 50);
+                function change_Tidio() {
+                    var tidio=$("#tidio-chat iframe");
+                    if(tidio.css("display")=="block"&& $(window).width()>977 ){
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" &&$(window).width()>977)>0? "-40px" : ($("div.toc-title").length&&$(window).width()>977)>0?"85px":"20px";
+                        document.getElementById("tidio-chat-iframe").style.right="-15px";
+                        document.getElementById("tidio-chat-iframe").style.height=parseInt(tidio.css("height"))>=520?"520px":tidio.css("height");
+                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                    }
+                    else if(tidio.css("display")=="block"&&$(window).width()>601 &&$(window).width()<992 ){
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && 601< $(window).width()<992)>0? "-40px":"20px" ;
+                        document.getElementById("tidio-chat-iframe").style.right="-15px";
+                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                    }
+                    else if(tidio.css("display")=="block"&&$(window).width()<601 && parseInt(tidio.css("height"))<230){
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && $(window).width()<601)>0? "-10px":"45px" ;
+                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                    }
+                    if( tidio.css("display")=="block"&&$(window).width()<601 && parseInt(tidio.css("height"))>=230){
+                        document.getElementById("tidio-chat-iframe").style.zIndex="998";
+                    }
+                }
+            });
+        </script>
     
 
     
