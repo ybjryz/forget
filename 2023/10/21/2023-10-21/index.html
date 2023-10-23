@@ -332,11 +332,13 @@ int fun()
 <p>hint的提示</p>
 <p>为了在绕过strcmp的同时覆盖flag的值可以使用\0截断</p>
 <p>先跑个本地测试</p>
-<p><img src="/2023-10-21/image-20231023015045816.png" alt="image-20231023015045816"></p>
+<img src="/2023/10/21/2023-10-21/image-20231023015045816.png" class="" title="image-20231023015045816">
+
 <p>一番思考过后 本地没有意义 内存地址不同</p>
 <p>继续分析ida</p>
 <p>查看</p>
-<p><img src="/2023-10-21/image-20231023020259859.png" alt="image-20231023020259859"></p>
+<img src="/2023/10/21/2023-10-21/image-20231023020259859.png" class="" title="image-20231023020259859">
+
 <p>s1的地址 （-30）- （-21） （16进制）</p>
 <p>s2的地址  （-20 ）-（-5 ）</p>
 <p>s3			    （-4）-0</p>
@@ -349,12 +351,14 @@ p<span class="token punctuation">.</span>sendline<span class="token punctuation"
 p<span class="token punctuation">.</span>interactive<span class="token punctuation">(</span><span class="token punctuation">)</span>
 </code></pre>
 
-<p><img src="/2023-10-21/image-20231023024258231.png" alt="image-20231023024258231"></p>
+<img src="/2023/10/21/2023-10-21/image-20231023024258231.png" class="" title="image-20231023024258231">
+
 <p>本地测试的结果是 先用15个字符填充s1  再任意一个补掉s1的最后一个字符 然后就是s2 </p>
 <p>难点在于如何输入’\0’</p>
 <p>其实不用输入 在构造时加入就行</p>
 <p>为了验证前面的猜想 我们将字母换成15个A尝试一下</p>
-<p><img src="/2023-10-21/image-20231023024539711.png" alt="image-20231023024539711"></p>
+<img src="/2023/10/21/2023-10-21/image-20231023024539711.png" class="" title="image-20231023024539711">
+
 <p>那么</p>
 <pre class="language-python" data-language="python"><code class="language-python">payload<span class="token operator">=</span><span class="token string">'A'</span><span class="token operator">*</span><span class="token number">15</span><span class="token operator">+</span><span class="token string">'0'</span><span class="token operator">+</span><span class="token string">'A'</span><span class="token operator">*</span><span class="token number">15</span><span class="token operator">+</span><span class="token string">'\0'</span><span class="token operator">+</span><span class="token string">'B'</span><span class="token operator">*</span><span class="token number">12</span><span class="token operator">+</span>p64<span class="token punctuation">(</span><span class="token number">0x0000</span><span class="token punctuation">)</span><span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token string">"iso-8859-1"</span><span class="token punctuation">)</span></code></pre>
 
@@ -369,17 +373,22 @@ p<span class="token punctuation">.</span>interactive<span class="token punctuati
 </code></pre>
 
 <p>kali好像环境没配对</p>
-<p><img src="/2023-10-21/image-20231023025510260.png" alt="image-20231023025510260"></p>
+<img src="/2023/10/21/2023-10-21/image-20231023025510260.png" class="" title="image-20231023025510260">
+
 <p>拖进ubuntu一样的报错</p>
 <p>最后检查发现是注释的问题 python中&#x2F;&#x2F;不是注释</p>
-<p><img src="/2023-10-21/image-20231023030709171.png" alt="image-20231023030709171"></p>
+<img src="/2023/10/21/2023-10-21/image-20231023030709171.png" class="" title="image-20231023030709171">
+
 <p>一样奇怪的是 连接不上 我以为是校园网的问题挂了vpn</p>
 <p>好的 换了同学的宽带就解决了</p>
-<p><img src="/2023-10-21/image-20231023033258587.png" alt="image-20231023033258587"></p>
-<h2 id="misc"><a href="#misc" class="headerlink" title="misc"></a>misc</h2><h3 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h3><p><img src="/2023-10-21/image-20231023043724187.png" alt="image-20231023043724187"></p>
+<img src="/2023/10/21/2023-10-21/image-20231023033258587.png" class="" title="image-20231023033258587">
+
+<h2 id="misc"><a href="#misc" class="headerlink" title="misc"></a>misc</h2><h3 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h3><img src="/2023/10/21/2023-10-21/image-20231023043724187.png" class="" title="image-20231023043724187">
+
 <h3 id="cancanneed日志"><a href="#cancanneed日志" class="headerlink" title="cancanneed日志"></a>cancanneed日志</h3><p>url解码后的结果</p>
 <p>解码姿势比较丑陋 拖进burp</p>
-<p><img src="/2023-10-21/image-20231023144408556.png" alt="image-20231023144408556"></p>
+<img src="/2023/10/21/2023-10-21/image-20231023144408556.png" class="" title="image-20231023144408556">
+
 <p>是一条select语句</p>
 <p>报文长度527对应false 519对应true </p>
 <p>从而算出最后的字符对应的ascii码</p>
@@ -391,13 +400,16 @@ p<span class="token punctuation">.</span>interactive<span class="token punctuati
 <p>得到flag </p>
 <p>0xFA{h@cked_wi7h_sqli}</p>
 <h3 id="ezpy"><a href="#ezpy" class="headerlink" title="ezpy"></a>ezpy</h3><p>换成utf-8编码就可</p>
-<p><img src="/2023-10-21/image-20231023145033497.png" alt="image-20231023145033497"></p>
+<img src="/2023/10/21/2023-10-21/image-20231023145033497.png" class="" title="image-20231023145033497">
+
 <p>0xFA{yyz，How can | live without you？！？！！}</p>
 <h3 id="快来签到吧"><a href="#快来签到吧" class="headerlink" title="快来签到吧"></a>快来签到吧</h3><p>！</p>
-<h2 id="WEB"><a href="#WEB" class="headerlink" title="WEB"></a>WEB</h2><h3 id="ezupload"><a href="#ezupload" class="headerlink" title="ezupload"></a>ezupload</h3><p><img src="/2023-10-21/image-20231023145218677.png" alt="image-20231023145218677"></p>
+<h2 id="WEB"><a href="#WEB" class="headerlink" title="WEB"></a>WEB</h2><h3 id="ezupload"><a href="#ezupload" class="headerlink" title="ezupload"></a>ezupload</h3><img src="/2023/10/21/2023-10-21/image-20231023145218677.png" class="" title="image-20231023145218677">
+
 <p>可以看到system()高危函数</p>
 <p>抓包</p>
-<p><img src="/2023-10-21/image-20231023145522669.png" alt="image-20231023145522669"></p>
+<img src="/2023/10/21/2023-10-21/image-20231023145522669.png" class="" title="image-20231023145522669">
+
 <pre class="language-php" data-language="php"><code class="language-php"><span class="token keyword">function</span> <span class="token function-definition function">SaveFile</span><span class="token punctuation">(</span><span class="token variable">$tmpname</span><span class="token punctuation">,</span> <span class="token variable">$filename</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
     <span class="token variable">$filepath</span> <span class="token operator">=</span>  <span class="token string single-quoted-string">'/tmp/uploads/'</span><span class="token operator">.</span><span class="token variable">$filename</span><span class="token punctuation">;</span>
     <span class="token function">move_uploaded_file</span><span class="token punctuation">(</span><span class="token variable">$tmpname</span><span class="token punctuation">,</span> <span class="token variable">$filepath</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -406,18 +418,24 @@ p<span class="token punctuation">.</span>interactive<span class="token punctuati
 
 <p>system(): 执行系统命令，并将执行结果输出，只输出正确的结果，错误结果不输出。</p>
 <p>用分号将语句结束 输入任意想执行的命令</p>
-<p><img src="/2023-10-21/image-20231023150647264.png" alt="image-20231023150647264"></p>
-<p><img src="/2023-10-21/image-20231023150952794.png" alt="image-20231023150952794"></p>
-<p><img src="/2023-10-21/image-20231023151124277.png" alt="image-20231023151124277"></p>
+<img src="/2023/10/21/2023-10-21/image-20231023150647264.png" class="" title="image-20231023150647264">
+
+<img src="/2023/10/21/2023-10-21/image-20231023150952794.png" class="" title="image-20231023150952794">
+
+<img src="/2023/10/21/2023-10-21/image-20231023151124277.png" class="" title="image-20231023151124277">
+
 <p>env无</p>
 <p>ls -l  &#x2F;爆根目录无回显 应该是权限不够</p>
 <p>那就cd.. 来找吧</p>
-<p><img src="/2023-10-21/image-20231023151414313.png" alt="image-20231023151414313"></p>
+<img src="/2023/10/21/2023-10-21/image-20231023151414313.png" class="" title="image-20231023151414313">
+
 <p>找到flag的位置</p>
-<p><img src="/2023-10-21/image-20231023151445473.png" alt="image-20231023151445473"></p>
+<img src="/2023/10/21/2023-10-21/image-20231023151445473.png" class="" title="image-20231023151445473">
+
 <p>得到flag</p>
 <p>0xFA{46422626-27d3-4020-966e-7fd2e7ea4858}</p>
-<h3 id="ezgo-x"><a href="#ezgo-x" class="headerlink" title="ezgo(x)"></a>ezgo(x)</h3><p><img src="/2023-10-21/image-20231023155007999.png" alt="image-20231023155007999"></p>
+<h3 id="ezgo-x"><a href="#ezgo-x" class="headerlink" title="ezgo(x)"></a>ezgo(x)</h3><img src="/2023/10/21/2023-10-21/image-20231023155007999.png" class="" title="image-20231023155007999">
+
 <p>关键函数</p>
 <pre class="language-go" data-language="go"><code class="language-go">
 <span class="token keyword">type</span> Dalao <span class="token keyword">struct</span> <span class="token punctuation">&#123;</span>
@@ -450,9 +468,11 @@ p<span class="token punctuation">.</span>interactive<span class="token punctuati
 <p>所以name要显示命令的输出结果 调用实例的exec函数</p>
 <pre class="language-go" data-language="go"><code class="language-go"><span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span>Exec<span class="token punctuation">.</span> <span class="token string">"ls"</span> <span class="token string">"-l"</span><span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span></code></pre>
 
-<p><img src="/2023-10-21/image-20231023180114263.png" alt="image-20231023180114263"></p>
-<p><img src="/2023-10-21/image-20231023180143671.png" alt="环境变量里找到flag"></p>
-<h2 id="Crypto"><a href="#Crypto" class="headerlink" title="Crypto"></a>Crypto</h2><h3 id="RSA加密"><a href="#RSA加密" class="headerlink" title="RSA加密"></a>RSA加密</h3><h4 id=""><a href="#" class="headerlink" title=""></a><img src="/2023-10-21/image-20231023163710684.png" alt="image-20231023163710684"></h4><p>有好多数学的知识 </p>
+<img src="/2023/10/21/2023-10-21/image-20231023180114263.png" class="" title="image-20231023180114263">
+
+<img src="/2023/10/21/2023-10-21/image-20231023180143671.png" class="" title="环境变量里找到flag">
+
+<h2 id="Crypto"><a href="#Crypto" class="headerlink" title="Crypto"></a>Crypto</h2><h3 id="RSA加密"><a href="#RSA加密" class="headerlink" title="RSA加密"></a>RSA加密</h3><h4 id=""><a href="#" class="headerlink" title=""></a><img src="/2023/10/21/2023-10-21/image-20231023163710684.png" class="" title="image-20231023163710684"></h4><p>有好多数学的知识 </p>
 <p>简单来说可以直接看题目的算法</p>
 <p>这是加密过程</p>
 <pre class="language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> flag <span class="token keyword">import</span> flag
@@ -504,7 +524,8 @@ cipher =  2695691642622143259272428057110458545088443431178611153468495214593684
 <p>语法</p>
 <pre class="language-none"><code class="language-none">yafu-x64.exe factor(data)</code></pre>
 
-<p><img src="/2023-10-21/image-20231023165401794.png" alt="image-20231023165401794"></p>
+<img src="/2023/10/21/2023-10-21/image-20231023165401794.png" class="" title="image-20231023165401794">
+
 <p><a name="解密算法"></a></p>
 <pre class="language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> libnum
 <span class="token keyword">from</span> Crypto<span class="token punctuation">.</span>Util<span class="token punctuation">.</span>number <span class="token keyword">import</span> long_to_bytes
@@ -534,7 +555,8 @@ c2 &#x3D;  677901108470944400049614381994132340016077067227750276020069346903270
 
 
 
-<p><img src="/2023-10-21/image-20231023171404921.png" alt="原理"></p>
+<img src="/2023/10/21/2023-10-21/image-20231023171404921.png" class="" title="原理">
+
 <p>解密代码</p>
 <pre class="language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> libnum
 <span class="token keyword">from</span> Crypto<span class="token punctuation">.</span>Util<span class="token punctuation">.</span>number <span class="token keyword">import</span> long_to_bytes
@@ -639,12 +661,15 @@ m <span class="token operator">=</span> <span class="token builtin">pow</span><s
 <span class="token keyword">print</span><span class="token punctuation">(</span>long_to_bytes<span class="token punctuation">(</span>m<span class="token punctuation">)</span><span class="token punctuation">)</span>
 </code></pre>
 
-<h2 id="RE"><a href="#RE" class="headerlink" title="RE"></a>RE</h2><h3 id="babyre"><a href="#babyre" class="headerlink" title="babyre"></a>babyre</h3><p><img src="/2023-10-21/image-20231023180358727.png" alt="image-20231023180358727"></p>
+<h2 id="RE"><a href="#RE" class="headerlink" title="RE"></a>RE</h2><h3 id="babyre"><a href="#babyre" class="headerlink" title="babyre"></a>babyre</h3><img src="/2023/10/21/2023-10-21/image-20231023180358727.png" class="" title="image-20231023180358727">
+
 <p>提示两部分组成</p>
 <p>看下字符串 找到part1</p>
-<p><img src="/2023-10-21/image-20231023180520336.png" alt="image-20231023180520336"></p>
+<img src="/2023/10/21/2023-10-21/image-20231023180520336.png" class="" title="image-20231023180520336">
+
 <p>分析源代码 写出对应函数</p>
-<p><img src="/2023-10-21/image-20231023180912935.png" alt="image-20231023180912935"></p>
+<img src="/2023/10/21/2023-10-21/image-20231023180912935.png" class="" title="image-20231023180912935">
+
 <p>得到part2</p>
 <p>合并得到flag</p>
 
