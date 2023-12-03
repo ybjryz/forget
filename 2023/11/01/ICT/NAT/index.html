@@ -1,0 +1,484 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>NAT | ryz</title><meta name="keywords" content="ICT"><meta name="author" content="ryz"><meta name="copyright" content="ryz"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#18171d"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="NAT"><meta name="application-name" content="NAT"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#18171d"><meta property="og:type" content="article"><meta property="og:title" content="NAT"><meta property="og:url" content="http://ybjryz.github.io/2023/11/01/ICT/NAT/index.html"><meta property="og:site_name" content="ryz"><meta property="og:description" content="NAT1 NAT概述1.1 NAT引入NAT (Network Address Translation，网络地址转换） 当前的Internet主要基于IPv4协议,用户访问Internet的前提条件是拥有属于自己的IPv4地址。 IPv4地址共32位，理论上支持约40亿的地址空间，但远远不够捏 为了"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="http://ybjryz.github.io/img/tx.png"><meta property="article:author" content="ryz"><meta property="article:tag"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="http://ybjryz.github.io/img/tx.png"><meta name="description" content="NAT1 NAT概述1.1 NAT引入NAT (Network Address Translation，网络地址转换） 当前的Internet主要基于IPv4协议,用户访问Internet的前提条件是拥有属于自己的IPv4地址。 IPv4地址共32位，理论上支持约40亿的地址空间，但远远不够捏 为了"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="http://ybjryz.github.io/2023/11/01/ICT/NAT/"><link rel="preconnect" href="//cdn.cbd.int"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.20/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: {"enable":true,"img":"https://upload-bbs.miyoushe.com/upload/2023/09/03/125766904/ee23df8517f3c3e3efc4145658269c06_5714860933110284659.png"},
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"local","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://xx.xx/"},
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎肥来！"},
+  LA51: undefined,
+  greetingBox: undefined,
+  twikooEnvId: '',
+  commentBarrageConfig:{"enable":true,"maxBarrage":1,"barrageTime":4000,"accessToken":"","mailMd5":""},
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: true,
+  mainTone: undefined,
+  authorStatus: undefined,
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"prismjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: ryz","link":"链接: ","source":"来源: ryz","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: 'ryz',
+  title: 'NAT',
+  postAI: '',
+  pageFillDescription: 'NAT, 1 NAT概述, 1.1 NAT引入, 1.2 杂谈, 2. NAT组网和常用术语, 2.1 基础NAT原理, 3. NAT配置, 4.NAPT, 4.1 NAT的不足, 4.2 NAPT原理, 4.2.2 详细过程, 4.3 NAPT配置, 5.Easy IP(接口转换), 5.1 特点, 5.2 配置, 6.NAT server(端口映射), 6.1 原理, 6.2 配置, 6.2.1 TCP传输协议观察, 6.3 FOFA搜索指纹信息, 7.静态NAT, 8.NAT-ALG（增强版NAT–H3C）概述引入网络地址转换当前的主要基于协议用户访问的前提条件是拥有属于自己的地址地址共位理论上支持约亿的地址空间但远远不够捏为了解决地址短缺的问题提出了网络地址转换解决方案是个啥人信息人电话家族地址分为公有地址和私有地址公有地址由统一分配用于通讯私有地址可以自由分配用于私有网络内部通讯技术的主要作用是将私有地址转换成公有地址使私有网络中的主机可以通过共享少量公有地址访问私有地址范围类地址范围即类地址范围即类地址范围即插个眼等会儿下床去看那个类地址杂谈里管叫非正规寻址方案组网和常用术语用公网做私网可行但容易出现网段冲突不做私网可以发送到公网但互联网上没有关于的路由条目因此无法收到应答基础原理得有公网地址池才能做地址转换分类给哪些分地址配置关联等把云玩明白去抓个包来分析下原理配置分类仅对前个进行转换配置公网地址池在接口上配置实际没有接口配置的但接口本身会做应答把流量引到自身上来做一个地址转换可以看到应答的地址下面查看一下的出现逃杀式丢包因为这种方法的不合理性若想不丢包需要给每个主机配一个公网因此有来解决只有一个公网的情况的不足在中内部地址与外部地址存在一一对应关系即一个外部地址在同一时刻只能被分配给一个内部地址它只解决了公网和私网的通信问题并没有解决公有地址不足的问题网络地址端口转换对数据包的层和传输层信息同时进行转换可以显著提高公有地址的利用效率原理路由器靠端口来进行不同的数据区分详细过程在上图中私网主机需要访问公网的的服务在上配置地址池为地址转换过程如下产生目的地为的报文发送给缺省网关报文源地址端口为目的地址端口为收到报文后查找路由表将报文转发至出接口由于在出接口上配置了因此需要将私网地址端口转换成公网地址端口从地址池中查找第一个可用的公网地址本例中为用这个地址替换数据包的源地址并查找该公网地址的一个可用端口本例中为用这个端口替换源端口转换后的报文源地址端口为目的地址端口为同时在自己的表中添加一个表项收到报文后做相应的处理处理完报文后发送回应报文报文源地址端口为目的地址端口为收到报文发现报文的目的地址在地址池内遂检查表项找到相应表项用私网地址端口替换公网地址端口然后转发给转换后的报文源地址端口为目的地址端口为收到报文地址转换过程结束如果在这个过程中也同时要访问则可以从地址池中为其分配同一个可用公网地址但分配另一个端口并在表中添加一条相应的表项记录的私网地址端口到公网地址端口的映射提高了公网地址复用的能力配置分类仅对前个进行转换配置公网地址池在接口上配置与的区别仅在于无改写配置后不再存在原来丢包的问题接口转换常用于拨号上网地址不固定特点设备直接使用出接口的地址作为转换后的源地址不需要预先定义地址组不用预先配置地址池工作原理与普通相同是的一种特例适用于拨号接入或动态获得地址的场合配置端口映射原理配置服务协议传输协议观察觉得实验拓扑配置有些问题应该是路由条目出错了抓包一直出现一看路由条目默认下一条是修改成接下来看下服务的协议三次握手第一次获取服务不成功抓包到的结果已经建立握手信息但是握手没成功一样的问题的路由条目没写对因此修改之快速刷新但一条不对好好好是腾哥挖的坑之前在写的策略时只放行了前位可是换了结果一样有时间再看吧搜索指纹信息画画的名字静态多个公网给内网某台设备使用逻辑是映射分配独立的公网增强版用于解决应用层负荷无法进行转换的问题如等协议',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-11-02 12:15:31',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="/img/tx.png"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><a id="site-name" href="/" accesskey="h"><div class="title">ryz</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" target="_blank"><img class="post-qr-code-img" alt="微信" src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" target="_blank"><img class="post-qr-code-img" alt="支付宝" src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">音乐</div><span class="author-content-item-title">灵魂的碰撞💥</span></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item on" id="consoleCommentBarrage" onclick="anzhiyu.switchCommentBarrage()" title="热评开关"><a class="commentBarrage"><i class="anzhiyufont anzhiyu-icon-message"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="article-meta tags"><a class="article-meta__tags" href="/tags/ICT/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>ICT</span></a></span></div></div><h1 class="post-title" itemprop="name headline">NAT</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2023-11-01T05:15:13.000Z" title="发表于 2023-11-01 13:15:13">2023-11-01</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2023-11-02T04:15:31.795Z" title="更新于 2023-11-02 12:15:31">2023-11-02</time></span></div><div class="meta-secondline"><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为重庆"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>重庆</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src=""></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="http://ybjryz.github.io/2023/11/01/ICT/NAT/"><header><a href="/tags/ICT/" tabindex="-1" itemprop="url">ICT</a><h1 id="CrawlerTitle" itemprop="name headline">NAT</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">ryz</span><time itemprop="dateCreated datePublished" datetime="2023-11-01T05:15:13.000Z" title="发表于 2023-11-01 13:15:13">2023-11-01</time><time itemprop="dateCreated datePublished" datetime="2023-11-02T04:15:31.795Z" title="更新于 2023-11-02 12:15:31">2023-11-02</time></header><h1 id="NAT"><a href="#NAT" class="headerlink" title="NAT"></a>NAT</h1><h2 id="1-NAT概述"><a href="#1-NAT概述" class="headerlink" title="1 NAT概述"></a>1 NAT概述</h2><h3 id="1-1-NAT引入"><a href="#1-1-NAT引入" class="headerlink" title="1.1 NAT引入"></a>1.1 NAT引入</h3><p><strong>NAT (Network Address Translation，网络地址转换）</strong></p>
+<p>当前的Internet主要基于IPv4协议,用户访问Internet的前提条件是拥有属于自己的IPv4地址。</p>
+<p>IPv4地址共32位，理论上支持约40亿的地址空间，但远远不够捏</p>
+<p><strong>为了解决IPv4地址短缺的问题</strong>，IETF提出了<strong>NAT (Network Address Translation，网络地址转换）</strong>解决方案。</p>
+<p>IETF是个啥？Information E人 telephone family              信息E人电话家族</p>
+<p>IP地址分为**公有地址(Global Address)<strong>和</strong>私有地址(Private Address)**。</p>
+<p>公有地址由IANA 统一分配，用于 Internet通讯;</p>
+<p>私有地址可以自由分配，用于私有网络内部通讯。</p>
+<p>NAT技术的主要作用是将私有地址转换成公有地址，使私有网络中的主机可以通过共享少量公有地址访问Internet。</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/01/ICT/NAT/image-20231101132510721.png" class="" title="NAT">
+
+<p>私有地址范围:</p>
+<ul>
+<li>A类地址范围：10.0.0.0—10.255.255.255，即10.0.0.0&#x2F;8</li>
+<li>B类地址范围：172.16.0.0—172.31.255.555，即172.16.0.0&#x2F;12</li>
+<li>C类地址范围：192.168.0.0—192.168.255.255，即192.168.0.0&#x2F;16</li>
+</ul>
+<p><strong>插个眼 等会儿下床去看那个ABCDE类地址</strong></p>
+<h3 id="1-2-杂谈"><a href="#1-2-杂谈" class="headerlink" title="1.2 杂谈"></a>1.2 杂谈</h3><p>IPV6里管NAT叫非正规寻址方案</p>
+<h2 id="2-NAT组网和常用术语"><a href="#2-NAT组网和常用术语" class="headerlink" title="2. NAT组网和常用术语"></a>2. NAT组网和常用术语</h2><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/01/ICT/NAT/image-20231101133541368.png" class="" title="NAT组网和常用术语">
+
+<p>用公网ip做私网 可行 但容易出现网段冲突</p>
+<p>不做NAT 私网可以发送到公网ip   但互联网上没有关于10的路由条目 因此无法收到应答 </p>
+<h3 id="2-1-基础NAT原理"><a href="#2-1-基础NAT原理" class="headerlink" title="2.1 基础NAT原理"></a>2.1 基础NAT原理</h3><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/01/ICT/NAT/image-20231101133919620.png" class="" title="image-20231101133919620">
+
+<p>1、得有公网地址池 才能做NAT地址转换</p>
+<p>2、ACL–分类 给哪些ip分地址</p>
+<p>3、配置NAT关联</p>
+<p>等把云玩明白 去抓个包来分析下原理</p>
+<h2 id="3-NAT配置"><a href="#3-NAT配置" class="headerlink" title="3. NAT配置"></a>3. NAT配置</h2><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/01/ICT/NAT/image-20231101162911171.png" class="" title="拓扑">
+
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token punctuation">[</span><span class="token constant">R2</span><span class="token operator">-</span>acl<span class="token operator">-</span>basic<span class="token operator">-</span><span class="token number">2000</span><span class="token punctuation">]</span>rule permit source <span class="token number">10.1</span><span class="token number">.2</span><span class="token number">.0</span> <span class="token number">0.0</span><span class="token number">.0</span><span class="token number">.127</span> 			#acl分类 仅对前<span class="token number">128</span>个ip进行转换
+<span class="token punctuation">[</span><span class="token constant">R2</span><span class="token operator">-</span>acl<span class="token operator">-</span>basic<span class="token operator">-</span><span class="token number">2000</span><span class="token punctuation">]</span>ru deny
+<span class="token punctuation">[</span><span class="token constant">R2</span><span class="token operator">-</span>acl<span class="token operator">-</span>basic<span class="token operator">-</span><span class="token number">2000</span><span class="token punctuation">]</span>q
+<span class="token punctuation">[</span><span class="token constant">R2</span><span class="token punctuation">]</span>nat address<span class="token operator">-</span>group <span class="token number">0</span> <span class="token number">192.168</span><span class="token number">.1</span><span class="token number">.60</span> <span class="token number">192.168</span><span class="token number">.1</span><span class="token number">.61</span>					#配置<span class="token constant">NAT</span>公网地址池
+<span class="token punctuation">[</span><span class="token constant">R2</span><span class="token punctuation">]</span><span class="token keyword">int</span> g0<span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span>
+<span class="token punctuation">[</span><span class="token constant">R2</span><span class="token operator">-</span><span class="token class-name">GigabitEthernet0</span><span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span><span class="token punctuation">]</span>nat outbound <span class="token number">2000</span> address<span class="token operator">-</span>group <span class="token number">0</span> no<span class="token operator">-</span>pat   #在接口上配置<span class="token constant">NAT</span></code></pre>
+
+<p>实际 没有接口配置60的ip 但接口本身会做应答 把流量引到自身上来 做 一个nat地址转换</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/01/ICT/NAT/image-20231101165652769.png" class="" title="R2&#x2F;g0&#x2F;0&#x2F;0抓包">
+
+<p>可以看到应答的mac地址 下面查看一下R2&#x2F;g0&#x2F;0&#x2F;0的mac</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/01/ICT/NAT/image-20231101165841327.png" class="" title="image-20231101165841327">
+
+
+
+<p>出现2逃3杀式丢包</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/01/ICT/NAT/image-20231101164929936.png" class="" title="image-20231101164929936">
+
+<p>因为这种方法的不合理性</p>
+<p>若想不丢包 需要给每个主机配一个公网ip</p>
+<p>因此有NAPT 来解决只有一个公网ip的情况</p>
+<h2 id="4-NAPT"><a href="#4-NAPT" class="headerlink" title="4.NAPT"></a>4.NAPT</h2><h3 id="4-1-NAT的不足"><a href="#4-1-NAT的不足" class="headerlink" title="4.1 NAT的不足"></a>4.1 NAT的不足</h3><p>在Basic NAT中，内部地址与外部地址存在<strong>一一对应关系</strong></p>
+<p>即一个外部地址在同一时刻只能被分配给一个内部地址。</p>
+<p>它只解决了公网和私网的通信问题，并没有解决公有地址不足的问题。<br>NAPT (Network Address Port Translation，网络地址端口转换）对数据包的IP层和传输层信息同时进行转换，可以显著提高公有IP地址的利用效率。</p>
+<h3 id="4-2-NAPT原理"><a href="#4-2-NAPT原理" class="headerlink" title="4.2 NAPT原理"></a>4.2 NAPT原理</h3><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/01/ICT/NAT/image-20231101171504990.png" class="" title="NAPT原理图">
+
+<p>路由器靠<strong>端口</strong>来进行不同ip的数据区分</p>
+<h4 id="4-2-2-详细过程"><a href="#4-2-2-详细过程" class="headerlink" title="4.2.2 详细过程"></a>4.2.2 详细过程</h4><p>在上图中，私网主机HostA (10.0.0.1）需要访问公网的Server (198.76.29.4）的 Www服务。在RTA上配置NAPT，地址池为198.76.28.11～198.76.28.20，地址转换过程如下:</p>
+<ol>
+<li>HostA 产生目的地为Server的IP报文，发送给缺省网关RTA，报文源地址&#x2F;端口为10.0.0.1:1024，目的地址&#x2F;端口为198.76.29.4:80;</li>
+<li>RTA收到IP报文后，查找路由表，将IP报文转发至出接口，由于在出接口上配置了NAPT，因此RTA需要将私网地址&#x2F;端口10.0.0.1:1024转换成公网地址&#x2F;端口;</li>
+<li>RTA从地址池中查找第一个可用的公网地址，本例中为198.76.28.11，用这个地址替换数据包的源地址;并查找该公网地址的一个可用端口，本例中为2001，用这个端口替换源端口。转换后的报文源地址&#x2F;端口为198.76.28.11:2001，目的地址&#x2F;端口为198.76.29.4:80。同时，RTA在自己的NAT表(NAT Table）中添加一个表项(10.0.0.1:1024→&gt;198.76.28.11:2001),</li>
+<li>Server 收到IP报文后做相应的处理;</li>
+<li>Server处理完报文后，发送回应报文，报文源地址&#x2F;端口为198.76.29.4:80，目的地址&#x2F;端口为198.76.28.11:2001;</li>
+<li>RTA 收到IP报文，发现报文的目的地址在NAT地址池内，遂检查NAT表项，找到相应表项(10.0.0.1:1024→198.76.28.11:2001)，用私网地址&#x2F;端口10.0.0.1:1024替换公网地址&#x2F;端口198.76.28.11:2001，然后转发给HostA。转换后的报文源地址&#x2F;端口为198.76.29.4:80，目的地址&#x2F;端口为10.0.0.1:1024;</li>
+<li>HostA 收到IP报文，地址转换过程结束。</li>
+<li>如果在这个过程中，HostB也同时要访问Server，则 RTA可以从地址池中为其分配同一个可用公网地址198.76.28.11，但分配另一个端口3001，并在NAT表中添加一条相应的表项(10.0.0.2:1024→198.76.28.11:3001),记录HostB的私网地址&#x2F;端口到公网地址&#x2F;端口的映射。</li>
+</ol>
+<p>提高了公网地址复用的能力</p>
+<h3 id="4-3-NAPT配置"><a href="#4-3-NAPT配置" class="headerlink" title="4.3 NAPT配置"></a>4.3 NAPT配置</h3><pre class="language-java" data-language="java"><code class="language-java"><span class="token punctuation">[</span><span class="token constant">R2</span><span class="token operator">-</span>acl<span class="token operator">-</span>basic<span class="token operator">-</span><span class="token number">2000</span><span class="token punctuation">]</span>rule permit source <span class="token number">10.1</span><span class="token number">.2</span><span class="token number">.0</span> <span class="token number">0.0</span><span class="token number">.0</span><span class="token number">.127</span> 			#acl分类 仅对前<span class="token number">128</span>个ip进行转换
+<span class="token punctuation">[</span><span class="token constant">R2</span><span class="token operator">-</span>acl<span class="token operator">-</span>basic<span class="token operator">-</span><span class="token number">2000</span><span class="token punctuation">]</span>ru deny
+<span class="token punctuation">[</span><span class="token constant">R2</span><span class="token operator">-</span>acl<span class="token operator">-</span>basic<span class="token operator">-</span><span class="token number">2000</span><span class="token punctuation">]</span>q
+<span class="token punctuation">[</span><span class="token constant">R2</span><span class="token punctuation">]</span>nat address<span class="token operator">-</span>group <span class="token number">0</span> <span class="token number">192.168</span><span class="token number">.1</span><span class="token number">.60</span> <span class="token number">192.168</span><span class="token number">.1</span><span class="token number">.61</span>					#配置<span class="token constant">NAT</span>公网地址池
+<span class="token punctuation">[</span><span class="token constant">R2</span><span class="token punctuation">]</span><span class="token keyword">int</span> g0<span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span>
+<span class="token punctuation">[</span><span class="token constant">R2</span><span class="token operator">-</span><span class="token class-name">GigabitEthernet0</span><span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span><span class="token punctuation">]</span>nat outbound <span class="token number">2000</span> address<span class="token operator">-</span>group <span class="token number">0</span>    		#在接口上配置<span class="token constant">NAPT</span> 与<span class="token constant">NAT</span>的区别仅在于无no<span class="token operator">-</span>pat</code></pre>
+
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/01/ICT/NAT/image-20231101172718139.png" class="" title="NAPT">
+
+<p>改写配置后 不再存在原来丢包的问题</p>
+<h2 id="5-Easy-IP-接口转换"><a href="#5-Easy-IP-接口转换" class="headerlink" title="5.Easy IP(接口转换)"></a>5.Easy IP(接口转换)</h2><p>常用于拨号上网（IP地址不固定）</p>
+<h3 id="5-1-特点"><a href="#5-1-特点" class="headerlink" title="5.1 特点"></a>5.1 特点</h3><ol>
+<li>NAT设备直接使用<strong>出接口的IP地址</strong>作为转换后的源地址–不需要预先定义ip地址组</li>
+<li>不用预先配置地址池</li>
+<li>工作原理与普通NAPT相同，是NAPT的一种特例</li>
+<li>适用于PPPOE拨号接入Internet或动态获得IP地址的场合</li>
+</ol>
+<h3 id="5-2-配置"><a href="#5-2-配置" class="headerlink" title="5.2 配置"></a>5.2 配置</h3><pre class="language-java" data-language="java"><code class="language-java"><span class="token punctuation">[</span><span class="token constant">R2</span><span class="token punctuation">]</span>acl <span class="token number">2000</span> 
+<span class="token punctuation">[</span><span class="token constant">R2</span><span class="token operator">-</span>acl<span class="token operator">-</span>basic<span class="token operator">-</span><span class="token number">2000</span><span class="token punctuation">]</span>rule  permit 
+<span class="token punctuation">[</span><span class="token constant">R2</span><span class="token punctuation">]</span>inter g0<span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span>
+<span class="token punctuation">[</span><span class="token constant">R2</span><span class="token operator">-</span><span class="token class-name">GigabitEthernet0</span><span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span><span class="token punctuation">]</span>nat outbound <span class="token number">2000</span> </code></pre>
+
+<h2 id="6-NAT-server-端口映射"><a href="#6-NAT-server-端口映射" class="headerlink" title="6.NAT server(端口映射)"></a>6.NAT server(端口映射)</h2><h3 id="6-1-原理"><a href="#6-1-原理" class="headerlink" title="6.1 原理"></a>6.1 原理</h3><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/01/ICT/NAT/image-20231101174936817.png" class="" title="NAT Server">
+
+
+
+<h3 id="6-2-配置"><a href="#6-2-配置" class="headerlink" title="6.2 配置"></a>6.2 配置</h3><p>http服务–tcp协议</p>
+<p>​	<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/01/ICT/NAT/image-20231102014207270.png" class="" title="TOPO"></p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token punctuation">[</span><span class="token constant">R1</span><span class="token operator">-</span><span class="token class-name">GigabitEthernet0</span><span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">]</span>nat server protocol tcp global  current<span class="token operator">-</span><span class="token keyword">interface</span> <span class="token number">8003</span> inside <span class="token number">10.1</span><span class="token number">.3</span><span class="token number">.250</span> <span class="token number">80</span> </code></pre>
+
+
+
+<h3 id="6-2-1-TCP传输协议观察"><a href="#6-2-1-TCP传输协议观察" class="headerlink" title="6.2.1 TCP传输协议观察"></a>6.2.1 TCP传输协议观察</h3><p>觉得实验拓扑配置有些问题 应该是路由条目出错了 抓包一直出现<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/01/ICT/NAT/image-20231102021957516.png" class="" title="image-20231102021957516"></p>
+<p>一看路由条目 </p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token punctuation">[</span><span class="token constant">R2</span><span class="token punctuation">]</span>display ip routing<span class="token operator">-</span>table </code></pre>
+
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/01/ICT/NAT/image-20231102022043933.png" class="" title="image-20231102022043933">
+
+<p>默认下一条是192.168.1.1 修改成192.168.1.50</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token punctuation">[</span><span class="token constant">R2</span><span class="token punctuation">]</span>undo ip route<span class="token operator">-</span><span class="token keyword">static</span> <span class="token number">0.0</span><span class="token number">.0</span><span class="token number">.0</span> <span class="token number">0</span> <span class="token number">192.168</span><span class="token number">.1</span><span class="token number">.1</span>
+<span class="token punctuation">[</span><span class="token constant">R2</span><span class="token punctuation">]</span>ip route<span class="token operator">-</span><span class="token keyword">static</span> <span class="token number">0.0</span><span class="token number">.0</span><span class="token number">.0</span> <span class="token number">0</span> <span class="token number">192.168</span><span class="token number">.1</span><span class="token number">.50</span></code></pre>
+
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/01/ICT/NAT/image-20231102022449719.png" class="" title="image-20231102022449719">
+
+<p>ok! 接下来看下http服务的tcp协议三次握手</p>
+<p>第一次获取服务不成功</p>
+<p>抓包到的结果已经建立tcp握手信息</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/01/ICT/NAT/image-20231102022732352.png" class="" title="image-20231102022732352">
+
+<p>但是握手没成功</p>
+<p>一样的问题 R1的路由条目没写对 因此修改之</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/01/ICT/NAT/image-20231102023241090.png" class="" title="TCP握手不成功">
+
+<p>快速刷新但一条不对！</p>
+<p>好好好 是腾哥挖的坑 之前在写R2的acl策略时 只放行了前128位ip</p>
+<p>可是换了ip 结果一样 有时间再看吧（1：48）</p>
+<h3 id="6-3-FOFA搜索指纹信息"><a href="#6-3-FOFA搜索指纹信息" class="headerlink" title="6.3 FOFA搜索指纹信息"></a>6.3 FOFA搜索指纹信息</h3><p>title &#x3D; ”画画的名字“&#x2F; icon_hash &#x3D; “”</p>
+<h2 id="7-静态NAT"><a href="#7-静态NAT" class="headerlink" title="7.静态NAT"></a>7.静态NAT</h2><p>多个公网ip 给内网某台设备使用</p>
+<p>逻辑是映射</p>
+<p>分配独立的公网ip</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token punctuation">[</span><span class="token constant">R1</span><span class="token operator">-</span><span class="token class-name">GigabitEthernet0</span><span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">]</span>nat <span class="token keyword">static</span> global <span class="token number">192.168</span><span class="token number">.1</span><span class="token number">.68</span> inside <span class="token number">10.1</span><span class="token number">.1</span><span class="token number">.254</span> 
+</code></pre>
+
+<h2 id="8-NAT-ALG（增强版NAT–H3C）"><a href="#8-NAT-ALG（增强版NAT–H3C）" class="headerlink" title="8.NAT-ALG（增强版NAT–H3C）"></a>8.NAT-ALG（增强版NAT–H3C）</h2><p>用于解决应用层ip负荷无法进行转换的问题</p>
+<p>如ftp等协议</p>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/tx.png" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/tx.png" title="头像" alt="头像"></a><div class="post-copyright__author_name">ryz</div><div class="post-copyright__author_desc">生活就是白云苍狗</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="http://ybjryz.github.io/2023/11/01/ICT/NAT/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('http://ybjryz.github.io/2023/11/01/ICT/NAT/')">NAT</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="http://ybjryz.github.io/2023/11/01/ICT/NAT/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=NAT&amp;url=http://ybjryz.github.io/2023/11/01/ICT/NAT/&amp;pic=" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://ybjryz.github.io" target="_blank">ryz</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/ICT/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>ICT<span class="tagsPageCount">11</span></a></div></div></div><div class="post_share"><div class="social-share" data-image="/img/tx.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/11/01/2023-11-1/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">别看世界了 看书</div></div></a></div><div class="next-post pull-right"><a href="/2023/11/02/ICT/PPP/"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">PPP</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="anzhiyufont anzhiyu-icon-thumbs-up fa-fw" style="font-size: 1.5rem; margin-right: 4px"></i><span>喜欢这篇文章的人也看了</span></div><div class="relatedPosts-list"><div><a href="/2023/11/08/ip%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" title="ip基本概念"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2023-11-08</div><div class="title">ip基本概念</div></div></a></div><div><a href="/2023/11/02/ICT/PPP/" title="PPP"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2023-11-02</div><div class="title">PPP</div></div></a></div><div><a href="/2023/11/09/ICT/%E5%8D%8E%E4%B8%BAensp%E5%91%BD%E4%BB%A4%E9%85%8D%E7%BD%AE/" title="ensp命令与部分知识点总结"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2023-11-09</div><div class="title">ensp命令与部分知识点总结</div></div></a></div><div><a href="/2023/11/10/ICT/%E6%95%B0%E9%80%9A%E5%88%B7%E9%A2%98/" title="数通刷题"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2023-11-10</div><div class="title">数通刷题</div></div></a></div><div><a href="/2023/11/18/ICT/BGP/" title="BGP"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2023-11-18</div><div class="title">BGP</div></div></a></div><div><a href="/2023/11/11/ICT/%E7%AD%96%E7%95%A5%E8%B7%AF%E7%94%B1/" title="路由策略"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2023-11-11</div><div class="title">路由策略</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/tx.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__description"></div></div></div><div class="card-widget anzhiyu-right-widget" id="card-wechat" onclick="null"><div id="flip-wrapper"><div id="flip-content"><div class="face" style="background: url(https://bu.dusays.com/2023/01/13/63c02edf44033.png) center center / 100% no-repeat"></div><div class="back face" style="background: url(https://bu.dusays.com/2023/05/13/645fa415e8694.png) center center / 100% no-repeat"></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#NAT"><span class="toc-number">1.</span> <span class="toc-text">NAT</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-NAT%E6%A6%82%E8%BF%B0"><span class="toc-number">1.1.</span> <span class="toc-text">1 NAT概述</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-NAT%E5%BC%95%E5%85%A5"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.1 NAT引入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E6%9D%82%E8%B0%88"><span class="toc-number">1.1.2.</span> <span class="toc-text">1.2 杂谈</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-NAT%E7%BB%84%E7%BD%91%E5%92%8C%E5%B8%B8%E7%94%A8%E6%9C%AF%E8%AF%AD"><span class="toc-number">1.2.</span> <span class="toc-text">2. NAT组网和常用术语</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E5%9F%BA%E7%A1%80NAT%E5%8E%9F%E7%90%86"><span class="toc-number">1.2.1.</span> <span class="toc-text">2.1 基础NAT原理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-NAT%E9%85%8D%E7%BD%AE"><span class="toc-number">1.3.</span> <span class="toc-text">3. NAT配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-NAPT"><span class="toc-number">1.4.</span> <span class="toc-text">4.NAPT</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-NAT%E7%9A%84%E4%B8%8D%E8%B6%B3"><span class="toc-number">1.4.1.</span> <span class="toc-text">4.1 NAT的不足</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-NAPT%E5%8E%9F%E7%90%86"><span class="toc-number">1.4.2.</span> <span class="toc-text">4.2 NAPT原理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-2-2-%E8%AF%A6%E7%BB%86%E8%BF%87%E7%A8%8B"><span class="toc-number">1.4.2.1.</span> <span class="toc-text">4.2.2 详细过程</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-NAPT%E9%85%8D%E7%BD%AE"><span class="toc-number">1.4.3.</span> <span class="toc-text">4.3 NAPT配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-Easy-IP-%E6%8E%A5%E5%8F%A3%E8%BD%AC%E6%8D%A2"><span class="toc-number">1.5.</span> <span class="toc-text">5.Easy IP(接口转换)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-%E7%89%B9%E7%82%B9"><span class="toc-number">1.5.1.</span> <span class="toc-text">5.1 特点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-%E9%85%8D%E7%BD%AE"><span class="toc-number">1.5.2.</span> <span class="toc-text">5.2 配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-NAT-server-%E7%AB%AF%E5%8F%A3%E6%98%A0%E5%B0%84"><span class="toc-number">1.6.</span> <span class="toc-text">6.NAT server(端口映射)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1-%E5%8E%9F%E7%90%86"><span class="toc-number">1.6.1.</span> <span class="toc-text">6.1 原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-%E9%85%8D%E7%BD%AE"><span class="toc-number">1.6.2.</span> <span class="toc-text">6.2 配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-1-TCP%E4%BC%A0%E8%BE%93%E5%8D%8F%E8%AE%AE%E8%A7%82%E5%AF%9F"><span class="toc-number">1.6.3.</span> <span class="toc-text">6.2.1 TCP传输协议观察</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-3-FOFA%E6%90%9C%E7%B4%A2%E6%8C%87%E7%BA%B9%E4%BF%A1%E6%81%AF"><span class="toc-number">1.6.4.</span> <span class="toc-text">6.3 FOFA搜索指纹信息</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E9%9D%99%E6%80%81NAT"><span class="toc-number">1.7.</span> <span class="toc-text">7.静态NAT</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-NAT-ALG%EF%BC%88%E5%A2%9E%E5%BC%BA%E7%89%88NAT%E2%80%93H3C%EF%BC%89"><span class="toc-number">1.8.</span> <span class="toc-text">8.NAT-ALG（增强版NAT–H3C）</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/12/02/%E6%95%B4%E6%9C%BA/C%E7%9B%98%E5%88%86%E5%8C%BA%E6%89%A9%E5%AE%B9/" title="无题">无题</a><time datetime="2023-12-02T01:39:09.149Z" title="发表于 2023-12-02 09:39:09">2023-12-02</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/11/30/web%E6%BC%8F%E6%B4%9E%E5%AE%9E%E9%AA%8C/web%E6%BC%8F%E6%B4%9E%E5%AE%9E%E9%AA%8C9/" title="web漏洞实验9">web漏洞实验9</a><time datetime="2023-11-30T03:14:18.000Z" title="发表于 2023-11-30 11:14:18">2023-11-30</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/11/30/web%E6%BC%8F%E6%B4%9E%E5%AE%9E%E9%AA%8C/web%E6%BC%8F%E6%B4%9E%E5%AE%9E%E9%AA%8C8/" title="web漏洞实验8">web漏洞实验8</a><time datetime="2023-11-30T02:34:18.000Z" title="发表于 2023-11-30 10:34:18">2023-11-30</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/11/30/%E4%BB%A3%E5%8A%9E/" title="代办">代办</a><time datetime="2023-11-29T18:52:57.000Z" title="发表于 2023-11-30 02:52:57">2023-11-30</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/11/28/windows%E5%AE%89%E5%8D%93%E6%A8%A1%E6%8B%9F%E5%99%A8%E4%B8%8Evmware%E5%86%B2%E7%AA%81%E7%9A%84%E9%97%AE%E9%A2%98/" title="windows安卓模拟器与vmware冲突的问题">windows安卓模拟器与vmware冲突的问题</a><time datetime="2023-11-28T15:25:45.905Z" title="发表于 2023-11-28 23:25:45">2023-11-28</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2020 - 2023 By <a class="footer-bar-link" href="/" title="ryz" target="_blank">ryz</a></div></div><div id="footer-type-tips"></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">44</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">18</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">0</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://blog.anheyu.com/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://image.anheyu.com/" title="安知鱼图床"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.anheyu.com/favicon.ico" alt="安知鱼图床"/><span class="back-menu-item-text">安知鱼图床</span></a></div></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/ICT/" style="font-size: 0.88rem;">ICT<sup>11</sup></a><a href="/tags/WEB-Trojans/" style="font-size: 0.88rem;">WEB-Trojans<sup>1</sup></a><a href="/tags/code/" style="font-size: 0.88rem;">code<sup>1</sup></a><a href="/tags/ctf/" style="font-size: 0.88rem;">ctf<sup>1</sup></a><a href="/tags/tools/" style="font-size: 0.88rem;">tools<sup>1</sup></a><a href="/tags/typora/" style="font-size: 0.88rem;">typora<sup>1</sup></a><a href="/tags/web/" style="font-size: 0.88rem;">web<sup>1</sup></a><a href="/tags/web-tools/" style="font-size: 0.88rem;">web-tools<sup>2</sup></a><a href="/tags/web%E5%90%8E%E7%AB%AF%E6%BC%8F%E6%B4%9E/" style="font-size: 0.88rem;">web后端漏洞<sup>1</sup></a><a href="/tags/web%E6%BC%8F%E6%B4%9E/" style="font-size: 0.88rem;">web漏洞<sup>1</sup></a><a href="/tags/web%E6%BC%8F%E6%B4%9E%E5%AE%9E%E9%AA%8C/" style="font-size: 0.88rem;">web漏洞实验<sup>11</sup></a><a href="/tags/%E4%BB%A3%E5%8A%9E/" style="font-size: 0.88rem;">代办<sup>1</sup></a><a href="/tags/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/" style="font-size: 0.88rem;">博客优化<sup>1</sup></a><a href="/tags/%E5%B0%8F%E6%8A%80%E5%B7%A7/" style="font-size: 0.88rem;">小技巧<sup>1</sup></a><a href="/tags/%E6%9D%82%E9%A1%B9/" style="font-size: 0.88rem;">杂项<sup>1</sup></a><a href="/tags/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/" style="font-size: 0.88rem;">渗透测试<sup>1</sup></a><a href="/tags/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" style="font-size: 0.88rem;">环境搭建<sup>1</sup></a><a href="/tags/%E9%97%AE%E9%A2%98/" style="font-size: 0.88rem;">问题<sup>2</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><a id="switch-commentBarrage" href="javascript:anzhiyu.switchCommentBarrage();" title="开关弹幕"><i class="anzhiyufont anzhiyu-icon-danmu"></i></a><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="8779107562" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random"></meting-js></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://music.163.com/#/playlist?id=8779107562&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.20/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.8.4/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("05/14/2023 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2020 By 安知鱼 V1.6.8",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 ryz 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><div class="js-pjax"><input type="hidden" name="page-type" id="page-type" value="post"></div><script async data-pjax src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.1/bubble/bubble.js"></script><script>var visitorMail = "visitor@anheyu.com";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>

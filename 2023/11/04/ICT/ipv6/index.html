@@ -1,0 +1,1056 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>ipv6 | ryz</title><meta name="keywords" content="ICT"><meta name="author" content="ryz"><meta name="copyright" content="ryz"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#18171d"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="ipv6"><meta name="application-name" content="ipv6"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#18171d"><meta property="og:type" content="article"><meta property="og:title" content="ipv6"><meta property="og:url" content="http://ybjryz.github.io/2023/11/04/ICT/ipv6/index.html"><meta property="og:site_name" content="ryz"><meta property="og:description" content="IPV6  PPT–网络系统建设与运维中级 配置–https:&amp;#x2F;&amp;#x2F;note.youdao.com&amp;#x2F;ynoteshare&amp;#x2F;index.html?id&amp;#x3D;080469cfaae263caa238b7515e6af20c&amp;amp;type&amp;#x3D;notebook&amp;amp;_time&amp;#x3D;1699754240495#&amp;#x2F;"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="http://ybjryz.github.io/img/tx.png"><meta property="article:author" content="ryz"><meta property="article:tag"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="http://ybjryz.github.io/img/tx.png"><meta name="description" content="IPV6  PPT–网络系统建设与运维中级 配置–https:&amp;#x2F;&amp;#x2F;note.youdao.com&amp;#x2F;ynoteshare&amp;#x2F;index.html?id&amp;#x3D;080469cfaae263caa238b7515e6af20c&amp;amp;type&amp;#x3D;notebook&amp;amp;_time&amp;#x3D;1699754240495#&amp;#x2F;"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="http://ybjryz.github.io/2023/11/04/ICT/ipv6/"><link rel="preconnect" href="//cdn.cbd.int"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.20/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: {"enable":true,"img":"https://upload-bbs.miyoushe.com/upload/2023/09/03/125766904/ee23df8517f3c3e3efc4145658269c06_5714860933110284659.png"},
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"local","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://xx.xx/"},
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎肥来！"},
+  LA51: undefined,
+  greetingBox: undefined,
+  twikooEnvId: '',
+  commentBarrageConfig:{"enable":true,"maxBarrage":1,"barrageTime":4000,"accessToken":"","mailMd5":""},
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: true,
+  mainTone: undefined,
+  authorStatus: undefined,
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"prismjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: ryz","link":"链接: ","source":"来源: ryz","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: 'ryz',
+  title: 'ipv6',
+  postAI: '',
+  pageFillDescription: 'IPV6, 1.ipv6引入, 1.1 IPV4现状, 1.2 ipv4 局限性, 1.3 ipv6の崛起, 1.4 门禁锁连wifi, 2.IPv6与IPv4对比, 2.1 IPv6数据报封装, 3.IPv6基础！, 3.1 IPV6报头, 3.1.1 IPV6基本报头字段解释, 3.1.2 IPV6扩展报头, 3.1.3 IPV6报头处理机制, 3.2 实验–ping观察ipv6报头, 3.2.1 配置接口ip, 3.3 ping观察报头, 3.3.1 ping基础包, 3.3.2 分片, 3.3.2.1 分片的基本概念, 3.3.2.2 抓包分析, 3.4 常见上层协议及对应的Next Header值, 3.5 IPv6 表示方式, 1、前导0可省略, 2、1个或多个0组成的地址块可用取代, , 3.6 IPV6的单播组播广播, 3.6.1 IPV6地址结构, 3.6.2 IPV4的单播组播广播, 3.6.3IPV6的单播, 接口标识生成方法, 单播地址分类, 3.6.3.1 链路本地地址（LLA）–link-local, 3.6.3.2 唯一本地地址（ULA）–组建私网使用, 3.6.3.3 全球单播地址（GUA）, 3.6.3.4 未指定地址, 3.6.3.5 环回地址, 3.6.4 IPV4组播, 3.6.4.1 保留的永久组播地址, 3.6.4.2 用于在互联网上组播地址, 3.6.5 IPV6组播, 3.6.5.1 IPV6固定组播地址, 3.6.5.2 被请求节点组播地址, 3.6.6 IPV6任播, 4.IPV6单播地址业务流程, 4.1 NDP–邻居发现协议, 4.2 IPV6动态地址配置, 4.3 DAD, 4.4 地址解析, 5.IPV6路由基础, 5.1.1 IPV6静态路由配置, 5.1.2 路由协议配置, 5.1.2.1 OSPF协议配置–OSPFv3, 5.1.2.2 RIP协议配置–RIPNG, 6.1.3 IPV6 地址自动配置, 6.1.3.1 无状态自动配置, 6.1.3.2 ICMPv6报文, IPv6邻居发现协议 - NDP, 邻居状态, 查看IPv6邻居路由表, 路由器发现, IPv6无状态地址自动配置, 重定向报文, Path MTU, 6.1.3.3 DHCP配置, ADD, 1 单接口下配置多个ip网络系统建设与运维中级配置引入现状年月日因特网地址分配组织宣布将其最后的万个地址平均分配到全球个区域互联网注册管理机构此后再没有可分配的地址是负责全球互联网地址编号分配的机构将部分地址分配给大洲级的再由各进行所辖区域内地址分配五大包括欧洲地址注册中心服务于欧洲中东地区和中亚地区拉丁美洲和加勒比海地址注册中心服务于中美南美以及加勒比海地区美国编号注册中心服务于北美地区和部分加勒比海地区非洲网络信息中心服务于非洲地区亚太互联网络信息中心服务于亚洲和太平洋地区实践证明是一个非常成功的协议它本身也经受住了从少量计算机组网发展到目前上亿台计算机互联的考验但该协议是几十年前基于当时的网络规模而设计的在今天看来的设计者们对于的估计和预想显得很不充分随着的扩张和新应用的不断推出越来越显示出它的局限性规模的快速扩张是当时完全没有预料到的特别是近十年来更是爆炸式增长已经走进了千家万户人们的日常生活已经离不开它但正因为发展太快地址空间耗尽的问题迫在眉睫世纪年代推出网络地址转换与无类别域间路由等技术来推迟地址耗尽发生的时间点但是这些过渡方案只能减缓地址枯竭的速度并不能从根本上解决问题局限性地址不足互联网骨干路由器路由表非常庞大崛起地址空间巨大层次化的路由设计分配给五大洲的地区管理机构机构分配个厂商效率高扩展灵活支持即插即用集成了等功能更好的安全性保障引入了流标签的概念门禁锁连连学校需要账号密码劫持验证不要密码劫持数据库爆出了一堆与对比数据报封装相对于报头变简单并不是验证变弱了而是供需而用好比下雨天才带雨伞包头由一个基本包头必须存在和多个扩展包头可能不存在组成基本包头提供报文转发的基本信息会被转发路径上的所有设备解析详细解释基础报头基本报头字段解释基本报头字段解释版本号长度为对于该值为流类别长度为等同于中的字段表示数据包的类或优先级主要应用于流标签长度为中的新增字段用于区分实时流量不同的流标签源地址可以唯一确定一条数据流中间网络设备可以根据这些信息更加高效率的区分数据流有效载荷长度长度为有效载荷是指紧跟包头的数据包的其他部分即扩展包头和上层协议数据单元下一个包头长度为该字段定义紧跟在包头后面的第一个扩展包头如果存在的类型或者上层协议数据单元中的协议类型类似于的字段跳数限制长度为该字段类似于中的字段它定义了数据包所能经过的最大跳数每经过一个路由器该数值减去当该字段的值为时数据包将被丢弃源地址长度为表示发送方的地址目的地址长度为表示接收方的地址扩展报头包头包含可选字段内容涉及等这些可以将包头长度从扩充到携带这些的报文在转发过程中往往需要中间路由转发设备进行软件处理对于性能是个很大的消耗因此实际中也很少使用将这些从基本包头中剥离放到了扩展包头中扩展包头被置于基本包头和上层协议数据单元之间一个报文可以包含个个或多个扩展包头仅当需要路由器或目的节点做某些特殊处理时才由发送方添加一个或多个扩展头与不同扩展头长度任意不受限制这样便于日后扩充新增选项这一特征加上选项的处理方式使得选项能得以真正的利用但是为了提高处理选项头和传输层协议的性能扩展包头总是长度的整数倍当使用多个扩展包头时前面包头的字段指明下一个扩展包头的类型这样就形成了链状的包头列表当超过一种扩展包头被用在同一个报文里时包头必须按照下列顺序出现逐跳选项包头主要用于为在传送路径上的每跳转发指定发送参数传送路径上的每台中间节点都要读取并处理该字段目的选项包头携带了一些只有目的节点才会处理的信息路由包头源节点用来强制数据包经过特定的设备分段包头当报文长度超过最大传输单元时就需要将报文分段发送而在中分段发送使用的是分段包头认证包头该包头由使用提供认证数据完整性以及重放保护封装安全净载包头该包头由使用提供认证数据完整性以及重放保护和数据包的保密报头处理机制实验观察报头实验拓扑配置接口全局模式启动观察报头基础包可以看到包还有邻居建立的功能这里的和其实是包的替代下面观察包的报头分片分片的基本概念一个链路层数据报能承载的最大数据量称为最大传送单元因为数据报头被封装在链路层数据报中故链路层的严格地限制着数据报的长度而且在数据报的源与目的地路径上的各段链路可能使用不同的链路层协议有不同的例如以太网的为字节而许多广域网的不超过字节当数据报的总长度大于链路时就需要将数据报中的数据分装在两个或更多个较小的数据报中这些较小的数据报叫做片分片偏移片段偏移字段以字节块为单位进行测量它是位长并指定特定相对于原始未分段的数据报的开始的片段的偏移量零第一片段已偏移这允许最多偏移次方字节这将超过字节的最大报文长度与包括报头长度字节一般来说我们都知道是字节因此超过字节的数据就需要进行分片分片由头部中的标识分片偏移和更多分片字段控制分片的标识都是同样的而且分片偏移是以字节为单位的偏移分片源和目的端口号的协议头部只出现在第一个分片里重组分片在目的地的网络层被重新组装目的主机使用首部中的标识标志和片偏移字段来完成对片的重组同样的标识和不同的偏移让接收方可以对分片进行重组当的分片被接收到时重组程序才能确定原始数据报的长度标识当创建一个数据报时源主机为该数据报加上一个标识号当一个路由器需要将一个数据报分片时形成的每个数据报即片都具有相同的原始数据报的标识号当目的主机收到来自同一发送主机的一批数据报时它可以通过检查数据报的标识号以确定哪些数据报是属于同一个原始数据报的片更多分片首部中的标志位有个比特但只有后个比特有意义分别是位和位标志指明该数据报后面是否还有更多的分组只有当时该数据报才可以被分片则用来告知目的主机该数据报是否为原始数据报的最后一个片当时表示相应的原始数据报还有后续的片当时表示该数据报是相应原始数据报的最后一个片目的主机在对片进行重组时使用片偏移字段来确定片应放在原始数据报的哪个位置分片偏移偏移量是用来记录每个分片所在的位置偏移量相对分片报文长度假设一共传输字节为字节由于固定首部为字节因此实际传输长度为字节所以只需要传输三次那么第一片偏移为第二片偏移第三次偏移分片偏移量计算例考虑向一条具有字节的的链路发送一个字节的数据报首部字节数据部分字节假定初始化数据报具有序列号这将会生成多少个片它们的特征是什么答因为数据报首部占字节因此在每个分片中片的大小是个字节故原始数据报中字节数据必须被分配到个片中所以字节数据必须被分配到个独立的片中每个片也是一一个数据报由于偏移值的单位是字节所以除了最后一个片外其他所有片中的有效数据载荷都是的倍数每个片的标识号都为前个片的还有分片最后一个片的表示最后一个分片的分片报文可参考指定数据包大小控制包大小为抓包分析下对的报文进行分析先发送两个没有报头的包其中包含报头这是第一个片观察他的报头可以看到他的字段是片的标识关注字段可以看到偏移量为为用于数据包重组下图分别是第二个数据包和第三个数据包常见上层协议及对应的值表示方式地址共位位若以进制表示前导可省略个或多个组成的地址块可用取代注意整个地址中只能出现一次的单播组播广播一般用位做终端因为后位会根据地址去做填充地址结构的地址的结构为网络前缀接口网络前缀相当于中的网络位接口相当于中的主机位中较常用的网络大小是位前缀长度的网络的单播组播广播与类似也存在某一地址为单播组播等概念在中类是单播地址只有这三类地址才能分配给主机接口使用类属于组播地址类地址专门用于特殊的实验目的的单播单播地址表示唯一标识一个接口类似于的单播地址发送到单播地址的数据包将被传输到此地址所标识的唯一接口一个单播地址只能标识一个接口但一个接口可以有多个单播地址一个单播地址可以分为如下两部分网络前缀相当于地址中的网络接口标识相当于地址中的主机常见的单播地址如全球单播地址链路本地地址等要求网络前缀和接口标识必须为接口标识生成方法接口标识的长度为用于标识链路上的接口在每条链路上接口标识必须唯一接口标识有许多用途最常见的用法就是黏贴在链路本地地址前缀后面形成接口的链路本地地址或者在无状态自动配置中黏贴在获取到的全球单播地址前缀后面构成接口的全球单播地址规范这种由地址产生地址接口标识的方法可以减少配置的工作量尤其是当采用无状态地址自动配置时只需要获取一个前缀就可以与接口标识形成地址使用这种方式最大的缺点就是某些恶意者可以通过二层推算出三层地址单播地址分类单播地址可细分为以下几类链路本地地址前缀链路本地地址唯一本地地址唯一本地地址组建私网使用全球单播地址全球单播地址未指定地址未指定地址环回地址嵌入地址的地址链路本地地址链路本地地址是中另一种应用范围受限制的地址类型的有效范围是本地链路前缀为链路本地地址只在同一链路上的节点之间有效在启动后就自动生成无需地址使用了特定的前缀接口使用自动生成也可以使用手动配置例使用将地址位为的主机的地址生成过程如下先将地址拆分为部分在地址的中间加上变成将第位求反计算得出的接口为唯一本地地址组建私网使用唯一本地地址是私网地址只能够在内网中使用该地址空间在公网中不可被路由因此不能直接访问公网唯一本地地址是网络中可以自己随意使用的私有网络地址使用特定的前缀固定前缀全球唯一前缀通过伪随机方式产生工程师根据网络规划自定义的子网相当于中的主机位全球单播地址全球单播地址也被称为可聚合全球单播地址该类地址全球唯一用于需要有互联网访问需求的主机相当于的公网地址全球单播地址相当于中的公网地址日前已经分配出去的前位固定是所以已分配的地址范围是目前已分配的固定前缀为顶级聚合保留使用为未来扩充或者预留次级聚合站点级聚合未指定地址它不能分配给任何节点表示当前状态下没有地址如当设备刚接入网络后本身没有地址则发送数据包的源地址使用该地址该地址不能用作目的地址未指定地址或者该地址作为某些报文的源地址比如作为重复地址检测时发送的邻居请求报文的源地址或者初始化过程中客户端所发送的请求报文的源地址环回地址环回地址或者与中的作用相同用于本地回环发往的数据包实际上就是发给本地可用于本地协议栈环回测试节点用它作为发送后返回给自己的报文不能分配给任何物理接口相比的环回口地址直接分配一个地址段的环回口较为节省组播也称为多播组播是一种允许一个或多个发送者组播源发送单一的数据包到多个接收者一次的同时的的网络技术点到多点应用譬如网络视频会议网络音频视频广播股市行情发布多媒体远程教育协同计算远程会诊网络游戏缓解带宽的急剧消耗和网络拥挤问题组播是基于的保留的永久组播地址属于局部链路组播地址范围所有主机所有组播路由器没有分配路由器指定路由器路由器路由器服务器中继代理所有的路由器协议无关组播用于在互联网上组播地址包含在用户组播地址范围内实际的可用于在互联网上组播地址是这个组播地址不属于任何服务器或个人它有点类似一个微信群号任何成员组播源往微信群组播发送消息组播数据这个群里的成员组播接收者都会接收到此消息运营商使用的组播地址是一种自治系统之间的组播地址分配机制将号直接填入组播地址的中间两个字节中每个自治系统都可以得到个组播地址组播组播地址标识多个接口一般用于一对多的通信场景组播地址只可以作为报文的目的地址在中不存在广播报文要通过组播来实现广播本身就是组播的一种应用组播地址标识一组接口目的地址是组播地址的数据包会被属于该组的所有接口所接收组播地址前位都是以开头第位都是格式标识传播范围组播组标识号组播地址各字段值对应的组播组类型和范围表示永久分配或众所周知表示临时的预留节点本地范围单个接口有效仅用于通讯链路本地范围例如站点本地范围组织本地范围全球范围预留固定组播地址被请求节点组播地址当一个节点具有了单播或任播地址就会对应生成一个被请求节点组播地址并且加入这个组播组该地址主要用于邻居发现机制和地址重复检测功能被请求节点组播地址的有效范围为本地链路范围被请求节点组播组地址的应用场景举例在中及广播都被取消当设备需要请求某个地址对应的地址时设备依然需要发送请求报文但是该报文是一个组播报文其目的地址是目标单播地址对应的被请求节点组播地址由于只有目标节点才会侦听这个被请求节点组播地址所以该组播报文可以被目标节点所接收同时不会占用其他非目标节点的网络性能任播任播地址任播的概念最初是在中提出并定义的主要为和提供服务中没有为任播规定单独的地址空间任播地址和单播地址使用相同的地址空间任播地址可以同时被分配给多个设备也就是说多台设备可以有相同的任播地址以任播地址为目标的数据包会通过路由器的路由表被路由到离源设备最近的拥有该目标地址的设备任播地址标识一组网络接口通常属于不同的节点任播地址可以作为报文的源地址也可以作为目的地址若路由收到用户发来的任播数据包则会走服务器任播过程涉及一个任播报文发起方和一个或多个响应方任播报文的发起方通常为请求某一服务例如服务的主机任播地址与单播地址在格式上无任何差异唯一的区别是一台设备可以给多台具有相同地址的设备发送报文网络中运用任播地址有很多优势业务冗余比如用户可以通过多台使用相同地址的服务器获取同一个服务例如服务这些服务器都是任播报文的响应方如果不是采用任播地址通信当其中一台服务器发生故障时用户需要获取另一台服务器的地址才能重新建立通信如果采用的是任播地址当一台服务器发生故障时任播报文的发起方能够自动与使用相同地址的另一台服务器通信从而实现业务冗余提供更优质的服务比如某公司在省和省各部署了一台提供相同服务的服务器基于路由优选规则省的用户在访问该公司提供的服务时会优先访问部署在省的服务器提高访问速度降低访问时延大大提升了用户体验单播地址业务流程一个接口在发送报文之前要经历地址配置地址解析这三个阶段邻居发现协议扮演了重要角色邻居发现协议定义了该后来被替代使用报文实现其功能报文名称路由器请求路由器通告邻居请求邻居通告无状态自动配置无状态自动配置是的一个亮点功能它使得主机能够非常便捷地接入到网络中即插即用无需手工配置繁冗的地址无需部署应用服务器例如服务器为主机分发地址无状态自动配置机制使用到了中的路由器请求报文及路由器通告报文地址解析过程中使用了两种报文邻居请求和邻居通告重复地址检测使用和报文确保网络中无两个相同的单播地址所有接口在使用单播地址前都需要做动态地址配置支持地址有状态和无状态两种自动配置方式通过报文中的标记和标记来控制终端自动获取地址的方式有状态地址配置采用协议客户端将从服务器端获取完整的地址同时包括服务器等地址参数此外服务器端将会记录该地址的分配情况这也是为什么被称为有状态此方法配置较为复杂且对服务器端的性能要求较高有状态地址配置多用于公司内部有线终端的地址分配便于对地址进行管理无状态地址配置采用协议使能了功能的路由器会周期性的通告该链路上的地址前缀另一种情况主机发送路由器查询报文路由器回复报文告知该链路地址前缀主机根据路由器回应的报文获得地址前缀信息使用该地址前缀加上本地产生的接口标识形成单播地址若主机还想获得其他配置信息可以通过来获得除地址外的其他信息当使用这种方式时无状态地址配置的关键在于路由器完全不关心主机的状态如何是否在线等所以称为无状态无状态地址配置多用于物联网等终端较多且终端不需要除地址外其他参数的场景域名系统一种将用户容易记忆的域名映射为网络设备能够识别的地址的机制网络信息服务用来管理电脑网络中所有与电脑系统管理相关配置文件的系统简单网络时钟协议由改编而来主要用来同步因特网中计算机的时钟无论通过何种方式配置了单播地址主机或路由器都会通过报文进行仅当通过之后才会使用该单播地址假设为已在线设备地址为上线之后也配置了相同的地址在正式使用这个地址之前会对此地址做过程如下向链路上以组播的方式发送一个报文该的源地址为未指定地址目的地址为要进行的对应的被请求节点组播地址也就是这个里包含着要做的目标地址链路上的节点都会收到这个组播的报文没有配置的节点接口由于没有加入该地址对应的被请求节点组播组因此在收到这个的时候默默丢弃而在收到这个后由于它的接口配置了地址因此接口会加入组播组而此刻所收到的报文又是以该地址为目的地址因此它会解析该报文它发现对方进行的目标地址与自己本地接口地址相同于是立即回送一个报文该报文的目的地址是也就是所有节点组播地址同时在报文内写入目标地址以及自己接口的地址当收到这个后它就知道在链路上已经有人在用了因此将该地址标记为重复的该地址将不能用于通信若未收到报文则判断这个地址可以用机制有点类似于中的免费检测重复地址地址解析使用的和报文来取代在中的地址解析功能与不同的是的地址解析是去维护一张邻居表具体介绍见邻居表的地址解析不再使用也不再使用广播方式而采用和相同的和报文解析数据链路层地址假设想要解析的这个地址对应的地址详细过程如下将发送一个报文达到这个目的这个报文的源地址是目的地址则是对应的被请求节点组播地址接收此报文根据报文内的源地址和源记录下这个邻居同时根据自身的和回复单播报文收到此报文之后获取其中的源地址和源这样双方都可以建立一条关于对方的邻居信息表项路由基础实验拓扑静态路由配置路由协议配置注意无论还是在中已经没有命令无法通过宣告网段的方式来让下一路由学习需进入所需配置的接口进行划分协议配置值得关注的是中的仍使用地址在中的选举规则如下优选手工配置的进程手工配置的具有最高优先级在全局模式下配置的公用的优先级仅次于直接给进程手工配置即它具有第二优先级在没有手工配置的前提下优选接口地址中最大的地址作为在没有配置接口地址的前提下优选其他接口的地址中选择最大的地址作为不考虑接口的状态因此在上述配置做完后会发现邻居关系无法建立熟悉的样子仍然是得配置啊在上做同样的配置需要注意如果环回口的地址是在开启后配置的则依然无法启动经过测试不配置就无法发送报文邻居建立过程与相同每隔发送报文然后发送比大小邻居关系已建立报文协议配置地址自动配置实验拓扑无状态自动配置原理可见下文无状态自动配置机制在和上使能并让接口自动生成链路本地地址链路本地地址使能设备转发单播报文包括本地报文的发送与接收配置接口的链路本地地址在接口视图下通过手工或者自动的方式配置接口的链路本地地址此时去通信为例需要指定端口不然会报错在的接口上配置全球单播地址在接口视图下通过手工或者自动有状态或无状态的方式配置接口的全球单播地址在使能发布报文的功能默认情况下华为路由器接口不发送报文则该接口所连链路上的其他设备无法进行无状态地址自动配置若想进行无状态地址配置需要手工开启发送报文逻辑上应该是抑制功能配置接口自动获取地址检查的可以看到已经学习到了的拥有与一样的位前缀接口结合其地址生成方式参照链路本地地址标准报文参考实则是报文概述是的基础协议之一协议类型号即为用于向源节点传递报文转发的信息或者错误在中除了提供的对应功能之外还有其它一些功能的基础如邻居发现无状态地址配置重复地址检测发现等报文解释表明消息的类型至表示差错报文类型至表示消息报文类型表示此消息类型细分的类型表示报文的校验和两大类错误类消息也称为差错报文类型字段中的最高为也就是信息类消息也称为信息报文类型字段中的最高为也就是下述内容有部分机制在上文中已介绍过这里是为了报文的汇总而写也可以再次阅读上文主要是基于华为教材而写下面主要是基于的文章来介绍的邻居发现协议邻居发现协议在及中定义实现了中诸多重要机制如下图所示使用的相关报文如下图所示路由器请求报文路由器通告报文邻居请求报文邻居通告报文邻居状态在实际的通讯过程中不仅仅是地址解析这么简单而是需要维护一张邻居表每个邻居都有相应的状态状态之间可以迁移邻居状态有种未完成邻居请求已经发送到目标节点的请求组播地址但没有收到邻居的通告可达收到确认不需再发包确认陈旧从收到上一次可达性确认后过了超过延迟在状态后发送过一个报文并且内没有可达性确认探查每隔重传邻居请求来主动请求可达性确认直到收到确认下面以两个节点之间相互通讯过程的节点的邻居状态变化假设两个节点之前没有任何通讯先发送并生成邻居缓存条目状态为若回复则否则后即删除条目经过默认条目状态或者在状态收到的非请求且链路层地址不同则马上在状态若需要向发送数据则同时发送请求在默认秒后其间若有应答则在状态每隔默认秒发送单播发送个后再等有应答则否则进入即删除表项查看邻居路由表不像那样使用表来缓存与地址的映射而是维护一个邻居表在华为数通设备上则使用命令来查看邻居表在操作系统里可以使用命令查看邻居缓存的内容可以看到路由器的地址生成方式遵循开头的是节点组播地址路由器发现路由器发现功能用来发现与本地链路相连的设备并获取与地址自动配置相关的前缀和其他配置参数路由器发现功能主要通过以下两种报文实现路由器通告报文每台设备为了让二层网络上的主机和设备知道自己的存在可以定时以组播方式发送报文报文中会带有网络前缀信息及其他一些标志位信息报文的字段值为路由器请求报文很多情况下主机接入网络后希望尽快获取网络前缀进行通信此时主机可以立刻发送报文给路由器网络上的路由器收到该报文后会立即向相应的主机单播回应报文告知主机该网段的默认路由器和相关配置参数报文的字段值为链路上的路由器会定期的发送消息收到的主机将加入默认路由器列表中收到的路由器将检查内容的一致性主机接口初始化时发消息路由器回应无状态地址自动配置支持无状态地址自动配置无需使用诸如之类的辅助协议主机即可获取前缀并自动生成接口路由器发现功能是地址自动配置功能的基础主要通过以下两步骤获取网络节点向相连的路由器发送请求地址前缀信息路由器通过发送路由器通告回复地址前缀信息接口可通过结合接口生成如上图所示无状态地址自动配置的工作过程如下主机根据本地接口自动产生网卡的链路本地地址主机对链路本地地址进行检测如果该地址不存在冲突则可以启用主机发送报文尝试在链路上发现路由器该报文的源地址为主机的链路本地地址路由器回复报文携带前缀信息路由器在未收到时也能够配置主动发出报文主机根据路由器回应的报文获得地址前缀信息使用该地址前缀加上本地产生的接口形成单播地址主机对生成的地址进行检测如果没有检测到冲突那么该地址才能够启用重定向报文当网关路由器知道更好的转发路径时会以重定向报文的方式告知主机让报文发送者选择另一个网关路由器重定向报文的结构如下报文格式中为为是更好的路径下一跳地址是需要重定向转发的报文的目的地址如下图所示假设主机想与主机通讯主机的默认网关路由器是那么当发送报文给时报文会被送到接收到发送的报文以后会发现实际上主机直接发送给路由器更好它将发送一个重定向报文给主机其中为为主机主机接收到了重定向报文之后会在默认路由表中添加一个主机路由以后发往主机的报文就直接给这就是重定向的一个简单过程其中会有个问题如何知道去往主机的路径通过更好呢其实这个很简单因为会发现报文进入的接口就是报文路由得出接口也就是说发往主机的路由实际上只是在上转了一圈出来了然后转发到据此能判断出直接给是更好的路径在中为了减少中间转发设备的处理压力中间转发设备不对报文进行分片报文的分片将在源节点进行协议是通过的报文来完成的首先源节点假设就是其出接口的发出一个试探性的报文当转发路径上存在一个小于当前假设的时转发设备就会向源节点发送报文并且携带自己的值此后源节点将的假设值更改为新收到的值继续发送报文如此反复直到报文到达目的地之后源节点就能知道到达目的地的了如下图所示整条传输路径需要通过条链路每条链路的分别是当源节点发送一个分片报文的时候工作过程如下首先按照为进行分片并发送分片报文当到达为的出接口时路由器返回错误同时携带值为的信息源节点接收到之后会将报文重新按照为进行分片并再次发送一个分片报文当分片报文到达值为的出接口时同样返回错误携带值为的信息之后源节点重新按照为进行分片并发送分片报文最终到达目的地这样就找到了该路径的配置拓扑在全局和相关接口使能功能同时自动生成链路本地地址以配置为例在相应接口配置静态全球单播地址在上配置服务器功能接口通过方式获取全球单播地址并学习到网关的缺省路由在使能发布报文的功能通过无状态地址配置的方式获取地址在上配置静态路由在上配置聚合后的静态路由单接口下配置多个',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-11-28 02:28:46',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="/img/tx.png"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><a id="site-name" href="/" accesskey="h"><div class="title">ryz</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" target="_blank"><img class="post-qr-code-img" alt="微信" src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" target="_blank"><img class="post-qr-code-img" alt="支付宝" src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">音乐</div><span class="author-content-item-title">灵魂的碰撞💥</span></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item on" id="consoleCommentBarrage" onclick="anzhiyu.switchCommentBarrage()" title="热评开关"><a class="commentBarrage"><i class="anzhiyufont anzhiyu-icon-message"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="article-meta tags"><a class="article-meta__tags" href="/tags/ICT/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>ICT</span></a></span></div></div><h1 class="post-title" itemprop="name headline">ipv6</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2023-11-04T06:31:18.000Z" title="发表于 2023-11-04 14:31:18">2023-11-04</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2023-11-27T18:28:46.436Z" title="更新于 2023-11-28 02:28:46">2023-11-28</time></span></div><div class="meta-secondline"><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为重庆"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>重庆</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src=""></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="http://ybjryz.github.io/2023/11/04/ICT/ipv6/"><header><a href="/tags/ICT/" tabindex="-1" itemprop="url">ICT</a><h1 id="CrawlerTitle" itemprop="name headline">ipv6</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">ryz</span><time itemprop="dateCreated datePublished" datetime="2023-11-04T06:31:18.000Z" title="发表于 2023-11-04 14:31:18">2023-11-04</time><time itemprop="dateCreated datePublished" datetime="2023-11-27T18:28:46.436Z" title="更新于 2023-11-28 02:28:46">2023-11-28</time></header><h1 id="IPV6"><a href="#IPV6" class="headerlink" title="IPV6"></a>IPV6</h1><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/image-20231123021525893.png" class="" title="image-20231123021525893">
+
+<p>PPT–网络系统建设与运维中级</p>
+<p>配置–<a target="_blank" rel="noopener" href="https://note.youdao.com/ynoteshare/index.html?id=080469cfaae263caa238b7515e6af20c&type=notebook&_time=1699754240495#/WEBf75ccdbd94454554eb7bbfc5f7d37f54">https://note.youdao.com/ynoteshare/index.html?id=080469cfaae263caa238b7515e6af20c&amp;type=notebook&amp;_time=1699754240495#/WEBf75ccdbd94454554eb7bbfc5f7d37f54</a></p>
+<h2 id="1-ipv6引入"><a href="#1-ipv6引入" class="headerlink" title="1.ipv6引入"></a>1.ipv6引入</h2><h3 id="1-1-IPV4现状"><a href="#1-1-IPV4现状" class="headerlink" title="1.1 IPV4现状"></a>1.1 IPV4现状</h3><p>2011年2月3日，IANA（Internet Assigned Numbers Authority，因特网地址分配组织）宣布将 其最后的468万个IPv4地址平均分配到全球5个RIR（Regional Internet Registry，区域互联网注册 管理机构），此后IANA再没有可分配的IPv4地址。</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/image-20231127181042519.png" class="" title="image-20231127181042519">
+
+<p>IANA，是负责全球互联网IP地址编号分配的机构。IANA将部分IPv4地址分配给大洲级的 RIR，再由各RIR进行所辖区域内地址分配，</p>
+<p>五大RIR包括： </p>
+<p>▫ RIPE：Reseaux IP Europeans，欧洲IP地址注册中心，服务于欧洲、中东地区和中亚 地区； </p>
+<p>▫ LACNIC：Latin American and Caribbean Internet Address Registry，拉丁美洲和加 勒比海Internet地址注册中心，服务于中美、南美以及加勒比海地区； </p>
+<p>▫ ARIN：American Registry for Internet Numbers，美国Internet编号注册中心，服务 于北美地区和部分加勒比海地区；</p>
+<p> ▫ AFRINIC：Africa Network Information Centre，非洲网络信息中心，服务于非洲地 区； </p>
+<p>▫ APNIC：Asia Pacific Network Information Centre，亚太互联网络信息中心，服务于 亚洲和太平洋地区。 </p>
+<p>• 实践证明IPv4是一个非常成功的协议，它本身也经受住了Internet从少量计算机组网发展到 目前上亿台计算机互联的考验。但该协议是几十年前基于当时的网络规模而设计的。在今 天看来，IPv4的设计者们对于Internet的估计和预想显得很不充分。随着Internet的扩张和 新应用的不断推出，IPv4越来越显示出它的局限性。 </p>
+<p>• Internet规模的快速扩张是当时完全没有预料到的，特别是近十年来，更是爆炸式增长，已 经走进了千家万户，人们的日常生活已经离不开它。但正因为发展太快，IP地址空间耗尽的 问题迫在眉睫。 </p>
+<p>• 20世纪90年代，IETF推出NAT（Network Address Translation，网络地址转换）与CIDR （Classless Inter Domain Routing，无类别域间路由）等技术来推迟IPv4地址耗尽发生的 时间点。但是这些过渡方案只能减缓地址枯竭的速度，并不能从根本上解决问题。</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/image-20231123022132189.png" class="" title="image-20231123022132189">
+
+<h3 id="1-2-ipv4-局限性"><a href="#1-2-ipv4-局限性" class="headerlink" title="1.2 ipv4 局限性"></a>1.2 ipv4 局限性</h3><ol>
+<li><p>地址不足</p>
+</li>
+<li><p>互联网骨干路由器路由表非常庞大</p>
+</li>
+</ol>
+<h3 id="1-3-ipv6の崛起"><a href="#1-3-ipv6の崛起" class="headerlink" title="1.3 ipv6の崛起"></a>1.3 ipv6の崛起</h3><ol>
+<li><p>地址空间巨大</p>
+</li>
+<li><p>层次化的路由设计</p>
+<p>​	ANSI分配给五大洲的地区管理机构–机构分配个厂商</p>
+</li>
+<li><p>效率高，扩展灵活</p>
+</li>
+<li><p>支持即插即用（ICMP集成了DHCP等功能）</p>
+</li>
+<li><p>更好的安全性保障</p>
+</li>
+<li><p>引入了流标签的概念</p>
+</li>
+<li><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/image-20231127181323063.png" class="" title="image-20231127181323063"></li>
+</ol>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/image-20231127181340332.png" class="" title="image-20231127181340332">
+
+<h3 id="1-4-门禁锁连wifi"><a href="#1-4-门禁锁连wifi" class="headerlink" title="1.4 门禁锁连wifi"></a>1.4 门禁锁连wifi</h3><p>连学校wifi 需要账号密码 http劫持 portal验证 </p>
+<p>不要密码 mac劫持</p>
+<p>数据库爆出了一堆key</p>
+<h2 id="2-IPv6与IPv4对比"><a href="#2-IPv6与IPv4对比" class="headerlink" title="2.IPv6与IPv4对比"></a>2.IPv6与IPv4对比</h2><h3 id="2-1-IPv6数据报封装"><a href="#2-1-IPv6数据报封装" class="headerlink" title="2.1 IPv6数据报封装"></a>2.1 IPv6数据报封装</h3><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/image-20231123103050667.png" class="" title="image-20231123103050667">
+
+<p>ipv6相对于ipv4 报头变简单 并不是验证变弱了 而是“供需而用”</p>
+<p>好比下雨天才带雨伞</p>
+<p>• IPv6包头由一个IPv6基本包头（必须存在）和多个扩展包头（可能不存在）组成。 </p>
+<p>• 基本包头提供报文转发的基本信息，会被转发路径上的所有设备解析。</p>
+<p>详细解释</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/image-20231127181538114.png" class="" title="image-20231127181538114">
+
+<h2 id="3-IPv6基础！"><a href="#3-IPv6基础！" class="headerlink" title="3.IPv6基础！"></a>3.IPv6基础！</h2><h3 id="3-1-IPV6报头"><a href="#3-1-IPV6报头" class="headerlink" title="3.1 IPV6报头"></a>3.1 IPV6报头</h3><h4 id="3-1-1-IPV6基本报头字段解释"><a href="#3-1-1-IPV6基本报头字段解释" class="headerlink" title="3.1.1 IPV6基本报头字段解释"></a>3.1.1 IPV6基本报头字段解释</h4><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/image-20231112142405605.png" class="" title="image-20231112142405605">
+
+<p>IPV6基本报头字段解释：</p>
+<pre class="language-none"><code class="language-none">Version：版本号，长度为4 bit。对于IPv6，该值为6。						--（b）0110
+
+Traffic Class：流类别，长度为8 bit。等同于IPv4中的ToS字段，表示IPv6数据包的类或优先级，主要应用于QoS。
+
+Flow Label：流标签，长度为20 bit。IPv6中的新增字段，用于区分实时流量，不同的流标签+源地址可以唯一确定一条数据流，中间网络设备可以根据这些信息更加高效率的区分数据流。
+
+Payload Length：有效载荷长度，长度为16 bit。有效载荷是指紧跟IPv6包头的数据包的其他部分（即扩展包头和上层协议数据单元）。
+
+Next Header：下一个包头，长度为8 bit。该字段定义紧跟在IPv6包头后面的第一个扩展包头（如果存在）的类型，或者上层协议数据单元中的协议类型（类似于IPv4的Protocol字段）。
+
+Hop Limit：跳数限制，长度为8 bit。该字段类似于IPv4中的Time to Live字段，它定义了IP数据包所能经过的最大跳数。每经过一个路由器，该数值减去1，当该字段的值为0时，数据包将被丢弃。
+
+Source Address：源地址，长度为128 bit。表示发送方的地址。
+
+Destination Address：目的地址，长度为128 bit。表示接收方的地址。</code></pre>
+
+
+
+<h4 id="3-1-2-IPV6扩展报头"><a href="#3-1-2-IPV6扩展报头" class="headerlink" title="3.1.2 IPV6扩展报头"></a>3.1.2 IPV6扩展报头</h4><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/image-20231127182315696.png" class="" title="image-20231127182315696">
+
+<p>IPv4包头包含可选字段<strong>Options</strong>，内容涉及Security、Timestamp、Record route等，这些 Options可以将IPv4包头长度从20 Byte扩充到60 Byte。携带这些Options的IPv4报文在转发 过程中往往需要中间路由转发设备进行软件处理，对于性能是个很大的消耗，因此实际中 也很少使用。</p>
+<p> • IPv6将这些Options从IPv6基本包头中剥离，放到了<strong>扩展包</strong>头中，扩展包头被置于IPv6基<strong>本 包头和上层协议数据单元之间</strong>。一个IPv6报文可以包含0个、1个或多个扩展包头，仅当需 要路由器或目的节点做某些特殊处理时，才由发送方添加一个或多个扩展头。与IPv4不同， IPv6扩展头长度任意，不受40 Byte限制，这样便于日后扩充新增选项。这一特征加上选项 的处理方式使得IPv6选项能得以真正的利用。但是为了提高处理选项头和传输层协议的性 能，扩展包头总是8 Byte长度的整数倍。</p>
+<p> • 当使用<strong>多个</strong>扩展包头时，前面包头的Next Header字段指明<strong>下一个扩展包头</strong>的类型，这样就 形成了链状的包头列表。 </p>
+<p>• 当超过一种扩展包头被用在同一个IPv6报文里时，包头必须按照下列顺序出现： </p>
+<ol>
+<li><p>逐跳选项包头：主要用于为在传送路径上的每跳转发指定发送参数，传送路径上的 每台中间节点都要读取并处理该字段。 </p>
+</li>
+<li><p>目的选项包头：携带了一些只有目的节点才会处理的信息。 </p>
+</li>
+<li><p>路由包头：IPv6源节点用来强制数据包经过特定的设备。 </p>
+</li>
+<li><p><strong>分段包头</strong>：当报文长度超过MTU（Maximum Transmission Unit，最大传输单元） 时就需要将报文分段发送，而在IPv6中，分段发送使用的是分段包头。 </p>
+</li>
+<li><p>认证包头（AH）：该包头由IPsec使用，提供认证、数据完整性以及重放保护。</p>
+</li>
+<li><p>封装安全净载包头（ESP）：该包头由IPsec使用，提供认证、数据完整性以及重放保 护和IPv6数据包的保密</p>
+</li>
+</ol>
+<h4 id="3-1-3-IPV6报头处理机制"><a href="#3-1-3-IPV6报头处理机制" class="headerlink" title="3.1.3 IPV6报头处理机制"></a>3.1.3 IPV6报头处理机制</h4>   <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/image-20231127183327677.png" class="" title="image-20231127183327677">
+
+
+
+<h3 id="3-2-实验–ping观察ipv6报头"><a href="#3-2-实验–ping观察ipv6报头" class="headerlink" title="3.2 实验–ping观察ipv6报头"></a>3.2 实验–ping观察ipv6报头</h3><p>实验拓扑</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/image-20231123104428784.png" class="" title="image-20231123104428784">
+
+<h4 id="3-2-1-配置接口ip"><a href="#3-2-1-配置接口ip" class="headerlink" title="3.2.1 配置接口ip"></a>3.2.1 配置接口ip</h4><pre class="language-java" data-language="java"><code class="language-java"><span class="token punctuation">[</span><span class="token constant">R1</span><span class="token punctuation">]</span>ipv6 enable 											#全局模式启动ipv6
+<span class="token punctuation">[</span><span class="token constant">R1</span><span class="token punctuation">]</span>inter g0<span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span>
+<span class="token punctuation">[</span><span class="token constant">R1</span><span class="token operator">-</span><span class="token class-name">GigabitEthernet0</span><span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span><span class="token punctuation">]</span>ipv6 enable
+<span class="token punctuation">[</span><span class="token constant">R1</span><span class="token operator">-</span><span class="token class-name">GigabitEthernet0</span><span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span><span class="token punctuation">]</span>ipv6 add <span class="token number">2012</span><span class="token operator">::</span><span class="token number">2</span> <span class="token number">64</span>
+
+<span class="token punctuation">[</span><span class="token constant">R2</span><span class="token punctuation">]</span>inter g0<span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span>
+<span class="token punctuation">[</span><span class="token constant">R2</span><span class="token operator">-</span><span class="token class-name">GigabitEthernet0</span><span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span><span class="token punctuation">]</span>ipv6 enable
+<span class="token punctuation">[</span><span class="token constant">R2</span><span class="token operator">-</span><span class="token class-name">GigabitEthernet0</span><span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span><span class="token punctuation">]</span>ipv6 add <span class="token number">2012</span><span class="token operator">::</span><span class="token number">2</span> <span class="token number">64</span></code></pre>
+
+
+
+<h3 id="3-3-ping观察报头"><a href="#3-3-ping观察报头" class="headerlink" title="3.3 ping观察报头"></a>3.3 ping观察报头</h3><h4 id="3-3-1-ping基础包"><a href="#3-3-1-ping基础包" class="headerlink" title="3.3.1 ping基础包"></a>3.3.1 ping基础包</h4><pre class="language-java" data-language="java"><code class="language-java">ping ipv6 <span class="token number">2012</span><span class="token operator">::</span><span class="token number">2</span>														#ipv6<span class="token operator">--</span>ping</code></pre>
+
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/image-20231123104808806.png" class="" title="image-20231123104808806">
+
+<p>可以看到ICMP包还有邻居建立的 功能 </p>
+<p>这里的NS和NA其实是arp包的替代</p>
+<p>下面观察ICMP包的ipv6报头</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/image-20231123104905461.png" class="" title="image-20231123104905461">
+
+<h4 id="3-3-2-分片"><a href="#3-3-2-分片" class="headerlink" title="3.3.2 分片"></a>3.3.2 分片</h4><h5 id="3-3-2-1-分片的基本概念"><a href="#3-3-2-1-分片的基本概念" class="headerlink" title="3.3.2.1 分片的基本概念"></a>3.3.2.1 分片的基本概念</h5><p><strong>MTU</strong></p>
+<p>一个链路层数据报能承载的最大数据量称为最大传送单元(MTU)。<br>因为IP数据报（IP头+DATA）被封装在链路层数据报中，故链路层的MTU严格地限制着IP数据报的长度，<br>而且在IP数据报的源与目的地路径上的各段链路可能使用不同的链路层协议，有不同的MTU.<br>例如，以太网的MTU为1500字节，而许多广域网的MTU不超过576字节。</p>
+<p>当IP数据报的总长度大于链路MTU时，<br>就需要将IP数据报中的数据分装在两个或更多个较小的IP数据报中，<br>这些较小的数据报叫做片。</p>
+<p><strong>分片偏移</strong></p>
+<p>片段偏移字段以8字节块为单位进行测量。它是13位长，并指定特定相对于原始未分段的IP数据报的开始的片段的偏移量。零第一片段已偏移。这允许最多（2偏移13（次方）- 1）×8 &#x3D;字节65,528，这将超过65,535字节的最大IP报文长度与包括报头长度（+ 65,528 20 &#x3D; 65548字节）。</p>
+<p>一般来说我们都知道MTU是1500字节，因此超过1500字节的数据就需要进行ip分片。<br>1、分片由IPv4头部中的标识(Identification)、分片偏移(Fragment offiet)和更多分片(More Fragments, MF)字段控制，分片的标识(Identification)都是同样的而且分片偏移(Fragment offiet)是以8字节为单位的偏移。<br>2、分片：源和目的端口号的UDP(协议)头部只出现在第一个分片里<br>3、<strong>重组</strong>：IP分片在目的地的网络层被重新组装。<br>目的主机使用IP首部中的标识、标志和片偏移字段来完成对片的重组。<br>同样的标识和不同的偏移让接收方可以对分片进行重组，<br>当MF &#x3D; 0的分片被接收到时,重组程序才能确定原始数据报的长度,</p>
+<p><a href="#ipv6%E6%8A%A5%E5%A4%B4%E7%89%87%E5%AD%97%E6%AE%B5"><strong>标识(Identification)</strong></a><br>当创建一个 IP数据报时，源主机为该数据报加上一个<strong>标识号</strong>。<br>当一个路由器需要将一个数据报分片时，形成的每个数据报(即片)都具有相同的原始数据报的标识号。<br>当目的主机收到来自同一发送主机的一批数据报时，它可以通过检查数据报的标识号以确定哪些数据报是属于同一个原始数据报的片。</p>
+<p><a href="#ipv6%E6%8A%A5%E5%A4%B4%E7%89%87%E5%AD%97%E6%AE%B5"><strong>更多分片(More Fragments, MF</strong>)</a><br>IP首部中的标志位有3个比特，但只有后2个比特有意义，分别是MF位和DF位(Don’t Fragment)，标志指明该数据报后面是否还有更多的分组。<br>只有当DF&#x3D;0时，该IP数据报才可以被分片。<br>MF则用来告知目的主机该IP数据报是否为原始数据报的最后一个片。<br>当MF&#x3D;1时，表示相应的原始数据报还有后续的片；<br>当MF&#x3D;0时，表示该数据报是相应原始数据报的最后-一个片。<br>目的主机在对片进行重组时，使用片偏移字段来确定片应放在原始IP数据报的哪个位置。</p>
+<p><a href="#ipv6%E6%8A%A5%E5%A4%B4%E7%89%87%E5%AD%97%E6%AE%B5"><strong>分片偏移(Fragment offiet)</strong></a><br>偏移量是用来记录每个分片所在的位置，<br>偏移量&#x3D;相对分片报文长度&#x2F;8；<br>假设一共传输3800字节，mtu为1400字节，由于固定ip首部为20字节，<br>因此实际传输长度为1420字节，所以只需要传输三次，1400+1400+1000，<br>那么第一片偏移为0，第二片偏移&#x3D;1400&#x2F;8&#x3D;175，第三次偏移&#x3D;2800&#x2F;8&#x3D;350.</p>
+<p>分片偏移量计算。<br>例：<br>考虑向一条具有1500字节的MTU的链路发送一个8000字节的数据报(首部20字节，数据部分7980字节)，<br>假定初始化数据报具有序列号321，这将会生成多少个片？它们的特征是什么？</p>
+<p>答：<br>因为IP数据报首部占20字节，因此在每个分片中片的大小是1500-20&#x3D;1480个字节，<br>故原始数据报中7980字节数据必须被分配到7980&#x2F;1480&#x3D;6个片中。<br>所以7980字节数据必须被分配到6个独立的片中(每个片也是一一个IP数据报)。<br>由于偏移值的单位是8字节，所以除了最后一个片外，其他所有片中的有效数据载荷都是8的倍数。<br>每个片的标识号都为321.前5个片的MF&#x3D;1(还有分片)，最后一个片的MF&#x3D;0(表示最后一个分片)</p>
+<p>ipv4的分片报文可参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_44081384/article/details/126611347">https://blog.csdn.net/weixin_44081384/article/details/126611347</a></p>
+<pre class="language-none"><code class="language-none">ping -s 3000 ipv6 2012::2 (指定数据包大小3000)							    #ipv6--控制包大小为3000</code></pre>
+
+<h5 id="3-3-2-2-抓包分析"><a href="#3-3-2-2-抓包分析" class="headerlink" title="3.3.2.2 抓包分析"></a>3.3.2.2 抓包分析</h5><p>下对ipv6的报文进行分析</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/image-20231123162413481.png" class="" title="image-20231123162413481">
+
+<p>先发送两个没有icmp报头的ipv6包</p>
+<p>其中包含data报头</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/image-20231123162751230.png" class="" title="image-20231123162751230">
+
+<p>这是第一个片</p>
+<p>观察他的ipv6报头</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/image-20231123162832880.png" class="" title="image-20231123162832880">
+
+<p>可以看到他的next header字段是IPV6片的标识</p>
+<p>关注Fragement Header for IPv6字段</p>
+<p><a name="ipv6报头片字段"></a></p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/image-20231123162941425.png" class="" title="image-20231123162941425">
+
+<p>可以看到偏移量Offset为0 </p>
+<p>MORE Fragements为yes</p>
+<p>Identification用于数据包重组</p>
+<p>下图分别是第二个数据包和第三个ICMP数据包</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/image-20231123165452282.png" class="" title="image-20231123165452282">
+
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/image-20231123165520236.png" class="" title="image-20231123165520236">
+
+<h3 id="3-4-常见上层协议及对应的Next-Header值"><a href="#3-4-常见上层协议及对应的Next-Header值" class="headerlink" title="3.4 常见上层协议及对应的Next Header值"></a>3.4 常见上层协议及对应的Next Header值</h3><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/image-20231112143130312.png" class="" title="image-20231112143130312">
+
+
+
+
+
+
+
+
+
+<h3 id="3-5-IPv6-表示方式"><a href="#3-5-IPv6-表示方式" class="headerlink" title="3.5 IPv6 表示方式"></a>3.5 IPv6 表示方式</h3><p>ipv6地址共128位（b），128&#x2F;4&#x3D;32位（h）</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/image-20231112143518094.png" class="" title="image-20231112143518094">
+
+<p>若以16进制表示 </p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/image-20231112143529766.png" class="" title="image-20231112143529766">
+
+<h4 id="1、前导0可省略"><a href="#1、前导0可省略" class="headerlink" title="1、前导0可省略"></a>1、前导0可省略</h4><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/image-20231112143743201.png" class="" title="image-20231112143743201">
+
+<h4 id="2、1个或多个0组成的地址块可用-取代"><a href="#2、1个或多个0组成的地址块可用-取代" class="headerlink" title="2、1个或多个0组成的地址块可用::取代"></a>2、1个或多个0组成的地址块可用::取代</h4><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/image-20231112144200218.png" class="" title="image-20231112144200218">
+
+<p>注意：整个地址中，只能出现一次::</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/image-20231112144252674.png" class="" title="image-20231112144252674"></h2><h3 id="3-6-IPV6的单播组播广播"><a href="#3-6-IPV6的单播组播广播" class="headerlink" title="3.6 IPV6的单播组播广播"></a>3.6 IPV6的单播组播广播</h3><p>一般用64位做终端 因为后64位会根据mac地址去做填充</p>
+<h4 id="3-6-1-IPV6地址结构"><a href="#3-6-1-IPV6地址结构" class="headerlink" title="3.6.1 IPV6地址结构"></a>3.6.1 IPV6地址结构</h4><p>IPv6的地址的结构为：网络前缀+接口ID，网络前缀:相当于IPv4中的网络位，接口ID:相当于IPv4 中的主机位。</p>
+<p>IPv6中较常用的网络大小是64位前缀长度的网络。</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/image-20231123174552713.png" class="" title="image-20231123174552713">
+
+<h4 id="3-6-2-IPV4的单播组播广播"><a href="#3-6-2-IPV4的单播组播广播" class="headerlink" title="3.6.2 IPV4的单播组播广播"></a>3.6.2 IPV4的单播组播广播</h4><p>IPV6与IPV4类似 也存在某一地址为单播 组播 等概念</p>
+<p>在ipv4中</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/image-20231123174219852.png" class="" title="image-20231123174219852">
+
+<p>ABC类是单播地址，只有这三类地址才能分配给主 机接口使用。</p>
+<p> D类属于组播地址</p>
+<p>E类地址专门用于特殊的实验目的。</p>
+<h4 id="3-6-3IPV6的单播"><a href="#3-6-3IPV6的单播" class="headerlink" title="3.6.3IPV6的单播"></a>3.6.3IPV6的单播</h4><p>IPv6单播地址表示<strong>唯一</strong>标识一个接口，类似于IPv4的单播地址。发送到单播地址的数据包将被 传输到此地址所标识的唯一接口，一个单播地址只能标识<strong>一个</strong>接口，但一个接口可以有<strong>多个</strong>单 播地址</p>
+<p>一个IPv6单播地址可以分为如下两部分： </p>
+<p>▫ 网络前缀（Network Prefix）：n bit，相当于IPv4地址中的网络ID。 </p>
+<p>▫ 接口标识（Interface Identify）：（128-n）bit ，相当于IPv4地址中的主机ID。</p>
+<p> • 常见的IPv6单播地址如全球单播地址、链路本地地址等，要求网络前缀和接口标识必须为64 bit。</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/image-20231127213831795.png" class="" title="image-20231127213831795">
+
+<h5 id="接口标识生成方法"><a href="#接口标识生成方法" class="headerlink" title="接口标识生成方法"></a>接口标识生成方法</h5><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/image-20231127213952726.png" class="" title="image-20231127213952726">
+
+<p>接口标识的长度为<strong>64 bit</strong>，用于标识链路上的接口。在每条链路上，接口标识必须<strong>唯一</strong>。</p>
+<p>接 口标识有许多用途，最常见的用法就是黏贴在链路本地地址前缀后面，形成接口的链路本 地地址。</p>
+<p>或者在无状态自动配置中，黏贴在获取到的IPv6全球单播地址前缀后面，构成接 口的全球单播地址。</p>
+<p> • IEEE EUI-64（64-bit Extended Unique Identifier）规范 </p>
+<p>▫ 这种由MAC地址产生IPv6地址接口标识的方法可以减少配置的工作量，尤其是当采用 无状态地址自动配置时，只需要获取一个IPv6前缀就可以与接口标识形成IPv6地址。 </p>
+<p>▫ 使用这种方式最大的缺点就是某些恶意者可以通过二层MAC推算出三层IPv6地址。</p>
+<h5 id="单播地址分类"><a href="#单播地址分类" class="headerlink" title="单播地址分类"></a>单播地址分类</h5><p>单播地址可细分为以下几类：</p>
+<ul>
+<li>[链路本地地址 –link-local–fe80前缀](#3.6.3.1 链路本地地址–link-local)</li>
+<li>[唯一本地地址](#3.6.3.2 唯一本地地址–组建私网使用	)</li>
+<li>[全球单播地址](3.6.3.3 全球单播地址)</li>
+<li>[未指定地址](#3.6.3.4 未指定地址)</li>
+<li><a href="#3.6.3.5%E7%8E%AF%E5%9B%9E%E5%9C%B0%E5%9D%80">环回地址</a></li>
+<li>嵌入IPv4地址的IPv6地址</li>
+</ul>
+<h5 id="3-6-3-1-链路本地地址（LLA）–link-local"><a href="#3-6-3-1-链路本地地址（LLA）–link-local" class="headerlink" title="3.6.3.1 链路本地地址（LLA）–link-local"></a>3.6.3.1 链路本地地址（LLA）–link-local</h5><p>LLA（Link-Local Address，链路本地地址）是IPv6中另一种应用范围受限制的地址类型。LLA的 有效范围是本地链路，前缀为FE80::&#x2F;10。</p>
+<p>链路本地地址（Link-local）只在同一链路上的节点之间有效，在IPv6启动后就自动生成（无需ip地址）</p>
+<p>使用 了<strong>特定的前缀FE80::&#x2F;10</strong>，接口ID使用EUI-64自动生成，也可以使用手动配置。 </p>
+<p>例：使用EUI-64将MAC地址(48位)为A1-B2-C3-D4-E5-F6的主机的IPv6地址生成过程如下： </p>
+<pre class="language-none"><code class="language-none">先将MAC地址拆分为2部分：【A1B2C3】、【D4E5F6】； 
+
+在MAC地址的中间加上FFFE变成：【A1B2C3FFFED4E5F6】；
+
+将第7位求反：【A3B2C3FFFED4E5F6】；
+
+EUI-64计算得出的接口ID为：【A3B2:C3FF:FED4:E5F6】</code></pre>
+
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/image-20231127214807896.png" class="" title="image-20231127214807896">
+
+
+
+<h5 id="3-6-3-2-唯一本地地址（ULA）–组建私网使用"><a href="#3-6-3-2-唯一本地地址（ULA）–组建私网使用" class="headerlink" title="3.6.3.2 唯一本地地址（ULA）–组建私网使用"></a>3.6.3.2 唯一本地地址（ULA）–组建私网使用</h5><p>ULA（Unique Local Address，唯一本地地址）是IPv6私网地址，只能够在内网中使用。该地址 空间在IPv6公网中不可被路由，因此不能直接访问公网。</p>
+<p>唯一本地地址是IPv6网络中可以自己随意使用的私有网络地址，使用特定的前缀<strong>FD00&#x2F;8</strong>。 </p>
+<p>◼ 固定前缀：8bit，FD00&#x2F;8。 </p>
+<p>◼ Global ID：40bit，全球唯一前缀；通过伪随机方式产生。 </p>
+<p>◼ Subnet ID：16bit，工程师根据网络规划自定义的子网ID。 </p>
+<p>◼ Interface ID：64bit，相当于IPv4中的主机位。</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/image-20231127214509291.png" class="" title="image-20231127214509291">
+
+<h5 id="3-6-3-3-全球单播地址（GUA）"><a href="#3-6-3-3-全球单播地址（GUA）" class="headerlink" title="3.6.3.3 全球单播地址（GUA）"></a>3.6.3.3 全球单播地址（GUA）</h5><p>GUA（Global Unicast Address，全球单播地址），也被称为可聚合全球单播地址。该类地址全 球唯一，用于需要有互联网访问需求的主机，相当于IPv4的公网地址。</p>
+<p>全球单播地址相当于IPv4中的公网地址，日前已经分配出去的前3位固定是001，所以已分配的 地址范围是<strong>2000::&#x2F;3</strong>。</p>
+<p> ◼ 001：3bit，目前已分配的固定前缀为001。 </p>
+<p>◼ TLA（Top Level Aggregation）顶级聚合：13bit。 </p>
+<p>◼ RES:8bit，保留使用，为未来扩充TLA或者NLA预留。 </p>
+<p>◼ NLA（Next Level Aggregation）次级聚合：24bit。 </p>
+<p>◼ SLA（Site Level Aggregation）站点级聚合：16bit。</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/image-20231123175818983.png" class="" title="image-20231123175818983">
+
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/image-20231127214616971.png" class="" title="image-20231127214616971">
+
+
+
+<h5 id="3-6-3-4-未指定地址"><a href="#3-6-3-4-未指定地址" class="headerlink" title="3.6.3.4 未指定地址"></a>3.6.3.4 未指定地址</h5><p>◼ 它不能分配给任何节点，表示当前状态下没有地址，如当设备刚接入网络后，本身没有地址，则发送 数据包的源地址使用该地址，该地址不能用作目的地址。</p>
+<p>未指定地址：0:0:0:0:0:0:0:0&#x2F;128 或者::&#x2F;128。该地址作为某些报文的源地址，比如作 为<strong>重复地址检测（DAD）时</strong>发送的<strong>邻居请求报文</strong>（NS）的源地址，或者DHCPv6初始化过程中 客户端所发送的请求报文的源地址。</p>
+<h5 id="3-6-3-5-环回地址"><a href="#3-6-3-5-环回地址" class="headerlink" title="3.6.3.5 环回地址"></a>3.6.3.5 环回地址</h5><p>环回地址：0:0:0:0:0:0:0:1&#x2F;128 或者::1&#x2F;128，与IPv4中的127.0.0.1作用相同，用于本 地回环，发往::&#x2F;1的数据包实际上就是发给本地，可用于本地协议栈环回测试。</p>
+<p> ◼ 节点用它作为发送后返回给自己的IPv6报文，不能分配给任何物理接口</p>
+<p>相比IPV4的环回口地址（直接分配127一个地址段） IPV6的环回口较为节省</p>
+<h4 id="3-6-4-IPV4组播"><a href="#3-6-4-IPV4组播" class="headerlink" title="3.6.4 IPV4组播"></a>3.6.4 IPV4组播</h4><p>也称为多播multicast。组播是一种允许<strong>一个或多个</strong>发送者（组播源）发送<strong>单一的数据包到多个接收者</strong>（一次的，同时的）的网络技术。点到多点。</p>
+<p>应用：譬如网络视频会议、网络音频&#x2F;视频广播、AOD&#x2F;VOD、股市行情发布、多媒体远程教育、CSCW协同计算、远程会诊、网络游戏。缓解带宽的急剧消耗和网络拥挤问题。</p>
+<p>组播是基于UDP的。</p>
+<h5 id="3-6-4-1-保留的永久组播地址"><a href="#3-6-4-1-保留的永久组播地址" class="headerlink" title="3.6.4.1 保留的永久组播地址"></a>3.6.4.1 保留的永久组播地址</h5><p>(属于局部链路组播地址范围）<br>224.0.0.1 所有主机<br>224.0.0.2 所有组播路由器<br>224.0.0.3 没有分配<br>224.0.0.5 OSPF路由器<br>224.0.0.6 OSPF 指定路由器(DR)<br>224.0.0.9 RIP2路由器<br>224.0.0.10 IGRP路由器<br>224.0.0.12 DHCP服务器&#x2F;中继代理<br>224.0.0.13 所有的PIM路由器 协议无关组播<br>224.0.0.18 VRRP</p>
+<h5 id="3-6-4-2-用于在互联网上组播地址"><a href="#3-6-4-2-用于在互联网上组播地址" class="headerlink" title="3.6.4.2 用于在互联网上组播地址"></a>3.6.4.2 用于在互联网上组播地址</h5><p>（包含在用户组播地址范围内）<br>实际的可用于在互联网上组播地址是225.0.0.0&#x2F;8 - 238.0.0.0&#x2F;8，这个组播地址不属于任何服务器或个人，它有点类似一个微信群号，任何成员（组播源）往微信群（组播IP）发送消息（组播数据），这个群里的成员（组播接收者）都会接收到此消息。</p>
+<p>运营商使用的组播地址，233.0.0.0-233.255.255.255，是一种自治系统之间的组播地址分配机制，将 AS 号直接填入组播地址的中间两个字节中，每个自治系统都可以得到 255 个组播地址。</p>
+<h4 id="3-6-5-IPV6组播"><a href="#3-6-5-IPV6组播" class="headerlink" title="3.6.5 IPV6组播"></a>3.6.5 IPV6组播</h4><p>• IPv6组播地址标识多个接口，一般用于“一对多”的通信场景。</p>
+<p> • IPv6组播地址只可以作为IPv6报文的<strong>目的地址</strong>。</p>
+<p>在IPv6中不存在广播报文，要通过组播来实现，广播本身就是组播的一种应用。</p>
+<p>组播地址标识 一组接口，目的地址是组播地址的数据包会被属于该组的所有接口所接收。 </p>
+<p>◼ FF：8bit，IPv6组播地址前8位都是FF&#x2F;8，以FF::&#x2F;8开头。 </p>
+<p>◼ Left time：4bit，第1位都是0，格式|0|r|p|t|。</p>
+<p> ◼ Scope：4bit，标识传播范围。 </p>
+<p>◼ Group ID：112bit，组播组标识号。</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/image-20231127215014585.png" class="" title="image-20231127215014585">
+
+<p>• IPv6组播地址各字段值对应的组播组类型和范围： </p>
+<p>▫ Flags： </p>
+<p>​	▪ 0000表示永久分配或众所周知 ； </p>
+<p>​	▪ 0001表示 临时的。 </p>
+<p>▫ Scope：</p>
+<pre><code> ▪ 0：预留； 
+</code></pre>
+<p>​	 ▪ 1：节点本地范围；单个接口有效，仅用于Loopback通讯。 </p>
+<p>​	 ▪ 2：链路本地范围；例如FF02::1。 </p>
+<p>​	 ▪ 5：站点本地范围； </p>
+<p>​	 ▪ 8：组织本地范围；</p>
+<pre><code>  ▪ E：全球范围； 
+</code></pre>
+<p>​	 ▪ F：预留。</p>
+<h5 id="3-6-5-1-IPV6固定组播地址"><a href="#3-6-5-1-IPV6固定组播地址" class="headerlink" title="3.6.5.1 IPV6固定组播地址"></a>3.6.5.1 IPV6固定组播地址</h5><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/image-20231123210231603.png" class="" title="image-20231123210231603">
+
+<h5 id="3-6-5-2-被请求节点组播地址"><a href="#3-6-5-2-被请求节点组播地址" class="headerlink" title="3.6.5.2 被请求节点组播地址"></a>3.6.5.2 被请求节点组播地址</h5><p>当一个节点具有了单播或任播地址，就会对应生成一个被请求节点组播地址，并且加入这个组播 组。该地址主要用于<strong>邻居发现机制</strong>和<strong>地址重复检测</strong>功能。被请求节点组播地址的有效范围为<strong>本地链路范围</strong>。</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/image-20231127230916165.png" class="" title="image-20231127230916165">
+
+<p>被请求节点组播组地址的应用场景举例：在IPv6中，ARP及广播都被取消，当设备需要请求某个IPv6地址对应的MAC地址时，设备依然需要发送请求报文，但是该报文是一个<strong>组播</strong>报文，其目的IPv6地址是目标IPv6单播地址对应的<strong>被请求节点组播地址</strong>，由于只有目标节点才 会侦听这个被请求节点组播地址，所以该组播报文可以被目标节点所接收，同时不会占用 其他非目标节点的网络性能。</p>
+<h4 id="3-6-6-IPV6任播"><a href="#3-6-6-IPV6任播" class="headerlink" title="3.6.6 IPV6任播"></a>3.6.6 IPV6任播</h4><p>IPv6任播地址 </p>
+<p> 任播的概念最初是在RFC1546（Host Anycasting Service）中提出并定义的，主要为DNS和HTTP提 供服务。 </p>
+<p> IPv6中没有为任播规定单独的地址空间，任播地址和单播地址使用相同的地址空间。 </p>
+<p> IPv6任播地址可以同时被分配给多个设备，也就是说多台设备可以有相同的任播地址。</p>
+<p>以任播 地址为目标的数据包会通过路由器的路由表被路由到<strong>离源设备最近的拥有该目标地址</strong>的设备。</p>
+<p>任播地址标识一组网络接口（通常属于不同的节点）。任播地址可以作为IPv6报文的<strong>源地址，也 可以作为目的地址</strong>。</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/image-20231123211109571.png" class="" title="image-20231123211109571">
+
+<p>若路由收到用户发来的任播数据包 则会走服务器C</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/image-20231128022138363.png" class="" title="image-20231128022138363">
+
+<p>• 任播过程涉及一个任播报文发起方和一个或多个响应方。 </p>
+<p>​	▫ 任播报文的发起方通常为请求某一服务（例如，Web服务）的主机。 </p>
+<p>​	▫ 任播地址与单播地址在格式上无任何差异，唯一的区别是一台设备可以给多台具有相 同地址的设备发送报文。 </p>
+<p>• 网络中运用任播地址有很多优势： </p>
+<p>​	▫ 业务冗余。比如，用户可以通过多台使用相同地址的服务器获取同一个服务（例如， Web服务）。这些服务器都是任播报文的响应方。如果不是采用任播地址通信，当其 中一台服务器发生故障时，用户需要获取另一台服务器的地址才能重新建立通信。如 果采用的是任播地址，当一台服务器发生故障时，任播报文的发起方能够自动与使用 相同地址的另一台服务器通信，从而实现业务冗余。 </p>
+<p>​	▫ 提供更优质的服务。比如，某公司在A省和B省各部署了一台提供相同Web服务的服 务器。基于路由优选规则，A省的用户在访问该公司提供的Web服务时，会优先访问 部署在A省的服务器，提高访问速度，降低访问时延，大大提升了用户体验。</p>
+<h2 id="4-IPV6单播地址业务流程"><a href="#4-IPV6单播地址业务流程" class="headerlink" title="4.IPV6单播地址业务流程"></a>4.IPV6单播地址业务流程</h2><p>一个接口在发送IPv6报文之前要经历地址配置、DAD、地址解析这三个阶段，NDP（Neighbor Discovery  Protocol，邻居发现协议）扮演了重要角色。</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/image-20231127215741162.png" class="" title="image-20231127215741162">
+
+<h3 id="4-1-NDP–邻居发现协议"><a href="#4-1-NDP–邻居发现协议" class="headerlink" title="4.1 NDP–邻居发现协议"></a>4.1 NDP–邻居发现协议</h3><p>• RFC2461定义了NDP，该RFC后来被RFC4861替代。</p>
+<p> • NDP使用ICMPv6报文实现其功能。 </p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/image-20231127215838328.png" class="" title="image-20231127215838328">
+
+<table>
+<thead>
+<tr>
+<th align="center">ICMPv6 Type</th>
+<th align="center">报文名称</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">133</td>
+<td align="center">路由器请求（RS）</td>
+</tr>
+<tr>
+<td align="center">134</td>
+<td align="center">路由器通告（RA）</td>
+</tr>
+<tr>
+<td align="center">135</td>
+<td align="center">邻居请求（NS）</td>
+</tr>
+<tr>
+<td align="center">136</td>
+<td align="center">邻居通告（NA）</td>
+</tr>
+</tbody></table>
+<p>• **[无状态自动配置](#6.1.3.1 无状态自动配置)**是IPv6的一个亮点功能，它使得IPv6主机能够非常便捷地接入到IPv6网络中， 即插即用，无需手工配置繁冗的IPv6地址，无需部署应用服务器（例如DHCP服务器）为主 机分发地址。无状态自动配置机制使用到了ICMPv6中的路由器请求报文（Router  Solicitation）及路由器通告报文（Router Advertisement）。</p>
+<p> • 地址解析过程中使用了两种ICMPv6报文：邻居请求（Neighbor Solicitation）和邻居通告 （Neighbor Advertisement）。</p>
+<p> • 重复地址检测使用ICMPv6 NS和ICMPv6 NA报文确保网络中无两个相同的单播地址，所有 接口在使用单播地址前都需要做DAD</p>
+<h3 id="4-2-IPV6动态地址配置"><a href="#4-2-IPV6动态地址配置" class="headerlink" title="4.2 IPV6动态地址配置"></a>4.2 IPV6动态地址配置</h3><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/image-20231127220220204.png" class="" title="image-20231127220220204">
+
+<p>• IPv6支持地址<strong>有状态（stateful）</strong>和<strong>无状态（stateless）</strong>两种自动配置方式，通过ICMPv6  <strong>RA</strong>报文中的M标记（Managed Address Configuration Flag）和O标记（Other Stateful Configuration Flag）来控制终端自动获取地址的方式。 </p>
+<p>• 有状态地址配置（DHCPv6 ），M&#x3D;1，O&#x3D;1： </p>
+<p>​	▫ 采用<strong>DHCPv6协议</strong>，IPv6客户端将从<strong>DHCPv6服务器端</strong>获取完整的128 bit IPv6地址， 同时包括DNS、SNTP服务器等地址参数。 </p>
+<p>​	▫ 此外，DHCPv6服务器端将会<strong>记录该地址的分配情况</strong>（这也是为什么被称为有状态）。 </p>
+<p>​	▫ 此方法配置较为复杂，且对DHCPv6服务器端的性能要求较高。 </p>
+<p>​	▫ 有状态地址配置多用于公司内部有线终端的地址分配，便于对地址进行管理。</p>
+<p> • 无状态地址配置，M&#x3D;0，O&#x3D;0： </p>
+<p>​	▫ 采用<strong>ICMPv6协议</strong> </p>
+<p>​		▪ 使能了ICMPv6 RA功能的路由器会<strong>周期性的通告该链路上的IPv6地址前缀</strong>。 </p>
+<p>​		▪ 另一种情况，主机发送<strong>路由器查询（ICMPv6 RS）</strong>报文，路由器回复<strong>RA报文告 知该链路IPv6地址前缀</strong>。</p>
+<p>​	 ▫ 主机根据路由器回应的RA报文，获得IPv6地址前缀信息，使用该地址前缀，加上本地 产生的接口标识，形成单播IPv6地址。 </p>
+<p>​	 ▫ 若主机还想获得其他配置信息，可以通过DHCPv6来获得除地址外的其他信息。当使 用这种方式时，M&#x3D;0，O&#x3D;1。 </p>
+<p>​	 ▫ 无状态地址配置的关键在于路由器<strong>完全不关心主机的状态如何</strong>，是否在线等，所以称 为无状态。 </p>
+<p>​	▫ 无状态地址配置多用于物联网等终端较多，且终端不需要除地址外其他参数的场景。 </p>
+<p>• DNS（Domain Name System，域名系统）：一种将用户容易记忆的域名映射为网络设备 能够识别的IPv6地址的机制。 </p>
+<p>• NIS（Network Information System，网络信息服务）：用来管理电脑网络中所有与电脑系 统管理相关配置文件的系统。 </p>
+<p>• SNTP（Simple Network Time Protocol，简单网络时钟协议 ）：由 NTP 改编而来，主要 用来同步因特网中计算机的时钟。</p>
+<h3 id="4-3-DAD"><a href="#4-3-DAD" class="headerlink" title="4.3 DAD"></a>4.3 DAD</h3><p>• 无论通过何种方式配置了IPv6单播地址，主机或路由器都会： </p>
+<p> ▫ 通过ICMPv6报文进行DAD </p>
+<p> ▫ 仅当DAD通过之后才会使用该单播地址</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/image-20231127220927962.png" class="" title="image-20231127220927962">
+
+<p>• 假设R1为已在线设备，IPv6地址为2001::FFFF&#x2F;64。PC上线之后，也配置了相同的IPv6地址， 在正式使用这个地址之前，PC会对此地址做DAD，过程如下: </p>
+<ol>
+<li>PC向链路上以<strong>组播</strong>的方式发送一个<strong>NS报文</strong>，该NS的<strong>源IPv6地址</strong>为“::”（未指定地址），<strong>目的IPv6 地址</strong>为要进行DAD的2001::FFFF对应的被请求节点组播地址，也就是 FF02::1:FF00:FFFF。这个NS里包含着要做DAD的<strong>目标地址</strong>2001::FFFF。</li>
+<li>链路上的<strong>节点都会收到</strong>这个<strong>组播</strong>的NS报文，</li>
+<li>没有配置2001::FFFF的节点接口由于没 有加入该地址对应的被请求<strong>节点组播组</strong>，因此在收到这个NS的时候<strong>默默丢弃</strong>。</li>
+<li>而R1 在收到这个NS后，由于它的接口配置了2001::FFFF地址，因此接口会加入组播组 FF02::1:FF00:FFFF，</li>
+<li>而此刻所收到的报文又是以该地址为目的地址，因此它会解析该 报文，</li>
+<li>它发现对方进行DAD的目标地址与自己本地接口地址相同，于是立即回送一 个NA报文，该报文的目的地址是FF02::1，也就是所有节点组播地址，同时在报文内 写入目标地址2001::FFFF，以及自己接口的MAC地址。 </li>
+<li>当PC收到这个NA后，它就知道2001::FFFF在链路上已经有人在用了，因此将该地址 标记为Duplicate（重复的），该地址将不能用于通信。若未收到NA报文，则PC判断 这个IPv6地址可以用，DAD机制有点类似于IPv4中的免费ARP检测重复地址。</li>
+</ol>
+<h3 id="4-4-地址解析"><a href="#4-4-地址解析" class="headerlink" title="4.4 地址解析"></a>4.4 地址解析</h3><p>IPv6使用ICMPv6的NS和NA报文来取代ARP在IPv4中的地址解析功能。</p>
+<p>与IPV4不同的是 IPV6的地址解析是去维护一张邻居表 具体介绍见 <a href="#%E9%82%BB%E5%B1%85%E7%8A%B6%E6%80%81">邻居表</a></p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/image-20231127231309526.png" class="" title="image-20231127231309526">
+
+<p>• IPv6的地址解析不再使用<strong>ARP</strong>，也不再使用<strong>广播方式</strong>，而采用和DAD相同的<strong>NS和NA报文解析数据链路层地址</strong>。<br>• 假设PC想要解析R1的2001::2这个地址对应的MAC地址，详细过程如下： </p>
+<ol>
+<li>PC将发送一个NS报文达到这个目的。这个NS报文的源地址是2001::1，目的地址则 是2001::2对应的被请求节点组播地址。</li>
+<li>R1接收此NS报文，根据报文内的源IPv6地址和源MAC，记录下PC这个邻居，同时根 据自身的IPv6和MAC，回复单播NA报文。 </li>
+<li>PC收到此NA报文之后，获取其中的源IPv6地址和源MAC。这样双方都可以建立一条关于对方的邻居信息表项。</li>
+</ol>
+<h2 id="5-IPV6路由基础"><a href="#5-IPV6路由基础" class="headerlink" title="5.IPV6路由基础"></a>5.IPV6路由基础</h2><p>实验拓扑</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/image-20231123214927489.png" class="" title="image-20231123214927489">
+
+<h3 id="5-1-1-IPV6静态路由配置"><a href="#5-1-1-IPV6静态路由配置" class="headerlink" title="5.1.1 IPV6静态路由配置"></a>5.1.1 IPV6静态路由配置</h3><pre class="language-java" data-language="java"><code class="language-java"><span class="token punctuation">[</span><span class="token constant">R1</span><span class="token punctuation">]</span>ipv6 route<span class="token operator">-</span><span class="token keyword">static</span> <span class="token number">2022</span><span class="token operator">::</span> <span class="token number">64</span> <span class="token number">2012</span><span class="token operator">::</span><span class="token number">2</span></code></pre>
+
+<h3 id="5-1-2-路由协议配置"><a href="#5-1-2-路由协议配置" class="headerlink" title="5.1.2 路由协议配置"></a>5.1.2 路由协议配置</h3><p>注意，无论OSPF还是RIP，在IPV6中，已经没有network命令，无法通过宣告网段的方式来让下一路由学习</p>
+<p>需进入所需配置的接口进行划分</p>
+<h4 id="5-1-2-1-OSPF协议配置–OSPFv3"><a href="#5-1-2-1-OSPF协议配置–OSPFv3" class="headerlink" title="5.1.2.1 OSPF协议配置–OSPFv3"></a>5.1.2.1 OSPF协议配置–OSPFv3</h4><p>值得关注的是 ipv6中OSPF的router-id仍使用ipv4地址</p>
+<p><strong>在OSPF中的router id选举规则如下：</strong></p>
+<p><strong>1、优选手工配置的router id；</strong></p>
+<p>①OSPF进程手工配置的router id具有最高优先级</p>
+<p>②在全局模式下配置的公用router id的优先级仅次于直接给OSPF进程手工配置router id，即它具有第二优先级</p>
+<p><strong>2、在没有手工配置的前提下</strong>，优选loopback接口地址中最大的地址作为router id；</p>
+<p><strong>3、在没有配置loopback接口地址的前提下</strong>，优选其他接口的IP地址中选择最大的地址作为router id (不考虑接口的Up&#x2F;Down状态)。</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token punctuation">[</span><span class="token constant">R2</span><span class="token punctuation">]</span>ospfv3
+<span class="token punctuation">[</span><span class="token constant">R2</span><span class="token operator">-</span>ospfv3<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>area <span class="token number">0</span>
+<span class="token punctuation">[</span><span class="token constant">R2</span><span class="token operator">-</span>ospfv3<span class="token operator">-</span><span class="token number">1</span><span class="token operator">-</span>area<span class="token operator">-</span><span class="token number">0.0</span><span class="token number">.0</span><span class="token number">.0</span><span class="token punctuation">]</span>q
+<span class="token punctuation">[</span><span class="token constant">R2</span><span class="token operator">-</span>ospfv3<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>q
+<span class="token punctuation">[</span><span class="token constant">R2</span><span class="token punctuation">]</span>interf 
+<span class="token punctuation">[</span><span class="token constant">R2</span><span class="token punctuation">]</span><span class="token keyword">interface</span> g0<span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span>
+<span class="token punctuation">[</span><span class="token constant">R2</span><span class="token operator">-</span><span class="token class-name">GigabitEthernet0</span><span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span><span class="token punctuation">]</span>ospfv3 <span class="token operator">?</span>   
+  <span class="token constant">INTEGER</span><span class="token operator">&lt;</span><span class="token number">1</span><span class="token operator">-</span><span class="token number">65535</span><span class="token operator">></span>  <span class="token class-name">Process</span> <span class="token constant">ID</span>
+  cost              <span class="token class-name">Set</span> <span class="token class-name">OSPFv3</span> <span class="token keyword">interface</span> cost
+  dr<span class="token operator">-</span>priority       <span class="token class-name">Router</span> priority
+  mtu<span class="token operator">-</span>ignore        <span class="token class-name">Ignore</span> checking <span class="token constant">MTU</span> on <span class="token constant">DD</span> packets
+  network<span class="token operator">-</span>type      <span class="token class-name">OSPFv3</span> network type
+  peer              <span class="token class-name">Static</span> neighbor configuration <span class="token keyword">for</span> <span class="token constant">NBMA</span> and <span class="token constant">P2MP</span><span class="token operator">-</span><span class="token class-name">Nonbroadcast</span>
+                    network types
+  timer             <span class="token class-name">Specify</span> timer interval
+  trans<span class="token operator">-</span>delay       <span class="token class-name">Link</span> state transmit delay
+<span class="token punctuation">[</span><span class="token constant">R2</span><span class="token operator">-</span><span class="token class-name">GigabitEthernet0</span><span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span><span class="token punctuation">]</span>ospfv3 <span class="token number">1</span> area <span class="token number">0</span></code></pre>
+
+<p>因此在上述配置做完后 会发现邻居关系无法建立</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token punctuation">[</span><span class="token constant">R2</span><span class="token operator">-</span>ospfv3<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>router<span class="token operator">-</span>id <span class="token operator">?</span>
+  <span class="token constant">IP_ADDR</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">X<span class="token punctuation">.</span>X<span class="token punctuation">.</span>X<span class="token punctuation">.</span>X</span><span class="token punctuation">></span></span>  <span class="token class-name">OSPFv3</span> <span class="token class-name">Private</span> router <span class="token constant">ID</span> value</code></pre>
+
+<p>熟悉的样子 仍然是得配置IPV4啊！</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token punctuation">[</span><span class="token constant">R2</span><span class="token operator">-</span>ospfv3<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>router<span class="token operator">-</span>id <span class="token number">2.2</span><span class="token number">.2</span><span class="token number">.2</span></code></pre>
+
+<p>在R1上做同样的配置</p>
+<p>需要注意 如果环回口的ipv4地址是在ospf开启后配置的 则依然无法启动</p>
+<p>经过测试 不配置routerid就无法发送hello报文 </p>
+<p>邻居建立过程与ipv4相同</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/image-20231123220232806.png" class="" title="image-20231123220232806">
+
+<p>每隔10s发送hello报文 然后发送DB比大小 </p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/image-20231123220336936.png" class="" title="image-20231123220336936">
+
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token punctuation">[</span><span class="token constant">R2</span><span class="token punctuation">]</span>display ospfv3 peer
+<span class="token class-name">OSPFv3</span> <span class="token class-name">Process</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token class-name">OSPFv3</span> <span class="token class-name">Area</span> <span class="token punctuation">(</span><span class="token number">0.0</span><span class="token number">.0</span><span class="token number">.0</span><span class="token punctuation">)</span>
+<span class="token class-name">Neighbor</span> <span class="token constant">ID</span>     <span class="token class-name">Pri</span>  <span class="token class-name">State</span>            <span class="token class-name">Dead</span> <span class="token class-name">Time</span> <span class="token class-name">Interface</span>            <span class="token class-name">Instance</span> <span class="token constant">ID</span>
+<span class="token number">1.1</span><span class="token number">.1</span><span class="token number">.1</span>           <span class="token number">1</span>  <span class="token class-name">Full</span><span class="token operator">/</span><span class="token class-name">Backup</span>      <span class="token number">00</span><span class="token operator">:</span><span class="token number">00</span><span class="token operator">:</span><span class="token number">34</span>  <span class="token constant">GE0</span><span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span>                        <span class="token number">0</span></code></pre>
+
+<p>邻居关系已建立</p>
+<p>ipv6 ddns</p>
+<p>dhcpv6 报文 shutdown undo shutdown</p>
+<p>RA&#x2F;</p>
+<h4 id="5-1-2-2-RIP协议配置–RIPNG"><a href="#5-1-2-2-RIP协议配置–RIPNG" class="headerlink" title="5.1.2.2 RIP协议配置–RIPNG"></a>5.1.2.2 RIP协议配置–RIPNG</h4><pre class="language-none"><code class="language-none">[R2]ripng</code></pre>
+
+<h3 id="6-1-3-IPV6-地址自动配置"><a href="#6-1-3-IPV6-地址自动配置" class="headerlink" title="6.1.3 IPV6 地址自动配置"></a>6.1.3 IPV6 地址自动配置</h3><p>实验拓扑</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/image-20231124085730787.png" class="" title="image-20231124085730787">
+
+<h4 id="6-1-3-1-无状态自动配置"><a href="#6-1-3-1-无状态自动配置" class="headerlink" title="6.1.3.1 无状态自动配置"></a>6.1.3.1 无状态自动配置</h4><p>原理可见下文 <a href="#IPv6%E6%97%A0%E7%8A%B6%E6%80%81%E5%9C%B0%E5%9D%80%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE">IPV6无状态自动配置机制</a></p>
+<p>1.在R1和R2上使能ipv6 并让接口自动生成[链路本地地址](#3.6.3.1 链路本地地址–link-local)</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token punctuation">[</span><span class="token constant">R1</span><span class="token punctuation">]</span>ipv6									#使能设备转发<span class="token class-name">IPv6</span>单播报文，包括本地<span class="token class-name">IPv6</span>报文的发送与接收。
+<span class="token punctuation">[</span><span class="token constant">R1</span><span class="token punctuation">]</span>inter g0<span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span>   
+    
+<span class="token punctuation">[</span><span class="token constant">R1</span><span class="token operator">-</span><span class="token class-name">GigabitEthernet0</span><span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span><span class="token punctuation">]</span> ipv6 address ipv6<span class="token operator">-</span>address link<span class="token operator">-</span>local    
+<span class="token punctuation">[</span><span class="token constant">R1</span><span class="token operator">-</span><span class="token class-name">GigabitEthernet0</span><span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span><span class="token punctuation">]</span>ipv6 address auto <span class="token operator">?</span>
+  dhcp        <span class="token class-name">Address</span> assigned via <span class="token class-name">DHCPv6</span>
+  global      <span class="token class-name">Use</span> global address
+  link<span class="token operator">-</span>local  <span class="token class-name">Use</span> link<span class="token operator">-</span>local address    
+<span class="token punctuation">[</span><span class="token constant">R1</span><span class="token operator">-</span><span class="token class-name">GigabitEthernet0</span><span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span><span class="token punctuation">]</span>ipv6 address auto link<span class="token operator">-</span>local # 配置接口的链路本地地址
+    #在接口视图下，通过手工或者自动的方式，配置接口的链路本地地址。
+    
+<span class="token punctuation">[</span><span class="token constant">R1</span><span class="token operator">-</span><span class="token class-name">GigabitEthernet0</span><span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span><span class="token punctuation">]</span>display ipv6 <span class="token keyword">interface</span> brief
+<span class="token operator">*</span>down<span class="token operator">:</span> administratively down
+<span class="token punctuation">(</span>l<span class="token punctuation">)</span><span class="token operator">:</span> loopback
+<span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token operator">:</span> spoofing
+<span class="token class-name">Interface</span>                    <span class="token class-name">Physical</span>              <span class="token class-name">Protocol</span>   
+<span class="token class-name">GigabitEthernet0</span><span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span>         up                    up         
+<span class="token punctuation">[</span><span class="token class-name">IPv6</span> <span class="token class-name">Address</span><span class="token punctuation">]</span> <span class="token constant">FE80</span><span class="token operator">::</span><span class="token number">2E0</span><span class="token operator">:</span><span class="token constant">FCFF</span><span class="token operator">:</span><span class="token constant">FE2D</span><span class="token operator">:</span><span class="token number">5</span><span class="token constant">AC</span>	</code></pre>
+
+<p>此时去通信（ping为例） 需要指定端口</p>
+<pre class="language-java" data-language="java"><code class="language-java">ping ipv6 <span class="token constant">FE80</span><span class="token operator">::</span><span class="token number">2E0</span><span class="token operator">:</span><span class="token constant">FCFF</span><span class="token operator">:</span><span class="token constant">FE2D</span><span class="token operator">:</span><span class="token number">5</span><span class="token constant">AC</span> <span class="token operator">-</span>i <span class="token class-name">GigabitEthernet</span> <span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span></code></pre>
+
+<p>不然会报错：</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token punctuation">[</span><span class="token constant">R2</span><span class="token operator">-</span><span class="token class-name">GigabitEthernet0</span><span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span><span class="token punctuation">]</span>ping ipv6 <span class="token constant">FE80</span><span class="token operator">::</span><span class="token number">2E0</span><span class="token operator">:</span><span class="token constant">FCFF</span><span class="token operator">:</span><span class="token constant">FE2D</span><span class="token operator">:</span><span class="token number">5</span><span class="token constant">AC</span>
+<span class="token class-name">Error</span><span class="token operator">:</span> <span class="token class-name">Please</span> specify an <span class="token keyword">interface</span> name <span class="token keyword">for</span> the link<span class="token operator">-</span>local address<span class="token punctuation">.</span></code></pre>
+
+<p>2、在R2的接口上配置IPV6全球单播地址</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token punctuation">[</span><span class="token constant">R2</span><span class="token punctuation">]</span><span class="token keyword">interface</span> g0<span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span>
+<span class="token punctuation">[</span><span class="token constant">R2</span><span class="token operator">-</span><span class="token class-name">GigabitEthernet0</span><span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span><span class="token punctuation">]</span>ipv6 add <span class="token number">2001</span><span class="token operator">::</span><span class="token number">2</span> <span class="token number">64</span>
+<span class="token punctuation">[</span><span class="token constant">R2</span><span class="token operator">-</span><span class="token class-name">GigabitEthernet0</span><span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span><span class="token punctuation">]</span> ipv6 address auto <span class="token punctuation">&#123;</span> global <span class="token operator">|</span> dhcp <span class="token punctuation">&#125;</span>
+在接口视图下，通过手工或者自动（有状态或无状态）的方式，配置接口的全球单播地址。
+    
+    
+<span class="token punctuation">[</span><span class="token constant">R2</span><span class="token operator">-</span><span class="token class-name">GigabitEthernet0</span><span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span><span class="token punctuation">]</span>display ipv6 <span class="token keyword">interface</span> brief
+<span class="token operator">*</span>down<span class="token operator">:</span> administratively down
+<span class="token punctuation">(</span>l<span class="token punctuation">)</span><span class="token operator">:</span> loopback
+<span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token operator">:</span> spoofing
+<span class="token class-name">Interface</span>                    <span class="token class-name">Physical</span>              <span class="token class-name">Protocol</span>   
+<span class="token class-name">GigabitEthernet0</span><span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span>         up                    up         
+<span class="token punctuation">[</span><span class="token class-name">IPv6</span> <span class="token class-name">Address</span><span class="token punctuation">]</span> <span class="token number">2001</span><span class="token operator">::</span><span class="token number">2</span></code></pre>
+
+<p>3、在R2使能发布RA报文的功能</p>
+<p>默认情况下，华为路由器接口不发送ICMPv6 RA报文，则该接口所连链路上的其他设备无法进行<strong>无状态地址自动配置</strong>。 若想进行IPv6无状态地址配置，需要手工开启发送RA报文。</p>
+<p>逻辑上应该是undo抑制功能</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token punctuation">[</span><span class="token constant">R2</span><span class="token operator">-</span><span class="token class-name">GigabitEthernet0</span><span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span><span class="token punctuation">]</span>undo ipv6 nd ra halt</code></pre>
+
+<p>4、配置R1 g0&#x2F;0&#x2F;0接口自动获取ip地址</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token punctuation">[</span><span class="token constant">R1</span><span class="token punctuation">]</span>inter g0<span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span>
+<span class="token punctuation">[</span><span class="token constant">R1</span><span class="token operator">-</span><span class="token class-name">GigabitEthernet0</span><span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span><span class="token punctuation">]</span>ipv6 add auto global</code></pre>
+
+<p>5、检查R1的ip</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token punctuation">[</span><span class="token constant">R1</span><span class="token punctuation">]</span>display ipv6 <span class="token keyword">interface</span> brief 
+<span class="token operator">*</span>down<span class="token operator">:</span> administratively down
+<span class="token punctuation">(</span>l<span class="token punctuation">)</span><span class="token operator">:</span> loopback
+<span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token operator">:</span> spoofing
+<span class="token class-name">Interface</span>                    <span class="token class-name">Physical</span>              <span class="token class-name">Protocol</span>   
+<span class="token class-name">GigabitEthernet0</span><span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span>         up                    up         
+<span class="token punctuation">[</span><span class="token class-name">IPv6</span> <span class="token class-name">Address</span><span class="token punctuation">]</span> <span class="token number">2001</span><span class="token operator">::</span><span class="token number">2E0</span><span class="token operator">:</span><span class="token constant">FCFF</span><span class="token operator">:</span><span class="token constant">FE2D</span><span class="token operator">:</span><span class="token number">5</span><span class="token constant">AC</span></code></pre>
+
+<p>可以看到</p>
+<p>R1已经学习到了R2的ip</p>
+<p>拥有与R2一样的64位前缀2001::&#x2F;64</p>
+<p>接口id结合其mac地址 生成方式参照[EUI-64](#3.6.3.1 链路本地地址–link-local)标准</p>
+<h4 id="6-1-3-2-ICMPv6报文"><a href="#6-1-3-2-ICMPv6报文" class="headerlink" title="6.1.3.2 ICMPv6报文"></a>6.1.3.2 ICMPv6报文</h4><p>参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_32044265/article/details/126402242">https://blog.csdn.net/qq_32044265/article/details/126402242</a></p>
+<p>实则是icmpv6报文</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/image-20231124092754116.png" class="" title="image-20231124092754116">
+
+<p>ICMPv6概述<br>ICMPv6是IPv6的基础协议之一，协议类型号（即IPv6 Next Header）为<strong>58</strong>，用于向源节点传递报文转发的信息或者错误。</p>
+<p>在IPv6中，ICMPv6除了提供ICMPv4的对应功能之外，还有其它一些功能的基础，如邻居发现、无状态地址配置、重复地址检测、PMTU发现等。</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/image-20231127232506712.png" class="" title="image-20231127232506712">
+
+<p>报文解释：</p>
+<p>Type：表明消息的类型，0至127表示差错报文类型，128至255表示消息报文类型。</p>
+<p>Code：表示此消息类型细分的类型。</p>
+<p>Checksum：表示ICMPv6报文的校验和。</p>
+<p>ICMPv6 message Type(两大类)</p>
+<p>错误类消息（error messages），也称为差错报文，8bits类型字段中的最高bit为0，也就是ICMPv6 Type&#x3D;[0,127]</p>
+<p>信息类消息（information messages） ，也称为信息报文， 8bits类型字段中的最高bit为1，也就是ICMPv6 Type&#x3D;[128,255]</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/image-20231128020644916.png" class="" title="image-20231128020644916">
+
+<p>下述内容有部分机制在上文中已介绍过 这里是为了ICMP报文的汇总而写 也可以再次阅读 上文主要是基于华为IA教材而写 下面主要是基于csdn的文章来介绍的</p>
+<h5 id="IPv6邻居发现协议-NDP"><a href="#IPv6邻居发现协议-NDP" class="headerlink" title="IPv6邻居发现协议 - NDP"></a><strong>IPv6邻居发现协议 - NDP</strong></h5><p>NDP（Neighbor Discovery Protocol，邻居发现协议）在RFC2462及RFC4861中定义。NDP实现了IPv6中诸多重要机制，如下图所示：</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/168c2c210a4c1e227b061b5daadf98eb.png" class="" title="img">
+
+<p>NDP使用ICMPv6的相关报文如下图所示：</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/88f480f5050df489c15a2f5fc335d6ae.png" class="" title="img">
+
+<ul>
+<li>RS（Router Solicitation）：路由器请求报文</li>
+<li>RA（Router Advertisement）：路由器通告报文</li>
+<li>NS（Neighbor Solicitation）：邻居请求报文</li>
+<li>NA（Neighbor Advertisement）：邻居通告报文</li>
+</ul>
+<h5 id="邻居状态"><a href="#邻居状态" class="headerlink" title="邻居状态"></a>邻居状态</h5><p>在实际的IPV6通讯过程中不仅仅是<strong>地址解析</strong>这么简单，而是需要维护一张<strong>邻居表</strong>，每个邻居都有相应的状态，状态之间可以迁移。邻居状态有5种：</p>
+<p>INCOMPLETE：未完成，邻居请求已经发送到目标节点的请求组播地址，但没有收到邻居的通告；</p>
+<p>REACHABLE：可达，收到确认，不需再发包确认；</p>
+<p>STALE：陈旧，从收到上一次可达性确认后过了超过30s；</p>
+<p>DELAY：延迟，在stale状态后发送过一个报文，并且5s内没有可达性确认；</p>
+<p>PROBE：探查，每隔1s重传邻居请求来主动请求可达性确认，直到收到确认。</p>
+<p>下面以A、B两个节点之间相互通讯过程的A节点的邻居状态变化，假设A、B两个节点之前没有任何通讯：</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/83511b0bfed28a9b156e32f8ea896cbc.png" class="" title="img">
+
+<ol>
+<li><p>A先发送NS，并生成邻居缓存条目，状态为Incomplete；</p>
+</li>
+<li><p>若B回复NA，则Incomplete-&gt;Reachable，否则10s后Incomplete-&gt;Empty，即删除条目；</p>
+</li>
+<li><p>经过ReachableTime（<strong>默认30s</strong>），条目状态Reachable-&gt;Stale；或者在Reachable状态，收到B的非请求NA，且链路层地址不同，则马上-&gt;Stale；</p>
+</li>
+<li><p>在Stale状态若A需要向B发送数据，则Stale-&gt;Delay，同时发送NS请求；</p>
+</li>
+<li><p>在Delay_First_Probe_Time（默认5秒）后，Delay-&gt;Probe，其间若有NA应答，则Delay-&gt;Reachable；</p>
+</li>
+<li><p>在Probe状态，每隔RetransTimer（<strong>默认1秒</strong>）发送单播NS，发送MAX_UNICAST_SOLICIT个后再等RestransTimer，有应答则-&gt;Reachable，否则进入Empty，即删除表项。</p>
+</li>
+</ol>
+<h5 id="查看IPv6邻居路由表"><a href="#查看IPv6邻居路由表" class="headerlink" title="查看IPv6邻居路由表"></a><strong>查看IPv6邻居路由表</strong></h5><p>   IPv6不像IPv4那样使用ARP表来缓存IP与MAC地址的映射，而是维护一个IPv6邻居表。在华为数通设备上则使用<code>display ipv6 neighbors</code>命令来查看IPv6邻居表。</p>
+<p>在windows操作系统里，可以使用<code>netsh interface ipv6 show neighbors</code>命令查看邻居缓存的内容。</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/image-20231128021748305.png" class="" title="image-20231128021748305">
+
+<p>可以看到 路由器的ipv6地址生成方式遵循EUI-64</p>
+<p>ff02开头的是节点组播地址</p>
+<h5 id="路由器发现"><a href="#路由器发现" class="headerlink" title="路由器发现"></a>路由器发现</h5><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/image-20231128022308920.png" class="" title="image-20231128022308920">
+
+<p>路由器发现功能用来发现与本地链路相连的设备，并获取与地址自动配置相关的前缀和其他配置参数。路由器发现功能主要通过以下两种报文实现：</p>
+<p>RA（Router Advertisement，路由器通告）报文：每台设备为了让二层网络上的主机和设备知道自己的存在，可以定时以组播方式发送RA报文，RA报文中会带有网络前缀信息，及其他一些标志位信息。RA报文的Type字段值为134。</p>
+<p>RS（Router Solicitation，路由器请求）报文：很多情况下主机接入网络后希望尽快获取网络前缀进行通信，此时主机可以立刻发送RS报文给路由器。网络上的路由器收到该RS报文后会立即向相应的主机单播回应RA报文，告知主机该网段的默认路由器和相关配置参数。RS报文的Type字段值为133。</p>
+<p>RA</p>
+<p>链路上的路由器会定期的发送RA（Router Advertisement）消息。</p>
+<p>收到RA的主机将加入默认路由器列表中。</p>
+<p>收到RA的路由器将检查RA内容的一致性。</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/e8ebd0315251a9cbf7b5f412e2937635.png" class="" title="img">
+
+
+
+<p><strong>RS</strong></p>
+<p>主机接口初始化时发RS（Router Solicitation）消息，路由器回应RA。</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/a5141ce3426ff3c825f272687ab1ceb9.png" class="" title="img">
+
+<h5 id="IPv6无状态地址自动配置"><a href="#IPv6无状态地址自动配置" class="headerlink" title="IPv6无状态地址自动配置"></a>IPv6无状态地址自动配置</h5><p>IPv6支持无状态地址自动配置，无需使用诸如DHCP之类的辅助协议，主机即可获取IPv6前缀并自动生成接口ID。路由器发现功能是IPv6地址自动配置功能的基础，主要通过以下两步骤获取：</p>
+<ul>
+<li><p>网络节点向相连的路由器发送RS，请求地址前缀信息。</p>
+</li>
+<li><p>路由器通过发送路由器通告RA，回复地址前缀信息。</p>
+</li>
+<li><p>接口id可通过EUI-64结合接口生成</p>
+</li>
+</ul>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/fcbd8d25f16ab0a0907cbec89ad5cbee-17011095149841.png" class="" title="img">
+
+<p>如上图所示，IPv6无状态地址自动配置的工作过程如下：</p>
+<ol>
+<li><p>主机根据本地接口ID自动产生网卡的链路本地地址。</p>
+</li>
+<li><p>主机对链路本地地址进行DAD检测， 如果该地址不存在冲突则可以启用。</p>
+</li>
+<li><p>主机发送RS报文尝试在链路上发现IPv6路由器，该报文的源地址为主机的链路本地地址。</p>
+</li>
+<li><p>路由器回复RA报文（携带IPv6前缀信息，路由器在未收到RS时也能够配置主动发出RA报文）。</p>
+</li>
+<li><p>主机根据路由器回应的RA报文，获得IPv6地址前缀信息，使用该地址前缀，加上<strong>本地</strong>产生的接口ID，形成单播IPv6地址。</p>
+</li>
+<li><p>主机对生成的IPv6地址进行DAD检测，如果没有检测到冲突，那么该地址才能够启用。</p>
+</li>
+</ol>
+<h5 id="重定向报文"><a href="#重定向报文" class="headerlink" title="重定向报文"></a><strong>重定向报文</strong></h5><p>当网关路由器知道更好的转发路径时，会以重定向报文的方式告知主机，让报文发送者选择另一个网关路由器。</p>
+<p>重定向报文的结构如下：</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/ad653db1c7f3b32f0dd6755b1df76561.png" class="" title="img">
+
+<ul>
+<li>报文格式中Type为137，Code为0；</li>
+<li>Target Address是更好的路径下一跳地址；</li>
+<li>Destination Address是需要重定向转发的报文的目的地址。</li>
+</ul>
+<p>如下图所示，假设主机A想与主机B通讯，主机A的默认网关路由器是RTA，那么当A发送报文给B时报文会被送到RTA。RTA接收到A发送的报文以后会发现实际上主机A直接发送给路由器RTB更好，它将发送一个ICMPv6重定向报文给主机A，其中Target Address为RTB，Destination Address为主机B。</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/41461d2cc2ba0176f12e69cfc4a4bc68.png" class="" title="img">
+
+<p>主机A接收到了重定向报文之后，会在默认路由表中添加一个主机路由，以后发往主机B的报文就直接给RTB。</p>
+<p>这就是重定向的一个简单过程，其中会有个问题：RTA如何知道去往主机B的路径通过RTB更好呢？</p>
+<p>其实这个很简单，因为RTA会发现报文进入的接口就是报文路由得出接口，也就是说发往主机B的路由实际上只是在RTA上转了一圈出来了，然后转发到RTB，据此，RTA能判断出直接给RTB是更好的路径。</p>
+<h5 id="Path-MTU"><a href="#Path-MTU" class="headerlink" title="Path MTU"></a><strong>Path MTU</strong></h5><p>在IPv6中，为了减少中间转发设备的处理压力，中间转发设备不对IPv6报文进行分片，报文的分片将在源节点进行。</p>
+<p>PMTU协议是通过ICMPv6的Packet Too Big报文来完成的。首先源节点假设PMTU就是其出接口的MTU，发出一个试探性的报文，当转发路径上存在一个小于当前假设的PMTU时，转发设备就会向源节点发送Packet Too Big报文，并且携带自己的MTU值，此后源节点将PMTU的假设值更改为新收到的MTU值继续发送报文。如此反复，直到报文到达目的地之后，源节点就能知道到达目的地的PMTU了。</p>
+<p>如下图所示整条传输路径需要通过4条链路，每条链路的MTU分别是1500、1500、1400、1300，当源节点发送一个分片报文的时候，Path MTU工作过程如下：</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/05b78990835ec63e4c46fb717bb254dc.png" class="" title="img">
+
+<ul>
+<li><p>首先按照PMTU为1500进行分片并发送分片报文，当到达MTU为1400的出接口时，路由器返回Packet Too Big错误，同时携带MTU值为1400的信息。</p>
+</li>
+<li><p>源节点接收到之后会将报文重新按照PMTU为1400进行分片并再次发送一个分片报文，当分片报文到达MTU值为1300的出接口时，同样返回Packet Too Big错误，携带MTU值为1300的信息。</p>
+</li>
+<li><p>之后源节点重新按照PMTU为1300进行分片并发送分片报文，最终到达目的地，这样就找到了该路径的PMTU。</p>
+</li>
+</ul>
+<h4 id="6-1-3-3-DHCP配置"><a href="#6-1-3-3-DHCP配置" class="headerlink" title="6.1.3.3 DHCP配置"></a>6.1.3.3 DHCP配置</h4><p>拓扑</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2023/11/04/ICT/ipv6/image-20231127232044343.png" class="" title="image-20231127232044343">
+
+<p>1.在R1、R2、R3、R4全局和相关接口使能IPv6功能，同时自 动生成链路本地地址（以R1配置为例）</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token punctuation">[</span><span class="token constant">R1</span><span class="token punctuation">]</span>ipv6 
+<span class="token punctuation">[</span><span class="token constant">R1</span><span class="token punctuation">]</span><span class="token keyword">interface</span> <span class="token class-name">GigabitEthernet</span> <span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span>
+<span class="token punctuation">[</span><span class="token constant">R1</span><span class="token operator">-</span><span class="token class-name">GigabitEthernet0</span><span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span><span class="token punctuation">]</span>ipv6 enable
+<span class="token punctuation">[</span><span class="token constant">R1</span><span class="token operator">-</span><span class="token class-name">GigabitEthernet0</span><span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span><span class="token punctuation">]</span>ipv6 address auto link<span class="token operator">-</span>local </code></pre>
+
+<p>2.在R1、R2相应接口配置静态IPv6全球单播地址</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token punctuation">[</span><span class="token constant">R1</span><span class="token punctuation">]</span><span class="token keyword">interface</span> <span class="token class-name">GigabitEthernet</span> <span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span>
+<span class="token punctuation">[</span><span class="token constant">R1</span><span class="token operator">-</span><span class="token class-name">GigabitEthernet0</span><span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span><span class="token punctuation">]</span>ipv6 address <span class="token number">2001</span><span class="token operator">::</span><span class="token number">1</span> <span class="token number">64</span>
+
+<span class="token punctuation">[</span><span class="token constant">R2</span><span class="token punctuation">]</span><span class="token keyword">interface</span> <span class="token class-name">GigabitEthernet</span> <span class="token number">1</span><span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span>
+<span class="token punctuation">[</span><span class="token constant">R2</span><span class="token operator">-</span><span class="token class-name">GigabitEthernet1</span><span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span><span class="token punctuation">]</span>ipv6 address <span class="token number">2001</span><span class="token operator">::</span><span class="token number">2</span> <span class="token number">64</span>
+<span class="token punctuation">[</span><span class="token constant">R2</span><span class="token operator">-</span><span class="token class-name">GigabitEthernet1</span><span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token keyword">interface</span> <span class="token class-name">GigabitEthernet</span> <span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span>
+<span class="token punctuation">[</span><span class="token constant">R2</span><span class="token operator">-</span><span class="token class-name">GigabitEthernet0</span><span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span><span class="token punctuation">]</span>ipv6 address <span class="token number">2002</span><span class="token operator">::</span><span class="token number">1</span> <span class="token number">64</span>
+<span class="token punctuation">[</span><span class="token constant">R2</span><span class="token operator">-</span><span class="token class-name">GigabitEthernet0</span><span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token keyword">interface</span> <span class="token class-name">GigabitEthernet</span> <span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">1</span>
+<span class="token punctuation">[</span><span class="token constant">R2</span><span class="token operator">-</span><span class="token class-name">GigabitEthernet0</span><span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">1</span><span class="token punctuation">]</span>ipv6 address <span class="token number">2003</span><span class="token operator">::</span><span class="token number">1</span> <span class="token number">64</span></code></pre>
+
+<p>3.在R2上配置DHCPv6服务器功能；R3接口通过DHCPv6方式 获取全球单播地址，并学习到IPv6网关R2的缺省路由</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token punctuation">[</span><span class="token constant">R2</span><span class="token punctuation">]</span>dhcp enable 
+<span class="token punctuation">[</span><span class="token constant">R2</span><span class="token punctuation">]</span>dhcpv6 pool pool1 
+<span class="token punctuation">[</span><span class="token constant">R2</span><span class="token operator">-</span>dhcpv6<span class="token operator">-</span>pool<span class="token operator">-</span>pool1<span class="token punctuation">]</span>address prefix <span class="token number">2002</span><span class="token operator">::</span><span class="token operator">/</span><span class="token number">64</span>
+<span class="token punctuation">[</span><span class="token constant">R2</span><span class="token punctuation">]</span><span class="token keyword">interface</span> <span class="token class-name">GigabitEthernet</span> <span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span>
+<span class="token punctuation">[</span><span class="token constant">R2</span><span class="token operator">-</span><span class="token class-name">GigabitEthernet0</span><span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span><span class="token punctuation">]</span>dhcpv6 server pool1
+<span class="token punctuation">[</span><span class="token constant">R2</span><span class="token operator">-</span><span class="token class-name">GigabitEthernet0</span><span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span><span class="token punctuation">]</span> undo ipv6 nd ra halt 
+<span class="token punctuation">[</span><span class="token constant">R2</span><span class="token operator">-</span><span class="token class-name">GigabitEthernet0</span><span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span><span class="token punctuation">]</span> ipv6 nd autoconfig managed<span class="token operator">-</span>address<span class="token operator">-</span>flag
+<span class="token punctuation">[</span><span class="token constant">R2</span><span class="token operator">-</span><span class="token class-name">GigabitEthernet0</span><span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span><span class="token punctuation">]</span> ipv6 nd autoconfig other<span class="token operator">-</span>flag
+<span class="token punctuation">[</span><span class="token constant">R2</span><span class="token operator">-</span><span class="token class-name">GigabitEthernet0</span><span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span><span class="token punctuation">]</span> quit</code></pre>
+
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token punctuation">[</span><span class="token constant">R3</span><span class="token punctuation">]</span>dhcp enable 
+<span class="token punctuation">[</span><span class="token constant">R3</span><span class="token punctuation">]</span><span class="token keyword">interface</span> <span class="token class-name">GigabitEthernet</span> <span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span>
+<span class="token punctuation">[</span><span class="token constant">R3</span><span class="token operator">-</span><span class="token class-name">GigabitEthernet0</span><span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span><span class="token punctuation">]</span>ipv6 address auto dhcp
+<span class="token punctuation">[</span><span class="token constant">R3</span><span class="token operator">-</span><span class="token class-name">GigabitEthernet0</span><span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span><span class="token punctuation">]</span>ipv6 address auto global <span class="token keyword">default</span></code></pre>
+
+<p>4.在R2使能发布RA报文的功能，R4通过无状态地址配置的方 式获取地址</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token punctuation">[</span><span class="token constant">R2</span><span class="token punctuation">]</span><span class="token keyword">interface</span> <span class="token class-name">GigabitEthernet</span> <span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">1</span>
+<span class="token punctuation">[</span><span class="token constant">R2</span><span class="token operator">-</span><span class="token class-name">GigabitEthernet0</span><span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">1</span><span class="token punctuation">]</span>undo ipv6 nd ra halt</code></pre>
+
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token punctuation">[</span><span class="token constant">R4</span><span class="token punctuation">]</span><span class="token keyword">interface</span> <span class="token class-name">GigabitEthernet</span> <span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span>
+<span class="token punctuation">[</span><span class="token constant">R4</span><span class="token operator">-</span><span class="token class-name">GigabitEthernet0</span><span class="token operator">/</span><span class="token number">0</span><span class="token operator">/</span><span class="token number">0</span><span class="token punctuation">]</span>ipv6 address auto global</code></pre>
+
+<p>5.在R4上配置静态路由</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token punctuation">[</span><span class="token constant">R4</span><span class="token punctuation">]</span>ipv6 route<span class="token operator">-</span><span class="token keyword">static</span> <span class="token number">2001</span><span class="token operator">::</span> <span class="token number">64</span> <span class="token number">2003</span><span class="token operator">::</span><span class="token number">1</span> 
+<span class="token punctuation">[</span><span class="token constant">R4</span><span class="token punctuation">]</span>ipv6 route<span class="token operator">-</span><span class="token keyword">static</span> <span class="token number">2002</span><span class="token operator">::</span> <span class="token number">64</span> <span class="token number">2003</span><span class="token operator">::</span></code></pre>
+
+<p>6.在R1上配置聚合后的静态路由</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token punctuation">[</span><span class="token constant">R1</span><span class="token punctuation">]</span>ipv6 route<span class="token operator">-</span><span class="token keyword">static</span> <span class="token number">2002</span><span class="token operator">::</span> <span class="token number">15</span> <span class="token number">2001</span><span class="token operator">::</span><span class="token number">2</span></code></pre>
+
+
+
+<h2 id="ADD"><a href="#ADD" class="headerlink" title="ADD"></a>ADD</h2><h3 id="1-单接口下配置多个ip"><a href="#1-单接口下配置多个ip" class="headerlink" title="1 单接口下配置多个ip"></a>1 单接口下配置多个ip</h3><pre class="language-none"><code class="language-none">[R1]inter g0&#x2F;0&#x2F;0
+[R1-GigabitEthernet0&#x2F;0&#x2F;0]ip add 192.168.1.1
+[R1-GigabitEthernet0&#x2F;0&#x2F;0]ip add 192.168.1.2 sub
+[R1-GigabitEthernet0&#x2F;0&#x2F;0]ip add 192.168.1.3 sub
+...</code></pre>
+
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/tx.png" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/tx.png" title="头像" alt="头像"></a><div class="post-copyright__author_name">ryz</div><div class="post-copyright__author_desc">生活就是白云苍狗</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="http://ybjryz.github.io/2023/11/04/ICT/ipv6/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('http://ybjryz.github.io/2023/11/04/ICT/ipv6/')">ipv6</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="http://ybjryz.github.io/2023/11/04/ICT/ipv6/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=ipv6&amp;url=http://ybjryz.github.io/2023/11/04/ICT/ipv6/&amp;pic=" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://ybjryz.github.io" target="_blank">ryz</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/ICT/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>ICT<span class="tagsPageCount">11</span></a></div></div></div><div class="post_share"><div class="social-share" data-image="/img/tx.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/11/03/SQL/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">SQL</div></div></a></div><div class="next-post pull-right"><a href="/2023/11/04/%E7%BA%A2%E5%B2%A9%E6%9D%AF/"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">红岩杯</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="anzhiyufont anzhiyu-icon-thumbs-up fa-fw" style="font-size: 1.5rem; margin-right: 4px"></i><span>喜欢这篇文章的人也看了</span></div><div class="relatedPosts-list"><div><a href="/2023/11/08/ip%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" title="ip基本概念"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2023-11-08</div><div class="title">ip基本概念</div></div></a></div><div><a href="/2023/11/02/ICT/PPP/" title="PPP"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2023-11-02</div><div class="title">PPP</div></div></a></div><div><a href="/2023/11/09/ICT/%E5%8D%8E%E4%B8%BAensp%E5%91%BD%E4%BB%A4%E9%85%8D%E7%BD%AE/" title="ensp命令与部分知识点总结"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2023-11-09</div><div class="title">ensp命令与部分知识点总结</div></div></a></div><div><a href="/2023/11/10/ICT/%E6%95%B0%E9%80%9A%E5%88%B7%E9%A2%98/" title="数通刷题"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2023-11-10</div><div class="title">数通刷题</div></div></a></div><div><a href="/2023/11/18/ICT/BGP/" title="BGP"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2023-11-18</div><div class="title">BGP</div></div></a></div><div><a href="/2023/11/11/ICT/%E7%AD%96%E7%95%A5%E8%B7%AF%E7%94%B1/" title="路由策略"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2023-11-11</div><div class="title">路由策略</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/tx.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__description"></div></div></div><div class="card-widget anzhiyu-right-widget" id="card-wechat" onclick="null"><div id="flip-wrapper"><div id="flip-content"><div class="face" style="background: url(https://bu.dusays.com/2023/01/13/63c02edf44033.png) center center / 100% no-repeat"></div><div class="back face" style="background: url(https://bu.dusays.com/2023/05/13/645fa415e8694.png) center center / 100% no-repeat"></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#IPV6"><span class="toc-number">1.</span> <span class="toc-text">IPV6</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-ipv6%E5%BC%95%E5%85%A5"><span class="toc-number">1.1.</span> <span class="toc-text">1.ipv6引入</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-IPV4%E7%8E%B0%E7%8A%B6"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.1 IPV4现状</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-ipv4-%E5%B1%80%E9%99%90%E6%80%A7"><span class="toc-number">1.1.2.</span> <span class="toc-text">1.2 ipv4 局限性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-ipv6%E3%81%AE%E5%B4%9B%E8%B5%B7"><span class="toc-number">1.1.3.</span> <span class="toc-text">1.3 ipv6の崛起</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-%E9%97%A8%E7%A6%81%E9%94%81%E8%BF%9Ewifi"><span class="toc-number">1.1.4.</span> <span class="toc-text">1.4 门禁锁连wifi</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-IPv6%E4%B8%8EIPv4%E5%AF%B9%E6%AF%94"><span class="toc-number">1.2.</span> <span class="toc-text">2.IPv6与IPv4对比</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-IPv6%E6%95%B0%E6%8D%AE%E6%8A%A5%E5%B0%81%E8%A3%85"><span class="toc-number">1.2.1.</span> <span class="toc-text">2.1 IPv6数据报封装</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-IPv6%E5%9F%BA%E7%A1%80%EF%BC%81"><span class="toc-number">1.3.</span> <span class="toc-text">3.IPv6基础！</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-IPV6%E6%8A%A5%E5%A4%B4"><span class="toc-number">1.3.1.</span> <span class="toc-text">3.1 IPV6报头</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-1-IPV6%E5%9F%BA%E6%9C%AC%E6%8A%A5%E5%A4%B4%E5%AD%97%E6%AE%B5%E8%A7%A3%E9%87%8A"><span class="toc-number">1.3.1.1.</span> <span class="toc-text">3.1.1 IPV6基本报头字段解释</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-2-IPV6%E6%89%A9%E5%B1%95%E6%8A%A5%E5%A4%B4"><span class="toc-number">1.3.1.2.</span> <span class="toc-text">3.1.2 IPV6扩展报头</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-3-IPV6%E6%8A%A5%E5%A4%B4%E5%A4%84%E7%90%86%E6%9C%BA%E5%88%B6"><span class="toc-number">1.3.1.3.</span> <span class="toc-text">3.1.3 IPV6报头处理机制</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E5%AE%9E%E9%AA%8C%E2%80%93ping%E8%A7%82%E5%AF%9Fipv6%E6%8A%A5%E5%A4%B4"><span class="toc-number">1.3.2.</span> <span class="toc-text">3.2 实验–ping观察ipv6报头</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-1-%E9%85%8D%E7%BD%AE%E6%8E%A5%E5%8F%A3ip"><span class="toc-number">1.3.2.1.</span> <span class="toc-text">3.2.1 配置接口ip</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-ping%E8%A7%82%E5%AF%9F%E6%8A%A5%E5%A4%B4"><span class="toc-number">1.3.3.</span> <span class="toc-text">3.3 ping观察报头</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-1-ping%E5%9F%BA%E7%A1%80%E5%8C%85"><span class="toc-number">1.3.3.1.</span> <span class="toc-text">3.3.1 ping基础包</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-2-%E5%88%86%E7%89%87"><span class="toc-number">1.3.3.2.</span> <span class="toc-text">3.3.2 分片</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#3-3-2-1-%E5%88%86%E7%89%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">1.3.3.2.1.</span> <span class="toc-text">3.3.2.1 分片的基本概念</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-3-2-2-%E6%8A%93%E5%8C%85%E5%88%86%E6%9E%90"><span class="toc-number">1.3.3.2.2.</span> <span class="toc-text">3.3.2.2 抓包分析</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-%E5%B8%B8%E8%A7%81%E4%B8%8A%E5%B1%82%E5%8D%8F%E8%AE%AE%E5%8F%8A%E5%AF%B9%E5%BA%94%E7%9A%84Next-Header%E5%80%BC"><span class="toc-number">1.3.4.</span> <span class="toc-text">3.4 常见上层协议及对应的Next Header值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-IPv6-%E8%A1%A8%E7%A4%BA%E6%96%B9%E5%BC%8F"><span class="toc-number">1.3.5.</span> <span class="toc-text">3.5 IPv6 表示方式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81%E5%89%8D%E5%AF%BC0%E5%8F%AF%E7%9C%81%E7%95%A5"><span class="toc-number">1.3.5.1.</span> <span class="toc-text">1、前导0可省略</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%E3%80%811%E4%B8%AA%E6%88%96%E5%A4%9A%E4%B8%AA0%E7%BB%84%E6%88%90%E7%9A%84%E5%9C%B0%E5%9D%80%E5%9D%97%E5%8F%AF%E7%94%A8-%E5%8F%96%E4%BB%A3"><span class="toc-number">1.3.5.2.</span> <span class="toc-text">2、1个或多个0组成的地址块可用::取代</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">1.4.</span> <span class="toc-text"></span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-6-IPV6%E7%9A%84%E5%8D%95%E6%92%AD%E7%BB%84%E6%92%AD%E5%B9%BF%E6%92%AD"><span class="toc-number">1.4.1.</span> <span class="toc-text">3.6 IPV6的单播组播广播</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-6-1-IPV6%E5%9C%B0%E5%9D%80%E7%BB%93%E6%9E%84"><span class="toc-number">1.4.1.1.</span> <span class="toc-text">3.6.1 IPV6地址结构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-6-2-IPV4%E7%9A%84%E5%8D%95%E6%92%AD%E7%BB%84%E6%92%AD%E5%B9%BF%E6%92%AD"><span class="toc-number">1.4.1.2.</span> <span class="toc-text">3.6.2 IPV4的单播组播广播</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-6-3IPV6%E7%9A%84%E5%8D%95%E6%92%AD"><span class="toc-number">1.4.1.3.</span> <span class="toc-text">3.6.3IPV6的单播</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3%E6%A0%87%E8%AF%86%E7%94%9F%E6%88%90%E6%96%B9%E6%B3%95"><span class="toc-number">1.4.1.3.1.</span> <span class="toc-text">接口标识生成方法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8D%95%E6%92%AD%E5%9C%B0%E5%9D%80%E5%88%86%E7%B1%BB"><span class="toc-number">1.4.1.3.2.</span> <span class="toc-text">单播地址分类</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-6-3-1-%E9%93%BE%E8%B7%AF%E6%9C%AC%E5%9C%B0%E5%9C%B0%E5%9D%80%EF%BC%88LLA%EF%BC%89%E2%80%93link-local"><span class="toc-number">1.4.1.3.3.</span> <span class="toc-text">3.6.3.1 链路本地地址（LLA）–link-local</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-6-3-2-%E5%94%AF%E4%B8%80%E6%9C%AC%E5%9C%B0%E5%9C%B0%E5%9D%80%EF%BC%88ULA%EF%BC%89%E2%80%93%E7%BB%84%E5%BB%BA%E7%A7%81%E7%BD%91%E4%BD%BF%E7%94%A8"><span class="toc-number">1.4.1.3.4.</span> <span class="toc-text">3.6.3.2 唯一本地地址（ULA）–组建私网使用</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-6-3-3-%E5%85%A8%E7%90%83%E5%8D%95%E6%92%AD%E5%9C%B0%E5%9D%80%EF%BC%88GUA%EF%BC%89"><span class="toc-number">1.4.1.3.5.</span> <span class="toc-text">3.6.3.3 全球单播地址（GUA）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-6-3-4-%E6%9C%AA%E6%8C%87%E5%AE%9A%E5%9C%B0%E5%9D%80"><span class="toc-number">1.4.1.3.6.</span> <span class="toc-text">3.6.3.4 未指定地址</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-6-3-5-%E7%8E%AF%E5%9B%9E%E5%9C%B0%E5%9D%80"><span class="toc-number">1.4.1.3.7.</span> <span class="toc-text">3.6.3.5 环回地址</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-6-4-IPV4%E7%BB%84%E6%92%AD"><span class="toc-number">1.4.1.4.</span> <span class="toc-text">3.6.4 IPV4组播</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#3-6-4-1-%E4%BF%9D%E7%95%99%E7%9A%84%E6%B0%B8%E4%B9%85%E7%BB%84%E6%92%AD%E5%9C%B0%E5%9D%80"><span class="toc-number">1.4.1.4.1.</span> <span class="toc-text">3.6.4.1 保留的永久组播地址</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-6-4-2-%E7%94%A8%E4%BA%8E%E5%9C%A8%E4%BA%92%E8%81%94%E7%BD%91%E4%B8%8A%E7%BB%84%E6%92%AD%E5%9C%B0%E5%9D%80"><span class="toc-number">1.4.1.4.2.</span> <span class="toc-text">3.6.4.2 用于在互联网上组播地址</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-6-5-IPV6%E7%BB%84%E6%92%AD"><span class="toc-number">1.4.1.5.</span> <span class="toc-text">3.6.5 IPV6组播</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#3-6-5-1-IPV6%E5%9B%BA%E5%AE%9A%E7%BB%84%E6%92%AD%E5%9C%B0%E5%9D%80"><span class="toc-number">1.4.1.5.1.</span> <span class="toc-text">3.6.5.1 IPV6固定组播地址</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-6-5-2-%E8%A2%AB%E8%AF%B7%E6%B1%82%E8%8A%82%E7%82%B9%E7%BB%84%E6%92%AD%E5%9C%B0%E5%9D%80"><span class="toc-number">1.4.1.5.2.</span> <span class="toc-text">3.6.5.2 被请求节点组播地址</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-6-6-IPV6%E4%BB%BB%E6%92%AD"><span class="toc-number">1.4.1.6.</span> <span class="toc-text">3.6.6 IPV6任播</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-IPV6%E5%8D%95%E6%92%AD%E5%9C%B0%E5%9D%80%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B"><span class="toc-number">1.5.</span> <span class="toc-text">4.IPV6单播地址业务流程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-NDP%E2%80%93%E9%82%BB%E5%B1%85%E5%8F%91%E7%8E%B0%E5%8D%8F%E8%AE%AE"><span class="toc-number">1.5.1.</span> <span class="toc-text">4.1 NDP–邻居发现协议</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-IPV6%E5%8A%A8%E6%80%81%E5%9C%B0%E5%9D%80%E9%85%8D%E7%BD%AE"><span class="toc-number">1.5.2.</span> <span class="toc-text">4.2 IPV6动态地址配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-DAD"><span class="toc-number">1.5.3.</span> <span class="toc-text">4.3 DAD</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-%E5%9C%B0%E5%9D%80%E8%A7%A3%E6%9E%90"><span class="toc-number">1.5.4.</span> <span class="toc-text">4.4 地址解析</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-IPV6%E8%B7%AF%E7%94%B1%E5%9F%BA%E7%A1%80"><span class="toc-number">1.6.</span> <span class="toc-text">5.IPV6路由基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-1-IPV6%E9%9D%99%E6%80%81%E8%B7%AF%E7%94%B1%E9%85%8D%E7%BD%AE"><span class="toc-number">1.6.1.</span> <span class="toc-text">5.1.1 IPV6静态路由配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-2-%E8%B7%AF%E7%94%B1%E5%8D%8F%E8%AE%AE%E9%85%8D%E7%BD%AE"><span class="toc-number">1.6.2.</span> <span class="toc-text">5.1.2 路由协议配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#5-1-2-1-OSPF%E5%8D%8F%E8%AE%AE%E9%85%8D%E7%BD%AE%E2%80%93OSPFv3"><span class="toc-number">1.6.2.1.</span> <span class="toc-text">5.1.2.1 OSPF协议配置–OSPFv3</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-1-2-2-RIP%E5%8D%8F%E8%AE%AE%E9%85%8D%E7%BD%AE%E2%80%93RIPNG"><span class="toc-number">1.6.2.2.</span> <span class="toc-text">5.1.2.2 RIP协议配置–RIPNG</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1-3-IPV6-%E5%9C%B0%E5%9D%80%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE"><span class="toc-number">1.6.3.</span> <span class="toc-text">6.1.3 IPV6 地址自动配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#6-1-3-1-%E6%97%A0%E7%8A%B6%E6%80%81%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE"><span class="toc-number">1.6.3.1.</span> <span class="toc-text">6.1.3.1 无状态自动配置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-1-3-2-ICMPv6%E6%8A%A5%E6%96%87"><span class="toc-number">1.6.3.2.</span> <span class="toc-text">6.1.3.2 ICMPv6报文</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#IPv6%E9%82%BB%E5%B1%85%E5%8F%91%E7%8E%B0%E5%8D%8F%E8%AE%AE-NDP"><span class="toc-number">1.6.3.2.1.</span> <span class="toc-text">IPv6邻居发现协议 - NDP</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%82%BB%E5%B1%85%E7%8A%B6%E6%80%81"><span class="toc-number">1.6.3.2.2.</span> <span class="toc-text">邻居状态</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8BIPv6%E9%82%BB%E5%B1%85%E8%B7%AF%E7%94%B1%E8%A1%A8"><span class="toc-number">1.6.3.2.3.</span> <span class="toc-text">查看IPv6邻居路由表</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%B7%AF%E7%94%B1%E5%99%A8%E5%8F%91%E7%8E%B0"><span class="toc-number">1.6.3.2.4.</span> <span class="toc-text">路由器发现</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#IPv6%E6%97%A0%E7%8A%B6%E6%80%81%E5%9C%B0%E5%9D%80%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE"><span class="toc-number">1.6.3.2.5.</span> <span class="toc-text">IPv6无状态地址自动配置</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%87%8D%E5%AE%9A%E5%90%91%E6%8A%A5%E6%96%87"><span class="toc-number">1.6.3.2.6.</span> <span class="toc-text">重定向报文</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Path-MTU"><span class="toc-number">1.6.3.2.7.</span> <span class="toc-text">Path MTU</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-1-3-3-DHCP%E9%85%8D%E7%BD%AE"><span class="toc-number">1.6.3.3.</span> <span class="toc-text">6.1.3.3 DHCP配置</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ADD"><span class="toc-number">1.7.</span> <span class="toc-text">ADD</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%8D%95%E6%8E%A5%E5%8F%A3%E4%B8%8B%E9%85%8D%E7%BD%AE%E5%A4%9A%E4%B8%AAip"><span class="toc-number">1.7.1.</span> <span class="toc-text">1 单接口下配置多个ip</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/12/02/%E6%95%B4%E6%9C%BA/C%E7%9B%98%E5%88%86%E5%8C%BA%E6%89%A9%E5%AE%B9/" title="无题">无题</a><time datetime="2023-12-02T01:39:09.149Z" title="发表于 2023-12-02 09:39:09">2023-12-02</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/11/30/web%E6%BC%8F%E6%B4%9E%E5%AE%9E%E9%AA%8C/web%E6%BC%8F%E6%B4%9E%E5%AE%9E%E9%AA%8C9/" title="web漏洞实验9">web漏洞实验9</a><time datetime="2023-11-30T03:14:18.000Z" title="发表于 2023-11-30 11:14:18">2023-11-30</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/11/30/web%E6%BC%8F%E6%B4%9E%E5%AE%9E%E9%AA%8C/web%E6%BC%8F%E6%B4%9E%E5%AE%9E%E9%AA%8C8/" title="web漏洞实验8">web漏洞实验8</a><time datetime="2023-11-30T02:34:18.000Z" title="发表于 2023-11-30 10:34:18">2023-11-30</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/11/30/%E4%BB%A3%E5%8A%9E/" title="代办">代办</a><time datetime="2023-11-29T18:52:57.000Z" title="发表于 2023-11-30 02:52:57">2023-11-30</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/11/28/windows%E5%AE%89%E5%8D%93%E6%A8%A1%E6%8B%9F%E5%99%A8%E4%B8%8Evmware%E5%86%B2%E7%AA%81%E7%9A%84%E9%97%AE%E9%A2%98/" title="windows安卓模拟器与vmware冲突的问题">windows安卓模拟器与vmware冲突的问题</a><time datetime="2023-11-28T15:25:45.905Z" title="发表于 2023-11-28 23:25:45">2023-11-28</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2020 - 2023 By <a class="footer-bar-link" href="/" title="ryz" target="_blank">ryz</a></div></div><div id="footer-type-tips"></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">44</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">18</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">0</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://blog.anheyu.com/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://image.anheyu.com/" title="安知鱼图床"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.anheyu.com/favicon.ico" alt="安知鱼图床"/><span class="back-menu-item-text">安知鱼图床</span></a></div></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/ICT/" style="font-size: 0.88rem;">ICT<sup>11</sup></a><a href="/tags/WEB-Trojans/" style="font-size: 0.88rem;">WEB-Trojans<sup>1</sup></a><a href="/tags/code/" style="font-size: 0.88rem;">code<sup>1</sup></a><a href="/tags/ctf/" style="font-size: 0.88rem;">ctf<sup>1</sup></a><a href="/tags/tools/" style="font-size: 0.88rem;">tools<sup>1</sup></a><a href="/tags/typora/" style="font-size: 0.88rem;">typora<sup>1</sup></a><a href="/tags/web/" style="font-size: 0.88rem;">web<sup>1</sup></a><a href="/tags/web-tools/" style="font-size: 0.88rem;">web-tools<sup>2</sup></a><a href="/tags/web%E5%90%8E%E7%AB%AF%E6%BC%8F%E6%B4%9E/" style="font-size: 0.88rem;">web后端漏洞<sup>1</sup></a><a href="/tags/web%E6%BC%8F%E6%B4%9E/" style="font-size: 0.88rem;">web漏洞<sup>1</sup></a><a href="/tags/web%E6%BC%8F%E6%B4%9E%E5%AE%9E%E9%AA%8C/" style="font-size: 0.88rem;">web漏洞实验<sup>11</sup></a><a href="/tags/%E4%BB%A3%E5%8A%9E/" style="font-size: 0.88rem;">代办<sup>1</sup></a><a href="/tags/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/" style="font-size: 0.88rem;">博客优化<sup>1</sup></a><a href="/tags/%E5%B0%8F%E6%8A%80%E5%B7%A7/" style="font-size: 0.88rem;">小技巧<sup>1</sup></a><a href="/tags/%E6%9D%82%E9%A1%B9/" style="font-size: 0.88rem;">杂项<sup>1</sup></a><a href="/tags/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/" style="font-size: 0.88rem;">渗透测试<sup>1</sup></a><a href="/tags/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" style="font-size: 0.88rem;">环境搭建<sup>1</sup></a><a href="/tags/%E9%97%AE%E9%A2%98/" style="font-size: 0.88rem;">问题<sup>2</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><a id="switch-commentBarrage" href="javascript:anzhiyu.switchCommentBarrage();" title="开关弹幕"><i class="anzhiyufont anzhiyu-icon-danmu"></i></a><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="8779107562" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random"></meting-js></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://music.163.com/#/playlist?id=8779107562&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.20/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.8.4/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("05/14/2023 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2020 By 安知鱼 V1.6.8",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 ryz 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><div class="js-pjax"><input type="hidden" name="page-type" id="page-type" value="post"></div><script async data-pjax src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.1/bubble/bubble.js"></script><script>var visitorMail = "visitor@anheyu.com";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>
